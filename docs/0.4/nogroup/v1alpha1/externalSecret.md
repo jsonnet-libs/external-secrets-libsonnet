@@ -1,5 +1,5 @@
 ---
-permalink: /0.3/nogroup/v1alpha1/externalSecret/
+permalink: /0.4/nogroup/v1alpha1/externalSecret/
 ---
 
 # nogroup.v1alpha1.externalSecret
@@ -47,6 +47,7 @@ permalink: /0.3/nogroup/v1alpha1/externalSecret/
     * [`obj spec.target.template`](#obj-spectargettemplate)
       * [`fn withData(data)`](#fn-spectargettemplatewithdata)
       * [`fn withDataMixin(data)`](#fn-spectargettemplatewithdatamixin)
+      * [`fn withEngineVersion(engineVersion)`](#fn-spectargettemplatewithengineversion)
       * [`fn withTemplateFrom(templateFrom)`](#fn-spectargettemplatewithtemplatefrom)
       * [`fn withTemplateFromMixin(templateFrom)`](#fn-spectargettemplatewithtemplatefrommixin)
       * [`fn withType(type)`](#fn-spectargettemplatewithtype)
@@ -365,6 +366,14 @@ withDataMixin(data)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.target.template.withEngineVersion
+
+```ts
+withEngineVersion(engineVersion)
+```
+
+"EngineVersion specifies the template engine version that should be used to compile/execute the template specified in .data and .templateFrom[]."
 
 ### fn spec.target.template.withTemplateFrom
 

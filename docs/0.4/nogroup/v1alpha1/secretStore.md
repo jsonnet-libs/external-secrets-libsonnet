@@ -1,10 +1,10 @@
 ---
-permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
+permalink: /0.4/nogroup/v1alpha1/secretStore/
 ---
 
-# nogroup.v1alpha1.clusterSecretStore
+# nogroup.v1alpha1.secretStore
 
-"ClusterSecretStore represents a secure external location for storing secrets, which can be referenced as part of `storeRef` fields."
+"SecretStore represents a secure external location for storing secrets, which can be referenced as part of `storeRef` fields."
 
 ## Index
 
@@ -82,6 +82,8 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
             * [`fn withName(name)`](#fn-specproviderawsauthsecretrefsecretaccesskeysecretrefwithname)
             * [`fn withNamespace(namespace)`](#fn-specproviderawsauthsecretrefsecretaccesskeysecretrefwithnamespace)
     * [`obj spec.provider.azurekv`](#obj-specproviderazurekv)
+      * [`fn withAuthType(authType)`](#fn-specproviderazurekvwithauthtype)
+      * [`fn withIdentityId(identityId)`](#fn-specproviderazurekvwithidentityid)
       * [`fn withTenantId(tenantId)`](#fn-specproviderazurekvwithtenantid)
       * [`fn withVaultUrl(vaultUrl)`](#fn-specproviderazurekvwithvaulturl)
       * [`obj spec.provider.azurekv.authSecretRef`](#obj-specproviderazurekvauthsecretref)
@@ -93,6 +95,9 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
           * [`fn withKey(key)`](#fn-specproviderazurekvauthsecretrefclientsecretwithkey)
           * [`fn withName(name)`](#fn-specproviderazurekvauthsecretrefclientsecretwithname)
           * [`fn withNamespace(namespace)`](#fn-specproviderazurekvauthsecretrefclientsecretwithnamespace)
+    * [`obj spec.provider.fake`](#obj-specproviderfake)
+      * [`fn withData(data)`](#fn-specproviderfakewithdata)
+      * [`fn withDataMixin(data)`](#fn-specproviderfakewithdatamixin)
     * [`obj spec.provider.gcpsm`](#obj-specprovidergcpsm)
       * [`fn withProjectID(projectID)`](#fn-specprovidergcpsmwithprojectid)
       * [`obj spec.provider.gcpsm.auth`](#obj-specprovidergcpsmauth)
@@ -101,6 +106,12 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
             * [`fn withKey(key)`](#fn-specprovidergcpsmauthsecretrefsecretaccesskeysecretrefwithkey)
             * [`fn withName(name)`](#fn-specprovidergcpsmauthsecretrefsecretaccesskeysecretrefwithname)
             * [`fn withNamespace(namespace)`](#fn-specprovidergcpsmauthsecretrefsecretaccesskeysecretrefwithnamespace)
+        * [`obj spec.provider.gcpsm.auth.workloadIdentity`](#obj-specprovidergcpsmauthworkloadidentity)
+          * [`fn withClusterLocation(clusterLocation)`](#fn-specprovidergcpsmauthworkloadidentitywithclusterlocation)
+          * [`fn withClusterName(clusterName)`](#fn-specprovidergcpsmauthworkloadidentitywithclustername)
+          * [`obj spec.provider.gcpsm.auth.workloadIdentity.serviceAccountRef`](#obj-specprovidergcpsmauthworkloadidentityserviceaccountref)
+            * [`fn withName(name)`](#fn-specprovidergcpsmauthworkloadidentityserviceaccountrefwithname)
+            * [`fn withNamespace(namespace)`](#fn-specprovidergcpsmauthworkloadidentityserviceaccountrefwithnamespace)
     * [`obj spec.provider.gitlab`](#obj-specprovidergitlab)
       * [`fn withProjectID(projectID)`](#fn-specprovidergitlabwithprojectid)
       * [`fn withUrl(url)`](#fn-specprovidergitlabwithurl)
@@ -120,9 +131,10 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
             * [`fn withNamespace(namespace)`](#fn-specprovideribmauthsecretrefsecretapikeysecretrefwithnamespace)
     * [`obj spec.provider.oracle`](#obj-specprovideroracle)
       * [`fn withRegion(region)`](#fn-specprovideroraclewithregion)
-      * [`fn withTenancy(tenancy)`](#fn-specprovideroraclewithtenancy)
-      * [`fn withUser(user)`](#fn-specprovideroraclewithuser)
+      * [`fn withVault(vault)`](#fn-specprovideroraclewithvault)
       * [`obj spec.provider.oracle.auth`](#obj-specprovideroracleauth)
+        * [`fn withTenancy(tenancy)`](#fn-specprovideroracleauthwithtenancy)
+        * [`fn withUser(user)`](#fn-specprovideroracleauthwithuser)
         * [`obj spec.provider.oracle.auth.secretRef`](#obj-specprovideroracleauthsecretref)
           * [`obj spec.provider.oracle.auth.secretRef.fingerprint`](#obj-specprovideroracleauthsecretreffingerprint)
             * [`fn withKey(key)`](#fn-specprovideroracleauthsecretreffingerprintwithkey)
@@ -134,8 +146,10 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
             * [`fn withNamespace(namespace)`](#fn-specprovideroracleauthsecretrefprivatekeywithnamespace)
     * [`obj spec.provider.vault`](#obj-specprovidervault)
       * [`fn withCaBundle(caBundle)`](#fn-specprovidervaultwithcabundle)
+      * [`fn withForwardInconsistent(forwardInconsistent)`](#fn-specprovidervaultwithforwardinconsistent)
       * [`fn withNamespace(namespace)`](#fn-specprovidervaultwithnamespace)
       * [`fn withPath(path)`](#fn-specprovidervaultwithpath)
+      * [`fn withReadYourWrites(readYourWrites)`](#fn-specprovidervaultwithreadyourwrites)
       * [`fn withServer(server)`](#fn-specprovidervaultwithserver)
       * [`fn withVersion(version)`](#fn-specprovidervaultwithversion)
       * [`obj spec.provider.vault.auth`](#obj-specprovidervaultauth)
@@ -156,6 +170,7 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
             * [`fn withName(name)`](#fn-specprovidervaultauthcertsecretrefwithname)
             * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthcertsecretrefwithnamespace)
         * [`obj spec.provider.vault.auth.jwt`](#obj-specprovidervaultauthjwt)
+          * [`fn withPath(path)`](#fn-specprovidervaultauthjwtwithpath)
           * [`fn withRole(role)`](#fn-specprovidervaultauthjwtwithrole)
           * [`obj spec.provider.vault.auth.jwt.secretRef`](#obj-specprovidervaultauthjwtsecretref)
             * [`fn withKey(key)`](#fn-specprovidervaultauthjwtsecretrefwithkey)
@@ -172,6 +187,7 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
             * [`fn withName(name)`](#fn-specprovidervaultauthkubernetesserviceaccountrefwithname)
             * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthkubernetesserviceaccountrefwithnamespace)
         * [`obj spec.provider.vault.auth.ldap`](#obj-specprovidervaultauthldap)
+          * [`fn withPath(path)`](#fn-specprovidervaultauthldapwithpath)
           * [`fn withUsername(username)`](#fn-specprovidervaultauthldapwithusername)
           * [`obj spec.provider.vault.auth.ldap.secretRef`](#obj-specprovidervaultauthldapsecretref)
             * [`fn withKey(key)`](#fn-specprovidervaultauthldapsecretrefwithkey)
@@ -186,6 +202,23 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
         * [`fn withName(name)`](#fn-specprovidervaultcaproviderwithname)
         * [`fn withNamespace(namespace)`](#fn-specprovidervaultcaproviderwithnamespace)
         * [`fn withType(type)`](#fn-specprovidervaultcaproviderwithtype)
+    * [`obj spec.provider.webhook`](#obj-specproviderwebhook)
+      * [`fn withBody(body)`](#fn-specproviderwebhookwithbody)
+      * [`fn withCaBundle(caBundle)`](#fn-specproviderwebhookwithcabundle)
+      * [`fn withHeaders(headers)`](#fn-specproviderwebhookwithheaders)
+      * [`fn withHeadersMixin(headers)`](#fn-specproviderwebhookwithheadersmixin)
+      * [`fn withMethod(method)`](#fn-specproviderwebhookwithmethod)
+      * [`fn withSecrets(secrets)`](#fn-specproviderwebhookwithsecrets)
+      * [`fn withSecretsMixin(secrets)`](#fn-specproviderwebhookwithsecretsmixin)
+      * [`fn withTimeout(timeout)`](#fn-specproviderwebhookwithtimeout)
+      * [`fn withUrl(url)`](#fn-specproviderwebhookwithurl)
+      * [`obj spec.provider.webhook.caProvider`](#obj-specproviderwebhookcaprovider)
+        * [`fn withKey(key)`](#fn-specproviderwebhookcaproviderwithkey)
+        * [`fn withName(name)`](#fn-specproviderwebhookcaproviderwithname)
+        * [`fn withNamespace(namespace)`](#fn-specproviderwebhookcaproviderwithnamespace)
+        * [`fn withType(type)`](#fn-specproviderwebhookcaproviderwithtype)
+      * [`obj spec.provider.webhook.result`](#obj-specproviderwebhookresult)
+        * [`fn withJsonPath(jsonPath)`](#fn-specproviderwebhookresultwithjsonpath)
     * [`obj spec.provider.yandexlockbox`](#obj-specprovideryandexlockbox)
       * [`fn withApiEndpoint(apiEndpoint)`](#fn-specprovideryandexlockboxwithapiendpoint)
       * [`obj spec.provider.yandexlockbox.auth`](#obj-specprovideryandexlockboxauth)
@@ -193,6 +226,14 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
           * [`fn withKey(key)`](#fn-specprovideryandexlockboxauthauthorizedkeysecretrefwithkey)
           * [`fn withName(name)`](#fn-specprovideryandexlockboxauthauthorizedkeysecretrefwithname)
           * [`fn withNamespace(namespace)`](#fn-specprovideryandexlockboxauthauthorizedkeysecretrefwithnamespace)
+      * [`obj spec.provider.yandexlockbox.caProvider`](#obj-specprovideryandexlockboxcaprovider)
+        * [`obj spec.provider.yandexlockbox.caProvider.certSecretRef`](#obj-specprovideryandexlockboxcaprovidercertsecretref)
+          * [`fn withKey(key)`](#fn-specprovideryandexlockboxcaprovidercertsecretrefwithkey)
+          * [`fn withName(name)`](#fn-specprovideryandexlockboxcaprovidercertsecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specprovideryandexlockboxcaprovidercertsecretrefwithnamespace)
+  * [`obj spec.retrySettings`](#obj-specretrysettings)
+    * [`fn withMaxRetries(maxRetries)`](#fn-specretrysettingswithmaxretries)
+    * [`fn withRetryInterval(retryInterval)`](#fn-specretrysettingswithretryinterval)
 
 ## Fields
 
@@ -202,7 +243,7 @@ permalink: /0.3/nogroup/v1alpha1/clusterSecretStore/
 new(name)
 ```
 
-new returns an instance of ClusterSecretStore
+new returns an instance of SecretStore
 
 ## obj metadata
 
@@ -710,13 +751,29 @@ withNamespace(namespace)
 
 "AzureKV configures this store to sync secrets using Azure Key Vault provider"
 
+### fn spec.provider.azurekv.withAuthType
+
+```ts
+withAuthType(authType)
+```
+
+"Auth type defines how to authenticate to the keyvault service. Valid values are: - \"ServicePrincipal\" (default): Using a service principal (tenantId, clientId, clientSecret) - \"ManagedIdentity\": Using Managed Identity assigned to the pod (see aad-pod-identity)"
+
+### fn spec.provider.azurekv.withIdentityId
+
+```ts
+withIdentityId(identityId)
+```
+
+"If multiple Managed Identity is assigned to the pod, you can select the one to be used"
+
 ### fn spec.provider.azurekv.withTenantId
 
 ```ts
 withTenantId(tenantId)
 ```
 
-"TenantID configures the Azure Tenant to send requests to."
+"TenantID configures the Azure Tenant to send requests to. Required for ServicePrincipal auth type."
 
 ### fn spec.provider.azurekv.withVaultUrl
 
@@ -728,7 +785,7 @@ withVaultUrl(vaultUrl)
 
 ## obj spec.provider.azurekv.authSecretRef
 
-"Auth configures how the operator authenticates with Azure."
+"Auth configures how the operator authenticates with Azure. Required for ServicePrincipal auth type."
 
 ## obj spec.provider.azurekv.authSecretRef.clientId
 
@@ -786,6 +843,28 @@ withNamespace(namespace)
 
 "Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
 
+## obj spec.provider.fake
+
+"Fake configures a store with static key/value pairs"
+
+### fn spec.provider.fake.withData
+
+```ts
+withData(data)
+```
+
+
+
+### fn spec.provider.fake.withDataMixin
+
+```ts
+withDataMixin(data)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.provider.gcpsm
 
 "GCPSM configures this store to sync secrets using Google Cloud Platform Secret Manager provider"
@@ -827,6 +906,46 @@ withName(name)
 "The name of the Secret resource being referred to."
 
 ### fn spec.provider.gcpsm.auth.secretRef.secretAccessKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.gcpsm.auth.workloadIdentity
+
+
+
+### fn spec.provider.gcpsm.auth.workloadIdentity.withClusterLocation
+
+```ts
+withClusterLocation(clusterLocation)
+```
+
+
+
+### fn spec.provider.gcpsm.auth.workloadIdentity.withClusterName
+
+```ts
+withClusterName(clusterName)
+```
+
+
+
+## obj spec.provider.gcpsm.auth.workloadIdentity.serviceAccountRef
+
+"A reference to a ServiceAccount resource."
+
+### fn spec.provider.gcpsm.auth.workloadIdentity.serviceAccountRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the ServiceAccount resource being referred to."
+
+### fn spec.provider.gcpsm.auth.workloadIdentity.serviceAccountRef.withNamespace
 
 ```ts
 withNamespace(namespace)
@@ -948,17 +1067,29 @@ withNamespace(namespace)
 withRegion(region)
 ```
 
-"projectID is an access token specific to the secret."
+"Region is the region where vault is located."
 
-### fn spec.provider.oracle.withTenancy
+### fn spec.provider.oracle.withVault
+
+```ts
+withVault(vault)
+```
+
+"Vault is the vault's OCID of the specific vault where secret is located."
+
+## obj spec.provider.oracle.auth
+
+"Auth configures how secret-manager authenticates with the Oracle Vault. If empty, use the instance principal, otherwise the user credentials specified in Auth."
+
+### fn spec.provider.oracle.auth.withTenancy
 
 ```ts
 withTenancy(tenancy)
 ```
 
-"projectID is an access token specific to the secret."
+"Tenancy is the tenancy OCID where user is located."
 
-### fn spec.provider.oracle.withUser
+### fn spec.provider.oracle.auth.withUser
 
 ```ts
 withUser(user)
@@ -966,17 +1097,13 @@ withUser(user)
 
 "User is an access OCID specific to the account."
 
-## obj spec.provider.oracle.auth
-
-"Auth configures how secret-manager authenticates with the Oracle Vault."
-
 ## obj spec.provider.oracle.auth.secretRef
 
 "SecretRef to pass through sensitive information."
 
 ## obj spec.provider.oracle.auth.secretRef.fingerprint
 
-"projectID is an access token specific to the secret."
+"Fingerprint is the fingerprint of the API private key."
 
 ### fn spec.provider.oracle.auth.secretRef.fingerprint.withKey
 
@@ -1004,7 +1131,7 @@ withNamespace(namespace)
 
 ## obj spec.provider.oracle.auth.secretRef.privatekey
 
-"The Access Token is used for authentication"
+"PrivateKey is the user's API Signing Key in PEM format, used for authentication."
 
 ### fn spec.provider.oracle.auth.secretRef.privatekey.withKey
 
@@ -1042,6 +1169,14 @@ withCaBundle(caBundle)
 
 "PEM encoded CA bundle used to validate Vault server certificate. Only used if the Server URL is using HTTPS protocol. This parameter is ignored for plain HTTP protocol connection. If not set the system root certificates are used to validate the TLS connection."
 
+### fn spec.provider.vault.withForwardInconsistent
+
+```ts
+withForwardInconsistent(forwardInconsistent)
+```
+
+"ForwardInconsistent tells Vault to forward read-after-write requests to the Vault leader instead of simply retrying within a loop. This can increase performance if the option is enabled serverside. https://www.vaultproject.io/docs/configuration/replication#allow_forwarding_via_header"
+
 ### fn spec.provider.vault.withNamespace
 
 ```ts
@@ -1057,6 +1192,14 @@ withPath(path)
 ```
 
 "Path is the mount path of the Vault KV backend endpoint, e.g: \"secret\". The v2 KV secret engine version specific \"/data\" path suffix for fetching secrets from Vault is optional and will be appended if not present in specified path."
+
+### fn spec.provider.vault.withReadYourWrites
+
+```ts
+withReadYourWrites(readYourWrites)
+```
+
+"ReadYourWrites ensures isolated read-after-write semantics by providing discovered cluster replication states in each request. More information about eventual consistency in Vault can be found here https://www.vaultproject.io/docs/enterprise/consistency"
 
 ### fn spec.provider.vault.withServer
 
@@ -1190,6 +1333,14 @@ withNamespace(namespace)
 
 "Jwt authenticates with Vault by passing role and JWT token using the JWT/OIDC authentication method"
 
+### fn spec.provider.vault.auth.jwt.withPath
+
+```ts
+withPath(path)
+```
+
+"Path where the JWT authentication backend is mounted in Vault, e.g: \"jwt\
+
 ### fn spec.provider.vault.auth.jwt.withRole
 
 ```ts
@@ -1298,6 +1449,14 @@ withNamespace(namespace)
 
 "Ldap authenticates with Vault by passing username/password pair using the LDAP authentication method"
 
+### fn spec.provider.vault.auth.ldap.withPath
+
+```ts
+withPath(path)
+```
+
+"Path where the LDAP authentication backend is mounted in Vault, e.g: \"ldap\
+
 ### fn spec.provider.vault.auth.ldap.withUsername
 
 ```ts
@@ -1398,6 +1557,134 @@ withType(type)
 
 "The type of provider to use such as \"Secret\", or \"ConfigMap\"."
 
+## obj spec.provider.webhook
+
+"Webhook configures this store to sync secrets using a generic templated webhook"
+
+### fn spec.provider.webhook.withBody
+
+```ts
+withBody(body)
+```
+
+"Body"
+
+### fn spec.provider.webhook.withCaBundle
+
+```ts
+withCaBundle(caBundle)
+```
+
+"PEM encoded CA bundle used to validate webhook server certificate. Only used if the Server URL is using HTTPS protocol. This parameter is ignored for plain HTTP protocol connection. If not set the system root certificates are used to validate the TLS connection."
+
+### fn spec.provider.webhook.withHeaders
+
+```ts
+withHeaders(headers)
+```
+
+"Headers"
+
+### fn spec.provider.webhook.withHeadersMixin
+
+```ts
+withHeadersMixin(headers)
+```
+
+"Headers"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.provider.webhook.withMethod
+
+```ts
+withMethod(method)
+```
+
+"Webhook Method"
+
+### fn spec.provider.webhook.withSecrets
+
+```ts
+withSecrets(secrets)
+```
+
+"Secrets to fill in templates These secrets will be passed to the templating function as key value pairs under the given name"
+
+### fn spec.provider.webhook.withSecretsMixin
+
+```ts
+withSecretsMixin(secrets)
+```
+
+"Secrets to fill in templates These secrets will be passed to the templating function as key value pairs under the given name"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.provider.webhook.withTimeout
+
+```ts
+withTimeout(timeout)
+```
+
+"Timeout"
+
+### fn spec.provider.webhook.withUrl
+
+```ts
+withUrl(url)
+```
+
+"Webhook url to call"
+
+## obj spec.provider.webhook.caProvider
+
+"The provider for the CA bundle to use to validate webhook server certificate."
+
+### fn spec.provider.webhook.caProvider.withKey
+
+```ts
+withKey(key)
+```
+
+"The key the value inside of the provider type to use, only used with \"Secret\" type"
+
+### fn spec.provider.webhook.caProvider.withName
+
+```ts
+withName(name)
+```
+
+"The name of the object located at the provider type."
+
+### fn spec.provider.webhook.caProvider.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"The namespace the Provider type is in."
+
+### fn spec.provider.webhook.caProvider.withType
+
+```ts
+withType(type)
+```
+
+"The type of provider to use such as \"Secret\", or \"ConfigMap\"."
+
+## obj spec.provider.webhook.result
+
+"Result formatting"
+
+### fn spec.provider.webhook.result.withJsonPath
+
+```ts
+withJsonPath(jsonPath)
+```
+
+"Json path of return value"
+
 ## obj spec.provider.yandexlockbox
 
 "YandexLockbox configures this store to sync secrets using Yandex Lockbox provider"
@@ -1441,3 +1728,54 @@ withNamespace(namespace)
 ```
 
 "Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.yandexlockbox.caProvider
+
+"The provider for the CA bundle to use to validate Yandex.Cloud server certificate."
+
+## obj spec.provider.yandexlockbox.caProvider.certSecretRef
+
+"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+
+### fn spec.provider.yandexlockbox.caProvider.certSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.yandexlockbox.caProvider.certSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.yandexlockbox.caProvider.certSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.retrySettings
+
+"Used to configure http retries if failed"
+
+### fn spec.retrySettings.withMaxRetries
+
+```ts
+withMaxRetries(maxRetries)
+```
+
+
+
+### fn spec.retrySettings.withRetryInterval
+
+```ts
+withRetryInterval(retryInterval)
+```
+
