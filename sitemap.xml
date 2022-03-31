@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/</loc>
-         <lastmod>2022-02-25</lastmod>
+         <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/</loc>
-         <lastmod>2022-02-25</lastmod>
+         <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/</loc>
-         <lastmod>2022-02-25</lastmod>
+         <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/v1alpha1/</loc>
-         <lastmod>2022-02-25</lastmod>
+         <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/v1alpha1/clusterSecretStore/</loc>
-         <lastmod>2022-02-25</lastmod>
+         <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/v1alpha1/externalSecret/</loc>
-         <lastmod>2022-02-25</lastmod>
+         <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/v1alpha1/secretStore/</loc>
-         <lastmod>2022-02-25</lastmod>
+         <lastmod>2022-03-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
