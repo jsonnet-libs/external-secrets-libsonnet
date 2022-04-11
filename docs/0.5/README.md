@@ -8,3 +8,6 @@ permalink: /0.5/
 local external_secrets = import "github.com/jsonnet-libs/external-secrets-libsonnet/0.5/main.libsonnet"
 ```
 
+
+
+* [nogroup](nogroup/index.md)
