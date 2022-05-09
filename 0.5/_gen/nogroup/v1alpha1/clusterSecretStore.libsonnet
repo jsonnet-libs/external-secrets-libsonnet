@@ -50,7 +50,9 @@
   new(name): {
     apiVersion: 'external-secrets.io/v1alpha1',
     kind: 'ClusterSecretStore',
-  } + self.metadata.withName(name=name),
+  } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
+    'tanka.dev/namespaced': 'true',
+  }),
   '#spec':: d.obj(help='"SecretStoreSpec defines the desired state of SecretStore."'),
   spec: {
     '#provider':: d.obj(help='"Used to configure the provider. Only one provider may be set"'),
