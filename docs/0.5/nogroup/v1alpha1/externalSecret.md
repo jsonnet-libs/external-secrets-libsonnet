@@ -22,8 +22,6 @@ permalink: /0.5/nogroup/v1alpha1/externalSecret/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -37,6 +35,18 @@ permalink: /0.5/nogroup/v1alpha1/externalSecret/
   * [`fn withDataFromMixin(dataFrom)`](#fn-specwithdatafrommixin)
   * [`fn withDataMixin(data)`](#fn-specwithdatamixin)
   * [`fn withRefreshInterval(refreshInterval)`](#fn-specwithrefreshinterval)
+  * [`obj spec.data`](#obj-specdata)
+    * [`fn withSecretKey(secretKey)`](#fn-specdatawithsecretkey)
+    * [`obj spec.data.remoteRef`](#obj-specdataremoteref)
+      * [`fn withConversionStrategy(conversionStrategy)`](#fn-specdataremoterefwithconversionstrategy)
+      * [`fn withKey(key)`](#fn-specdataremoterefwithkey)
+      * [`fn withProperty(property)`](#fn-specdataremoterefwithproperty)
+      * [`fn withVersion(version)`](#fn-specdataremoterefwithversion)
+  * [`obj spec.dataFrom`](#obj-specdatafrom)
+    * [`fn withConversionStrategy(conversionStrategy)`](#fn-specdatafromwithconversionstrategy)
+    * [`fn withKey(key)`](#fn-specdatafromwithkey)
+    * [`fn withProperty(property)`](#fn-specdatafromwithproperty)
+    * [`fn withVersion(version)`](#fn-specdatafromwithversion)
   * [`obj spec.secretStoreRef`](#obj-specsecretstoreref)
     * [`fn withKind(kind)`](#fn-specsecretstorerefwithkind)
     * [`fn withName(name)`](#fn-specsecretstorerefwithname)
@@ -56,6 +66,19 @@ permalink: /0.5/nogroup/v1alpha1/externalSecret/
         * [`fn withAnnotationsMixin(annotations)`](#fn-spectargettemplatemetadatawithannotationsmixin)
         * [`fn withLabels(labels)`](#fn-spectargettemplatemetadatawithlabels)
         * [`fn withLabelsMixin(labels)`](#fn-spectargettemplatemetadatawithlabelsmixin)
+      * [`obj spec.target.template.templateFrom`](#obj-spectargettemplatetemplatefrom)
+        * [`obj spec.target.template.templateFrom.configMap`](#obj-spectargettemplatetemplatefromconfigmap)
+          * [`fn withItems(items)`](#fn-spectargettemplatetemplatefromconfigmapwithitems)
+          * [`fn withItemsMixin(items)`](#fn-spectargettemplatetemplatefromconfigmapwithitemsmixin)
+          * [`fn withName(name)`](#fn-spectargettemplatetemplatefromconfigmapwithname)
+          * [`obj spec.target.template.templateFrom.configMap.items`](#obj-spectargettemplatetemplatefromconfigmapitems)
+            * [`fn withKey(key)`](#fn-spectargettemplatetemplatefromconfigmapitemswithkey)
+        * [`obj spec.target.template.templateFrom.secret`](#obj-spectargettemplatetemplatefromsecret)
+          * [`fn withItems(items)`](#fn-spectargettemplatetemplatefromsecretwithitems)
+          * [`fn withItemsMixin(items)`](#fn-spectargettemplatetemplatefromsecretwithitemsmixin)
+          * [`fn withName(name)`](#fn-spectargettemplatetemplatefromsecretwithname)
+          * [`obj spec.target.template.templateFrom.secret.items`](#obj-spectargettemplatetemplatefromsecretitems)
+            * [`fn withKey(key)`](#fn-spectargettemplatetemplatefromsecretitemswithkey)
 
 ## Fields
 
@@ -173,24 +196,6 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-**Note:** This function appends passed data to existing values
-
 ### fn metadata.withName
 
 ```ts
@@ -296,6 +301,90 @@ withRefreshInterval(refreshInterval)
 ```
 
 "RefreshInterval is the amount of time before the values are read again from the SecretStore provider Valid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\" May be set to zero to fetch and create it once. Defaults to 1h."
+
+## obj spec.data
+
+"Data defines the connection between the Kubernetes Secret keys and the Provider data"
+
+### fn spec.data.withSecretKey
+
+```ts
+withSecretKey(secretKey)
+```
+
+
+
+## obj spec.data.remoteRef
+
+"ExternalSecretDataRemoteRef defines Provider data location."
+
+### fn spec.data.remoteRef.withConversionStrategy
+
+```ts
+withConversionStrategy(conversionStrategy)
+```
+
+"Used to define a conversion Strategy"
+
+### fn spec.data.remoteRef.withKey
+
+```ts
+withKey(key)
+```
+
+"Key is the key used in the Provider, mandatory"
+
+### fn spec.data.remoteRef.withProperty
+
+```ts
+withProperty(property)
+```
+
+"Used to select a specific property of the Provider value (if a map), if supported"
+
+### fn spec.data.remoteRef.withVersion
+
+```ts
+withVersion(version)
+```
+
+"Used to select a specific version of the Provider value, if supported"
+
+## obj spec.dataFrom
+
+"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+
+### fn spec.dataFrom.withConversionStrategy
+
+```ts
+withConversionStrategy(conversionStrategy)
+```
+
+"Used to define a conversion Strategy"
+
+### fn spec.dataFrom.withKey
+
+```ts
+withKey(key)
+```
+
+"Key is the key used in the Provider, mandatory"
+
+### fn spec.dataFrom.withProperty
+
+```ts
+withProperty(property)
+```
+
+"Used to select a specific property of the Provider value (if a map), if supported"
+
+### fn spec.dataFrom.withVersion
+
+```ts
+withVersion(version)
+```
+
+"Used to select a specific version of the Provider value, if supported"
 
 ## obj spec.secretStoreRef
 
@@ -440,3 +529,90 @@ withLabelsMixin(labels)
 
 
 **Note:** This function appends passed data to existing values
+
+## obj spec.target.template.templateFrom
+
+
+
+## obj spec.target.template.templateFrom.configMap
+
+
+
+### fn spec.target.template.templateFrom.configMap.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.target.template.templateFrom.configMap.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.target.template.templateFrom.configMap.withName
+
+```ts
+withName(name)
+```
+
+
+
+## obj spec.target.template.templateFrom.configMap.items
+
+
+
+### fn spec.target.template.templateFrom.configMap.items.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+## obj spec.target.template.templateFrom.secret
+
+
+
+### fn spec.target.template.templateFrom.secret.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.target.template.templateFrom.secret.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.target.template.templateFrom.secret.withName
+
+```ts
+withName(name)
+```
+
+
+
+## obj spec.target.template.templateFrom.secret.items
+
+
+
+### fn spec.target.template.templateFrom.secret.items.withKey
+
+```ts
+withKey(key)
+```
+
