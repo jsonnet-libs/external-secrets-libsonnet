@@ -40,12 +40,14 @@ permalink: /0.5/nogroup/v1beta1/externalSecret/
     * [`obj spec.data.remoteRef`](#obj-specdataremoteref)
       * [`fn withConversionStrategy(conversionStrategy)`](#fn-specdataremoterefwithconversionstrategy)
       * [`fn withKey(key)`](#fn-specdataremoterefwithkey)
+      * [`fn withMetadataPolicy(metadataPolicy)`](#fn-specdataremoterefwithmetadatapolicy)
       * [`fn withProperty(property)`](#fn-specdataremoterefwithproperty)
       * [`fn withVersion(version)`](#fn-specdataremoterefwithversion)
   * [`obj spec.dataFrom`](#obj-specdatafrom)
     * [`obj spec.dataFrom.extract`](#obj-specdatafromextract)
       * [`fn withConversionStrategy(conversionStrategy)`](#fn-specdatafromextractwithconversionstrategy)
       * [`fn withKey(key)`](#fn-specdatafromextractwithkey)
+      * [`fn withMetadataPolicy(metadataPolicy)`](#fn-specdatafromextractwithmetadatapolicy)
       * [`fn withProperty(property)`](#fn-specdatafromextractwithproperty)
       * [`fn withVersion(version)`](#fn-specdatafromextractwithversion)
     * [`obj spec.dataFrom.find`](#obj-specdatafromfind)
@@ -343,6 +345,14 @@ withKey(key)
 
 "Key is the key used in the Provider, mandatory"
 
+### fn spec.data.remoteRef.withMetadataPolicy
+
+```ts
+withMetadataPolicy(metadataPolicy)
+```
+
+"Policy for fetching tags/labels from provider secrets, possible options are Fetch, None. Defaults to None"
+
 ### fn spec.data.remoteRef.withProperty
 
 ```ts
@@ -382,6 +392,14 @@ withKey(key)
 ```
 
 "Key is the key used in the Provider, mandatory"
+
+### fn spec.dataFrom.extract.withMetadataPolicy
+
+```ts
+withMetadataPolicy(metadataPolicy)
+```
+
+"Policy for fetching tags/labels from provider secrets, possible options are Fetch, None. Defaults to None"
 
 ### fn spec.dataFrom.extract.withProperty
 

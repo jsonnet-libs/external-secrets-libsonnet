@@ -31,6 +31,7 @@ permalink: /0.5/nogroup/v1beta1/clusterSecretStore/
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
   * [`fn withController(controller)`](#fn-specwithcontroller)
+  * [`fn withRefreshInterval(refreshInterval)`](#fn-specwithrefreshinterval)
   * [`obj spec.provider`](#obj-specprovider)
     * [`obj spec.provider.akeyless`](#obj-specproviderakeyless)
       * [`fn withAkeylessGWApiURL(akeylessGWApiURL)`](#fn-specproviderakeylesswithakeylessgwapiurl)
@@ -166,6 +167,16 @@ permalink: /0.5/nogroup/v1beta1/clusterSecretStore/
           * [`fn withName(name)`](#fn-specproviderkubernetesservercaproviderwithname)
           * [`fn withNamespace(namespace)`](#fn-specproviderkubernetesservercaproviderwithnamespace)
           * [`fn withType(type)`](#fn-specproviderkubernetesservercaproviderwithtype)
+    * [`obj spec.provider.onepassword`](#obj-specprovideronepassword)
+      * [`fn withConnectHost(connectHost)`](#fn-specprovideronepasswordwithconnecthost)
+      * [`fn withVaults(vaults)`](#fn-specprovideronepasswordwithvaults)
+      * [`fn withVaultsMixin(vaults)`](#fn-specprovideronepasswordwithvaultsmixin)
+      * [`obj spec.provider.onepassword.auth`](#obj-specprovideronepasswordauth)
+        * [`obj spec.provider.onepassword.auth.secretRef`](#obj-specprovideronepasswordauthsecretref)
+          * [`obj spec.provider.onepassword.auth.secretRef.connectTokenSecretRef`](#obj-specprovideronepasswordauthsecretrefconnecttokensecretref)
+            * [`fn withKey(key)`](#fn-specprovideronepasswordauthsecretrefconnecttokensecretrefwithkey)
+            * [`fn withName(name)`](#fn-specprovideronepasswordauthsecretrefconnecttokensecretrefwithname)
+            * [`fn withNamespace(namespace)`](#fn-specprovideronepasswordauthsecretrefconnecttokensecretrefwithnamespace)
     * [`obj spec.provider.oracle`](#obj-specprovideroracle)
       * [`fn withRegion(region)`](#fn-specprovideroraclewithregion)
       * [`fn withVault(vault)`](#fn-specprovideroraclewithvault)
@@ -181,6 +192,16 @@ permalink: /0.5/nogroup/v1beta1/clusterSecretStore/
             * [`fn withKey(key)`](#fn-specprovideroracleauthsecretrefprivatekeywithkey)
             * [`fn withName(name)`](#fn-specprovideroracleauthsecretrefprivatekeywithname)
             * [`fn withNamespace(namespace)`](#fn-specprovideroracleauthsecretrefprivatekeywithnamespace)
+    * [`obj spec.provider.senhasegura`](#obj-specprovidersenhasegura)
+      * [`fn withIgnoreSslCertificate(ignoreSslCertificate)`](#fn-specprovidersenhasegurawithignoresslcertificate)
+      * [`fn withModule(module)`](#fn-specprovidersenhasegurawithmodule)
+      * [`fn withUrl(url)`](#fn-specprovidersenhasegurawithurl)
+      * [`obj spec.provider.senhasegura.auth`](#obj-specprovidersenhaseguraauth)
+        * [`fn withClientId(clientId)`](#fn-specprovidersenhaseguraauthwithclientid)
+        * [`obj spec.provider.senhasegura.auth.clientSecretSecretRef`](#obj-specprovidersenhaseguraauthclientsecretsecretref)
+          * [`fn withKey(key)`](#fn-specprovidersenhaseguraauthclientsecretsecretrefwithkey)
+          * [`fn withName(name)`](#fn-specprovidersenhaseguraauthclientsecretsecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specprovidersenhaseguraauthclientsecretsecretrefwithnamespace)
     * [`obj spec.provider.vault`](#obj-specprovidervault)
       * [`fn withCaBundle(caBundle)`](#fn-specprovidervaultwithcabundle)
       * [`fn withForwardInconsistent(forwardInconsistent)`](#fn-specprovidervaultwithforwardinconsistent)
@@ -269,6 +290,18 @@ permalink: /0.5/nogroup/v1beta1/clusterSecretStore/
           * [`fn withKey(key)`](#fn-specproviderwebhooksecretssecretrefwithkey)
           * [`fn withName(name)`](#fn-specproviderwebhooksecretssecretrefwithname)
           * [`fn withNamespace(namespace)`](#fn-specproviderwebhooksecretssecretrefwithnamespace)
+    * [`obj spec.provider.yandexcertificatemanager`](#obj-specprovideryandexcertificatemanager)
+      * [`fn withApiEndpoint(apiEndpoint)`](#fn-specprovideryandexcertificatemanagerwithapiendpoint)
+      * [`obj spec.provider.yandexcertificatemanager.auth`](#obj-specprovideryandexcertificatemanagerauth)
+        * [`obj spec.provider.yandexcertificatemanager.auth.authorizedKeySecretRef`](#obj-specprovideryandexcertificatemanagerauthauthorizedkeysecretref)
+          * [`fn withKey(key)`](#fn-specprovideryandexcertificatemanagerauthauthorizedkeysecretrefwithkey)
+          * [`fn withName(name)`](#fn-specprovideryandexcertificatemanagerauthauthorizedkeysecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specprovideryandexcertificatemanagerauthauthorizedkeysecretrefwithnamespace)
+      * [`obj spec.provider.yandexcertificatemanager.caProvider`](#obj-specprovideryandexcertificatemanagercaprovider)
+        * [`obj spec.provider.yandexcertificatemanager.caProvider.certSecretRef`](#obj-specprovideryandexcertificatemanagercaprovidercertsecretref)
+          * [`fn withKey(key)`](#fn-specprovideryandexcertificatemanagercaprovidercertsecretrefwithkey)
+          * [`fn withName(name)`](#fn-specprovideryandexcertificatemanagercaprovidercertsecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specprovideryandexcertificatemanagercaprovidercertsecretrefwithnamespace)
     * [`obj spec.provider.yandexlockbox`](#obj-specprovideryandexlockbox)
       * [`fn withApiEndpoint(apiEndpoint)`](#fn-specprovideryandexlockboxwithapiendpoint)
       * [`obj spec.provider.yandexlockbox.auth`](#obj-specprovideryandexlockboxauth)
@@ -470,6 +503,14 @@ withController(controller)
 ```
 
 "Used to select the correct KES controller (think: ingress.ingressClassName) The KES controller is instantiated with a specific controller name and filters ES based on this property"
+
+### fn spec.withRefreshInterval
+
+```ts
+withRefreshInterval(refreshInterval)
+```
+
+"Used to configure store refresh interval in seconds. Empty or 0 will default to the controller config."
 
 ## obj spec.provider
 
@@ -1061,7 +1102,7 @@ withNamespace(namespace)
 
 ## obj spec.provider.gitlab
 
-"GItlab configures this store to sync secrets using Gitlab Variables provider"
+"Gitlab configures this store to sync secrets using Gitlab Variables provider"
 
 ### fn spec.provider.gitlab.withProjectID
 
@@ -1351,6 +1392,72 @@ withType(type)
 
 "The type of provider to use such as \"Secret\", or \"ConfigMap\"."
 
+## obj spec.provider.onepassword
+
+"OnePassword configures this store to sync secrets using the 1Password Cloud provider"
+
+### fn spec.provider.onepassword.withConnectHost
+
+```ts
+withConnectHost(connectHost)
+```
+
+"ConnectHost defines the OnePassword Connect Server to connect to"
+
+### fn spec.provider.onepassword.withVaults
+
+```ts
+withVaults(vaults)
+```
+
+"Vaults defines which OnePassword vaults to search in which order"
+
+### fn spec.provider.onepassword.withVaultsMixin
+
+```ts
+withVaultsMixin(vaults)
+```
+
+"Vaults defines which OnePassword vaults to search in which order"
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.provider.onepassword.auth
+
+"Auth defines the information necessary to authenticate against OnePassword Connect Server"
+
+## obj spec.provider.onepassword.auth.secretRef
+
+"OnePasswordAuthSecretRef holds secret references for 1Password credentials."
+
+## obj spec.provider.onepassword.auth.secretRef.connectTokenSecretRef
+
+"The ConnectToken is used for authentication to a 1Password Connect Server."
+
+### fn spec.provider.onepassword.auth.secretRef.connectTokenSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.onepassword.auth.secretRef.connectTokenSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.onepassword.auth.secretRef.connectTokenSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
 ## obj spec.provider.oracle
 
 "Oracle configures this store to sync secrets using Oracle Vault provider"
@@ -1444,6 +1551,74 @@ withName(name)
 "The name of the Secret resource being referred to."
 
 ### fn spec.provider.oracle.auth.secretRef.privatekey.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.senhasegura
+
+"Senhasegura configures this store to sync secrets using senhasegura provider"
+
+### fn spec.provider.senhasegura.withIgnoreSslCertificate
+
+```ts
+withIgnoreSslCertificate(ignoreSslCertificate)
+```
+
+"IgnoreSslCertificate defines if SSL certificate must be ignored"
+
+### fn spec.provider.senhasegura.withModule
+
+```ts
+withModule(module)
+```
+
+"Module defines which senhasegura module should be used to get secrets"
+
+### fn spec.provider.senhasegura.withUrl
+
+```ts
+withUrl(url)
+```
+
+"URL of senhasegura"
+
+## obj spec.provider.senhasegura.auth
+
+"Auth defines parameters to authenticate in senhasegura"
+
+### fn spec.provider.senhasegura.auth.withClientId
+
+```ts
+withClientId(clientId)
+```
+
+
+
+## obj spec.provider.senhasegura.auth.clientSecretSecretRef
+
+"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+
+### fn spec.provider.senhasegura.auth.clientSecretSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.senhasegura.auth.clientSecretSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.senhasegura.auth.clientSecretSecretRef.withNamespace
 
 ```ts
 withNamespace(namespace)
@@ -2062,6 +2237,82 @@ withName(name)
 "The name of the Secret resource being referred to."
 
 ### fn spec.provider.webhook.secrets.secretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.yandexcertificatemanager
+
+"YandexCertificateManager configures this store to sync secrets using Yandex Certificate Manager provider"
+
+### fn spec.provider.yandexcertificatemanager.withApiEndpoint
+
+```ts
+withApiEndpoint(apiEndpoint)
+```
+
+"Yandex.Cloud API endpoint (e.g. 'api.cloud.yandex.net:443')"
+
+## obj spec.provider.yandexcertificatemanager.auth
+
+"Auth defines the information necessary to authenticate against Yandex Certificate Manager"
+
+## obj spec.provider.yandexcertificatemanager.auth.authorizedKeySecretRef
+
+"The authorized key used for authentication"
+
+### fn spec.provider.yandexcertificatemanager.auth.authorizedKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.yandexcertificatemanager.auth.authorizedKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.yandexcertificatemanager.auth.authorizedKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.yandexcertificatemanager.caProvider
+
+"The provider for the CA bundle to use to validate Yandex.Cloud server certificate."
+
+## obj spec.provider.yandexcertificatemanager.caProvider.certSecretRef
+
+"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+
+### fn spec.provider.yandexcertificatemanager.caProvider.certSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.yandexcertificatemanager.caProvider.certSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.yandexcertificatemanager.caProvider.certSecretRef.withNamespace
 
 ```ts
 withNamespace(namespace)

@@ -260,7 +260,7 @@
         '#withProjectID':: d.fn(help='"ProjectID project where secret is located"', args=[d.arg(name='projectID', type=d.T.string)]),
         withProjectID(projectID): { spec+: { provider+: { gcpsm+: { projectID: projectID } } } },
       },
-      '#gitlab':: d.obj(help='"GItlab configures this store to sync secrets using Gitlab Variables provider"'),
+      '#gitlab':: d.obj(help='"Gitlab configures this store to sync secrets using Gitlab Variables provider"'),
       gitlab: {
         '#auth':: d.obj(help='"Auth configures how secret-manager authenticates with a GitLab instance."'),
         auth: {

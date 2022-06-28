@@ -43,12 +43,14 @@ permalink: /0.5/nogroup/v1beta1/clusterExternalSecret/
       * [`obj spec.externalSecretSpec.data.remoteRef`](#obj-specexternalsecretspecdataremoteref)
         * [`fn withConversionStrategy(conversionStrategy)`](#fn-specexternalsecretspecdataremoterefwithconversionstrategy)
         * [`fn withKey(key)`](#fn-specexternalsecretspecdataremoterefwithkey)
+        * [`fn withMetadataPolicy(metadataPolicy)`](#fn-specexternalsecretspecdataremoterefwithmetadatapolicy)
         * [`fn withProperty(property)`](#fn-specexternalsecretspecdataremoterefwithproperty)
         * [`fn withVersion(version)`](#fn-specexternalsecretspecdataremoterefwithversion)
     * [`obj spec.externalSecretSpec.dataFrom`](#obj-specexternalsecretspecdatafrom)
       * [`obj spec.externalSecretSpec.dataFrom.extract`](#obj-specexternalsecretspecdatafromextract)
         * [`fn withConversionStrategy(conversionStrategy)`](#fn-specexternalsecretspecdatafromextractwithconversionstrategy)
         * [`fn withKey(key)`](#fn-specexternalsecretspecdatafromextractwithkey)
+        * [`fn withMetadataPolicy(metadataPolicy)`](#fn-specexternalsecretspecdatafromextractwithmetadatapolicy)
         * [`fn withProperty(property)`](#fn-specexternalsecretspecdatafromextractwithproperty)
         * [`fn withVersion(version)`](#fn-specexternalsecretspecdatafromextractwithversion)
       * [`obj spec.externalSecretSpec.dataFrom.find`](#obj-specexternalsecretspecdatafromfind)
@@ -376,6 +378,14 @@ withKey(key)
 
 "Key is the key used in the Provider, mandatory"
 
+### fn spec.externalSecretSpec.data.remoteRef.withMetadataPolicy
+
+```ts
+withMetadataPolicy(metadataPolicy)
+```
+
+"Policy for fetching tags/labels from provider secrets, possible options are Fetch, None. Defaults to None"
+
 ### fn spec.externalSecretSpec.data.remoteRef.withProperty
 
 ```ts
@@ -415,6 +425,14 @@ withKey(key)
 ```
 
 "Key is the key used in the Provider, mandatory"
+
+### fn spec.externalSecretSpec.dataFrom.extract.withMetadataPolicy
+
+```ts
+withMetadataPolicy(metadataPolicy)
+```
+
+"Policy for fetching tags/labels from provider secrets, possible options are Fetch, None. Defaults to None"
 
 ### fn spec.externalSecretSpec.dataFrom.extract.withProperty
 
