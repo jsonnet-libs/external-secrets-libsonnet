@@ -47,7 +47,7 @@
     apiVersion: 'external-secrets.io/v1beta1',
     kind: 'ClusterExternalSecret',
   } + self.metadata.withName(name=name) + self.metadata.withAnnotations(annotations={
-    'tanka.dev/namespaced': 'true',
+    'tanka.dev/namespaced': 'false',
   }),
   '#spec':: d.obj(help='"ClusterExternalSecretSpec defines the desired state of ClusterExternalSecret."'),
   spec: {
