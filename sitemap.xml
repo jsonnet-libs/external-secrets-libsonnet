@@ -2,257 +2,432 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/v1alpha1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/v1alpha1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/v1alpha1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.4/nogroup/v1alpha1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1alpha1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1alpha1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1alpha1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1alpha1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1beta1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.5/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1alpha1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1alpha1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1alpha1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1alpha1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1beta1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.6/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/generators/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/generators/v1alpha1/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/generators/v1alpha1/acrAccessToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/generators/v1alpha1/ecrAuthorizationToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/generators/v1alpha1/fake/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/generators/v1alpha1/gcrAccessToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/generators/v1alpha1/password/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/generators/v1alpha1/vaultDynamicSecret/</loc>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1alpha1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1alpha1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1alpha1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1alpha1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1beta1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.7/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/generators/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/generators/v1alpha1/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/generators/v1alpha1/acrAccessToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/generators/v1alpha1/ecrAuthorizationToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/generators/v1alpha1/fake/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/generators/v1alpha1/gcrAccessToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/generators/v1alpha1/password/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/generators/v1alpha1/vaultDynamicSecret/</loc>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1alpha1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1alpha1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1alpha1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1alpha1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1beta1/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.8/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2023-06-25</lastmod>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/generators/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/generators/v1alpha1/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/generators/v1alpha1/acrAccessToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/generators/v1alpha1/ecrAuthorizationToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/generators/v1alpha1/fake/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/generators/v1alpha1/gcrAccessToken/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/generators/v1alpha1/password/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/generators/v1alpha1/vaultDynamicSecret/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1alpha1/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1alpha1/clusterSecretStore/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1alpha1/externalSecret/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1alpha1/secretStore/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1beta1/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1beta1/clusterExternalSecret/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1beta1/clusterSecretStore/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1beta1/externalSecret/</loc>
+         <lastmod>2023-07-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.9/nogroup/v1beta1/secretStore/</loc>
+         <lastmod>2023-07-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
