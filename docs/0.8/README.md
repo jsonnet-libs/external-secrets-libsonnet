@@ -10,4 +10,5 @@ local external_secrets = import "github.com/jsonnet-libs/external-secrets-libson
 
 
 
+* [generators](generators/index.md)
 * [nogroup](nogroup/index.md)

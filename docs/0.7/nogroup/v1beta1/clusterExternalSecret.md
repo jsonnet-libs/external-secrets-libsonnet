@@ -97,6 +97,7 @@ permalink: /0.7/nogroup/v1beta1/clusterExternalSecret/
         * [`fn withData(data)`](#fn-specexternalsecretspectargettemplatewithdata)
         * [`fn withDataMixin(data)`](#fn-specexternalsecretspectargettemplatewithdatamixin)
         * [`fn withEngineVersion(engineVersion)`](#fn-specexternalsecretspectargettemplatewithengineversion)
+        * [`fn withMergePolicy(mergePolicy)`](#fn-specexternalsecretspectargettemplatewithmergepolicy)
         * [`fn withTemplateFrom(templateFrom)`](#fn-specexternalsecretspectargettemplatewithtemplatefrom)
         * [`fn withTemplateFromMixin(templateFrom)`](#fn-specexternalsecretspectargettemplatewithtemplatefrommixin)
         * [`fn withType(type)`](#fn-specexternalsecretspectargettemplatewithtype)
@@ -781,6 +782,14 @@ withDataMixin(data)
 
 ```ts
 withEngineVersion(engineVersion)
+```
+
+
+
+### fn spec.externalSecretSpec.target.template.withMergePolicy
+
+```ts
+withMergePolicy(mergePolicy)
 ```
 
 

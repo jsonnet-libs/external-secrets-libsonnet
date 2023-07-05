@@ -59,6 +59,8 @@
         remoteRef: {
           '#withConversionStrategy':: d.fn(help='"Used to define a conversion Strategy"', args=[d.arg(name='conversionStrategy', type=d.T.string)]),
           withConversionStrategy(conversionStrategy): { remoteRef+: { conversionStrategy: conversionStrategy } },
+          '#withDecodingStrategy':: d.fn(help='"Used to define a decoding Strategy"', args=[d.arg(name='decodingStrategy', type=d.T.string)]),
+          withDecodingStrategy(decodingStrategy): { remoteRef+: { decodingStrategy: decodingStrategy } },
           '#withKey':: d.fn(help='"Key is the key used in the Provider, mandatory"', args=[d.arg(name='key', type=d.T.string)]),
           withKey(key): { remoteRef+: { key: key } },
           '#withMetadataPolicy':: d.fn(help='"Policy for fetching tags/labels from provider secrets, possible options are Fetch, None. Defaults to None"', args=[d.arg(name='metadataPolicy', type=d.T.string)]),
@@ -77,6 +79,8 @@
         extract: {
           '#withConversionStrategy':: d.fn(help='"Used to define a conversion Strategy"', args=[d.arg(name='conversionStrategy', type=d.T.string)]),
           withConversionStrategy(conversionStrategy): { extract+: { conversionStrategy: conversionStrategy } },
+          '#withDecodingStrategy':: d.fn(help='"Used to define a decoding Strategy"', args=[d.arg(name='decodingStrategy', type=d.T.string)]),
+          withDecodingStrategy(decodingStrategy): { extract+: { decodingStrategy: decodingStrategy } },
           '#withKey':: d.fn(help='"Key is the key used in the Provider, mandatory"', args=[d.arg(name='key', type=d.T.string)]),
           withKey(key): { extract+: { key: key } },
           '#withMetadataPolicy':: d.fn(help='"Policy for fetching tags/labels from provider secrets, possible options are Fetch, None. Defaults to None"', args=[d.arg(name='metadataPolicy', type=d.T.string)]),
@@ -95,6 +99,8 @@
           },
           '#withConversionStrategy':: d.fn(help='"Used to define a conversion Strategy"', args=[d.arg(name='conversionStrategy', type=d.T.string)]),
           withConversionStrategy(conversionStrategy): { find+: { conversionStrategy: conversionStrategy } },
+          '#withDecodingStrategy':: d.fn(help='"Used to define a decoding Strategy"', args=[d.arg(name='decodingStrategy', type=d.T.string)]),
+          withDecodingStrategy(decodingStrategy): { find+: { decodingStrategy: decodingStrategy } },
           '#withPath':: d.fn(help='"A root path to start the find operations."', args=[d.arg(name='path', type=d.T.string)]),
           withPath(path): { find+: { path: path } },
           '#withTags':: d.fn(help='"Find secrets based on tags."', args=[d.arg(name='tags', type=d.T.object)]),
@@ -102,6 +108,20 @@
           '#withTagsMixin':: d.fn(help='"Find secrets based on tags."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tags', type=d.T.object)]),
           withTagsMixin(tags): { find+: { tags+: tags } },
         },
+        '#rewrite':: d.obj(help='"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"'),
+        rewrite: {
+          '#regexp':: d.obj(help='"Used to rewrite with regular expressions. The resulting key will be the output of a regexp.ReplaceAll operation."'),
+          regexp: {
+            '#withSource':: d.fn(help='"Used to define the regular expression of a re.Compiler."', args=[d.arg(name='source', type=d.T.string)]),
+            withSource(source): { regexp+: { source: source } },
+            '#withTarget':: d.fn(help='"Used to define the target pattern of a ReplaceAll operation."', args=[d.arg(name='target', type=d.T.string)]),
+            withTarget(target): { regexp+: { target: target } },
+          },
+        },
+        '#withRewrite':: d.fn(help='"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"', args=[d.arg(name='rewrite', type=d.T.array)]),
+        withRewrite(rewrite): { rewrite: if std.isArray(v=rewrite) then rewrite else [rewrite] },
+        '#withRewriteMixin':: d.fn(help='"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='rewrite', type=d.T.array)]),
+        withRewriteMixin(rewrite): { rewrite+: if std.isArray(v=rewrite) then rewrite else [rewrite] },
       },
       '#secretStoreRef':: d.obj(help='"SecretStoreRef defines which SecretStore to fetch the ExternalSecret data."'),
       secretStoreRef: {

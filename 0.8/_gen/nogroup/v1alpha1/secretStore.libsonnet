@@ -133,6 +133,17 @@
       alibaba: {
         '#auth':: d.obj(help='"AlibabaAuth contains a secretRef for credentials."'),
         auth: {
+          '#rrsa':: d.obj(help='"Authenticate against Alibaba using RRSA."'),
+          rrsa: {
+            '#withOidcProviderArn':: d.fn(help='', args=[d.arg(name='oidcProviderArn', type=d.T.string)]),
+            withOidcProviderArn(oidcProviderArn): { spec+: { provider+: { alibaba+: { auth+: { rrsa+: { oidcProviderArn: oidcProviderArn } } } } } },
+            '#withOidcTokenFilePath':: d.fn(help='', args=[d.arg(name='oidcTokenFilePath', type=d.T.string)]),
+            withOidcTokenFilePath(oidcTokenFilePath): { spec+: { provider+: { alibaba+: { auth+: { rrsa+: { oidcTokenFilePath: oidcTokenFilePath } } } } } },
+            '#withRoleArn':: d.fn(help='', args=[d.arg(name='roleArn', type=d.T.string)]),
+            withRoleArn(roleArn): { spec+: { provider+: { alibaba+: { auth+: { rrsa+: { roleArn: roleArn } } } } } },
+            '#withSessionName':: d.fn(help='', args=[d.arg(name='sessionName', type=d.T.string)]),
+            withSessionName(sessionName): { spec+: { provider+: { alibaba+: { auth+: { rrsa+: { sessionName: sessionName } } } } } },
+          },
           '#secretRef':: d.obj(help='"AlibabaAuthSecretRef holds secret references for Alibaba credentials."'),
           secretRef: {
             '#accessKeyIDSecretRef':: d.obj(help='"The AccessKeyID is used for authentication"'),
@@ -155,8 +166,6 @@
             },
           },
         },
-        '#withEndpoint':: d.fn(help='', args=[d.arg(name='endpoint', type=d.T.string)]),
-        withEndpoint(endpoint): { spec+: { provider+: { alibaba+: { endpoint: endpoint } } } },
         '#withRegionID':: d.fn(help='"Alibaba Region to be used for the provider"', args=[d.arg(name='regionID', type=d.T.string)]),
         withRegionID(regionID): { spec+: { provider+: { alibaba+: { regionID: regionID } } } },
       },
@@ -310,7 +319,7 @@
         '#withProjectID':: d.fn(help='"ProjectID project where secret is located"', args=[d.arg(name='projectID', type=d.T.string)]),
         withProjectID(projectID): { spec+: { provider+: { gcpsm+: { projectID: projectID } } } },
       },
-      '#gitlab':: d.obj(help='"Gitlab configures this store to sync secrets using Gitlab Variables provider"'),
+      '#gitlab':: d.obj(help='"GitLab configures this store to sync secrets using GitLab Variables provider"'),
       gitlab: {
         '#auth':: d.obj(help='"Auth configures how secret-manager authenticates with a GitLab instance."'),
         auth: {
@@ -704,7 +713,7 @@
       '#withRetryInterval':: d.fn(help='', args=[d.arg(name='retryInterval', type=d.T.string)]),
       withRetryInterval(retryInterval): { spec+: { retrySettings+: { retryInterval: retryInterval } } },
     },
-    '#withController':: d.fn(help='"Used to select the correct KES controller (think: ingress.ingressClassName) The KES controller is instantiated with a specific controller name and filters ES based on this property"', args=[d.arg(name='controller', type=d.T.string)]),
+    '#withController':: d.fn(help='"Used to select the correct ESO controller (think: ingress.ingressClassName) The ESO controller is instantiated with a specific controller name and filters ES based on this property"', args=[d.arg(name='controller', type=d.T.string)]),
     withController(controller): { spec+: { controller: controller } },
   },
   '#mixin': 'ignore',

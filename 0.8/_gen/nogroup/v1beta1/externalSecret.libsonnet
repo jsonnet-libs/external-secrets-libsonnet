@@ -224,6 +224,8 @@
         withDataMixin(data): { spec+: { target+: { template+: { data+: data } } } },
         '#withEngineVersion':: d.fn(help='', args=[d.arg(name='engineVersion', type=d.T.string)]),
         withEngineVersion(engineVersion): { spec+: { target+: { template+: { engineVersion: engineVersion } } } },
+        '#withMergePolicy':: d.fn(help='', args=[d.arg(name='mergePolicy', type=d.T.string)]),
+        withMergePolicy(mergePolicy): { spec+: { target+: { template+: { mergePolicy: mergePolicy } } } },
         '#withTemplateFrom':: d.fn(help='', args=[d.arg(name='templateFrom', type=d.T.array)]),
         withTemplateFrom(templateFrom): { spec+: { target+: { template+: { templateFrom: if std.isArray(v=templateFrom) then templateFrom else [templateFrom] } } } },
         '#withTemplateFromMixin':: d.fn(help='\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='templateFrom', type=d.T.array)]),

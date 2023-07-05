@@ -39,24 +39,33 @@ permalink: /0.5/nogroup/v1beta1/externalSecret/
     * [`fn withSecretKey(secretKey)`](#fn-specdatawithsecretkey)
     * [`obj spec.data.remoteRef`](#obj-specdataremoteref)
       * [`fn withConversionStrategy(conversionStrategy)`](#fn-specdataremoterefwithconversionstrategy)
+      * [`fn withDecodingStrategy(decodingStrategy)`](#fn-specdataremoterefwithdecodingstrategy)
       * [`fn withKey(key)`](#fn-specdataremoterefwithkey)
       * [`fn withMetadataPolicy(metadataPolicy)`](#fn-specdataremoterefwithmetadatapolicy)
       * [`fn withProperty(property)`](#fn-specdataremoterefwithproperty)
       * [`fn withVersion(version)`](#fn-specdataremoterefwithversion)
   * [`obj spec.dataFrom`](#obj-specdatafrom)
+    * [`fn withRewrite(rewrite)`](#fn-specdatafromwithrewrite)
+    * [`fn withRewriteMixin(rewrite)`](#fn-specdatafromwithrewritemixin)
     * [`obj spec.dataFrom.extract`](#obj-specdatafromextract)
       * [`fn withConversionStrategy(conversionStrategy)`](#fn-specdatafromextractwithconversionstrategy)
+      * [`fn withDecodingStrategy(decodingStrategy)`](#fn-specdatafromextractwithdecodingstrategy)
       * [`fn withKey(key)`](#fn-specdatafromextractwithkey)
       * [`fn withMetadataPolicy(metadataPolicy)`](#fn-specdatafromextractwithmetadatapolicy)
       * [`fn withProperty(property)`](#fn-specdatafromextractwithproperty)
       * [`fn withVersion(version)`](#fn-specdatafromextractwithversion)
     * [`obj spec.dataFrom.find`](#obj-specdatafromfind)
       * [`fn withConversionStrategy(conversionStrategy)`](#fn-specdatafromfindwithconversionstrategy)
+      * [`fn withDecodingStrategy(decodingStrategy)`](#fn-specdatafromfindwithdecodingstrategy)
       * [`fn withPath(path)`](#fn-specdatafromfindwithpath)
       * [`fn withTags(tags)`](#fn-specdatafromfindwithtags)
       * [`fn withTagsMixin(tags)`](#fn-specdatafromfindwithtagsmixin)
       * [`obj spec.dataFrom.find.name`](#obj-specdatafromfindname)
         * [`fn withRegexp(regexp)`](#fn-specdatafromfindnamewithregexp)
+    * [`obj spec.dataFrom.rewrite`](#obj-specdatafromrewrite)
+      * [`obj spec.dataFrom.rewrite.regexp`](#obj-specdatafromrewriteregexp)
+        * [`fn withSource(source)`](#fn-specdatafromrewriteregexpwithsource)
+        * [`fn withTarget(target)`](#fn-specdatafromrewriteregexpwithtarget)
   * [`obj spec.secretStoreRef`](#obj-specsecretstoreref)
     * [`fn withKind(kind)`](#fn-specsecretstorerefwithkind)
     * [`fn withName(name)`](#fn-specsecretstorerefwithname)
@@ -337,6 +346,14 @@ withConversionStrategy(conversionStrategy)
 
 "Used to define a conversion Strategy"
 
+### fn spec.data.remoteRef.withDecodingStrategy
+
+```ts
+withDecodingStrategy(decodingStrategy)
+```
+
+"Used to define a decoding Strategy"
+
 ### fn spec.data.remoteRef.withKey
 
 ```ts
@@ -373,6 +390,24 @@ withVersion(version)
 
 "DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
 
+### fn spec.dataFrom.withRewrite
+
+```ts
+withRewrite(rewrite)
+```
+
+"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+
+### fn spec.dataFrom.withRewriteMixin
+
+```ts
+withRewriteMixin(rewrite)
+```
+
+"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.dataFrom.extract
 
 "Used to extract multiple key/value pairs from one secret"
@@ -384,6 +419,14 @@ withConversionStrategy(conversionStrategy)
 ```
 
 "Used to define a conversion Strategy"
+
+### fn spec.dataFrom.extract.withDecodingStrategy
+
+```ts
+withDecodingStrategy(decodingStrategy)
+```
+
+"Used to define a decoding Strategy"
 
 ### fn spec.dataFrom.extract.withKey
 
@@ -429,6 +472,14 @@ withConversionStrategy(conversionStrategy)
 
 "Used to define a conversion Strategy"
 
+### fn spec.dataFrom.find.withDecodingStrategy
+
+```ts
+withDecodingStrategy(decodingStrategy)
+```
+
+"Used to define a decoding Strategy"
+
 ### fn spec.dataFrom.find.withPath
 
 ```ts
@@ -466,6 +517,30 @@ withRegexp(regexp)
 ```
 
 "Finds secrets base"
+
+## obj spec.dataFrom.rewrite
+
+"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+
+## obj spec.dataFrom.rewrite.regexp
+
+"Used to rewrite with regular expressions. The resulting key will be the output of a regexp.ReplaceAll operation."
+
+### fn spec.dataFrom.rewrite.regexp.withSource
+
+```ts
+withSource(source)
+```
+
+"Used to define the regular expression of a re.Compiler."
+
+### fn spec.dataFrom.rewrite.regexp.withTarget
+
+```ts
+withTarget(target)
+```
+
+"Used to define the target pattern of a ReplaceAll operation."
 
 ## obj spec.secretStoreRef
 

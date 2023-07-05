@@ -42,24 +42,33 @@ permalink: /0.5/nogroup/v1beta1/clusterExternalSecret/
       * [`fn withSecretKey(secretKey)`](#fn-specexternalsecretspecdatawithsecretkey)
       * [`obj spec.externalSecretSpec.data.remoteRef`](#obj-specexternalsecretspecdataremoteref)
         * [`fn withConversionStrategy(conversionStrategy)`](#fn-specexternalsecretspecdataremoterefwithconversionstrategy)
+        * [`fn withDecodingStrategy(decodingStrategy)`](#fn-specexternalsecretspecdataremoterefwithdecodingstrategy)
         * [`fn withKey(key)`](#fn-specexternalsecretspecdataremoterefwithkey)
         * [`fn withMetadataPolicy(metadataPolicy)`](#fn-specexternalsecretspecdataremoterefwithmetadatapolicy)
         * [`fn withProperty(property)`](#fn-specexternalsecretspecdataremoterefwithproperty)
         * [`fn withVersion(version)`](#fn-specexternalsecretspecdataremoterefwithversion)
     * [`obj spec.externalSecretSpec.dataFrom`](#obj-specexternalsecretspecdatafrom)
+      * [`fn withRewrite(rewrite)`](#fn-specexternalsecretspecdatafromwithrewrite)
+      * [`fn withRewriteMixin(rewrite)`](#fn-specexternalsecretspecdatafromwithrewritemixin)
       * [`obj spec.externalSecretSpec.dataFrom.extract`](#obj-specexternalsecretspecdatafromextract)
         * [`fn withConversionStrategy(conversionStrategy)`](#fn-specexternalsecretspecdatafromextractwithconversionstrategy)
+        * [`fn withDecodingStrategy(decodingStrategy)`](#fn-specexternalsecretspecdatafromextractwithdecodingstrategy)
         * [`fn withKey(key)`](#fn-specexternalsecretspecdatafromextractwithkey)
         * [`fn withMetadataPolicy(metadataPolicy)`](#fn-specexternalsecretspecdatafromextractwithmetadatapolicy)
         * [`fn withProperty(property)`](#fn-specexternalsecretspecdatafromextractwithproperty)
         * [`fn withVersion(version)`](#fn-specexternalsecretspecdatafromextractwithversion)
       * [`obj spec.externalSecretSpec.dataFrom.find`](#obj-specexternalsecretspecdatafromfind)
         * [`fn withConversionStrategy(conversionStrategy)`](#fn-specexternalsecretspecdatafromfindwithconversionstrategy)
+        * [`fn withDecodingStrategy(decodingStrategy)`](#fn-specexternalsecretspecdatafromfindwithdecodingstrategy)
         * [`fn withPath(path)`](#fn-specexternalsecretspecdatafromfindwithpath)
         * [`fn withTags(tags)`](#fn-specexternalsecretspecdatafromfindwithtags)
         * [`fn withTagsMixin(tags)`](#fn-specexternalsecretspecdatafromfindwithtagsmixin)
         * [`obj spec.externalSecretSpec.dataFrom.find.name`](#obj-specexternalsecretspecdatafromfindname)
           * [`fn withRegexp(regexp)`](#fn-specexternalsecretspecdatafromfindnamewithregexp)
+      * [`obj spec.externalSecretSpec.dataFrom.rewrite`](#obj-specexternalsecretspecdatafromrewrite)
+        * [`obj spec.externalSecretSpec.dataFrom.rewrite.regexp`](#obj-specexternalsecretspecdatafromrewriteregexp)
+          * [`fn withSource(source)`](#fn-specexternalsecretspecdatafromrewriteregexpwithsource)
+          * [`fn withTarget(target)`](#fn-specexternalsecretspecdatafromrewriteregexpwithtarget)
     * [`obj spec.externalSecretSpec.secretStoreRef`](#obj-specexternalsecretspecsecretstoreref)
       * [`fn withKind(kind)`](#fn-specexternalsecretspecsecretstorerefwithkind)
       * [`fn withName(name)`](#fn-specexternalsecretspecsecretstorerefwithname)
@@ -370,6 +379,14 @@ withConversionStrategy(conversionStrategy)
 
 "Used to define a conversion Strategy"
 
+### fn spec.externalSecretSpec.data.remoteRef.withDecodingStrategy
+
+```ts
+withDecodingStrategy(decodingStrategy)
+```
+
+"Used to define a decoding Strategy"
+
 ### fn spec.externalSecretSpec.data.remoteRef.withKey
 
 ```ts
@@ -406,6 +423,24 @@ withVersion(version)
 
 "DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
 
+### fn spec.externalSecretSpec.dataFrom.withRewrite
+
+```ts
+withRewrite(rewrite)
+```
+
+"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+
+### fn spec.externalSecretSpec.dataFrom.withRewriteMixin
+
+```ts
+withRewriteMixin(rewrite)
+```
+
+"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.externalSecretSpec.dataFrom.extract
 
 "Used to extract multiple key/value pairs from one secret"
@@ -417,6 +452,14 @@ withConversionStrategy(conversionStrategy)
 ```
 
 "Used to define a conversion Strategy"
+
+### fn spec.externalSecretSpec.dataFrom.extract.withDecodingStrategy
+
+```ts
+withDecodingStrategy(decodingStrategy)
+```
+
+"Used to define a decoding Strategy"
 
 ### fn spec.externalSecretSpec.dataFrom.extract.withKey
 
@@ -462,6 +505,14 @@ withConversionStrategy(conversionStrategy)
 
 "Used to define a conversion Strategy"
 
+### fn spec.externalSecretSpec.dataFrom.find.withDecodingStrategy
+
+```ts
+withDecodingStrategy(decodingStrategy)
+```
+
+"Used to define a decoding Strategy"
+
 ### fn spec.externalSecretSpec.dataFrom.find.withPath
 
 ```ts
@@ -499,6 +550,30 @@ withRegexp(regexp)
 ```
 
 "Finds secrets base"
+
+## obj spec.externalSecretSpec.dataFrom.rewrite
+
+"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+
+## obj spec.externalSecretSpec.dataFrom.rewrite.regexp
+
+"Used to rewrite with regular expressions. The resulting key will be the output of a regexp.ReplaceAll operation."
+
+### fn spec.externalSecretSpec.dataFrom.rewrite.regexp.withSource
+
+```ts
+withSource(source)
+```
+
+"Used to define the regular expression of a re.Compiler."
+
+### fn spec.externalSecretSpec.dataFrom.rewrite.regexp.withTarget
+
+```ts
+withTarget(target)
+```
+
+"Used to define the target pattern of a ReplaceAll operation."
 
 ## obj spec.externalSecretSpec.secretStoreRef
 

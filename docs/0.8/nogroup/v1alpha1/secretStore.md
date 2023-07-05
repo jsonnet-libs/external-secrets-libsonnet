@@ -67,9 +67,13 @@ permalink: /0.8/nogroup/v1alpha1/secretStore/
         * [`fn withNamespace(namespace)`](#fn-specproviderakeylesscaproviderwithnamespace)
         * [`fn withType(type)`](#fn-specproviderakeylesscaproviderwithtype)
     * [`obj spec.provider.alibaba`](#obj-specprovideralibaba)
-      * [`fn withEndpoint(endpoint)`](#fn-specprovideralibabawithendpoint)
       * [`fn withRegionID(regionID)`](#fn-specprovideralibabawithregionid)
       * [`obj spec.provider.alibaba.auth`](#obj-specprovideralibabaauth)
+        * [`obj spec.provider.alibaba.auth.rrsa`](#obj-specprovideralibabaauthrrsa)
+          * [`fn withOidcProviderArn(oidcProviderArn)`](#fn-specprovideralibabaauthrrsawithoidcproviderarn)
+          * [`fn withOidcTokenFilePath(oidcTokenFilePath)`](#fn-specprovideralibabaauthrrsawithoidctokenfilepath)
+          * [`fn withRoleArn(roleArn)`](#fn-specprovideralibabaauthrrsawithrolearn)
+          * [`fn withSessionName(sessionName)`](#fn-specprovideralibabaauthrrsawithsessionname)
         * [`obj spec.provider.alibaba.auth.secretRef`](#obj-specprovideralibabaauthsecretref)
           * [`obj spec.provider.alibaba.auth.secretRef.accessKeyIDSecretRef`](#obj-specprovideralibabaauthsecretrefaccesskeyidsecretref)
             * [`fn withKey(key)`](#fn-specprovideralibabaauthsecretrefaccesskeyidsecretrefwithkey)
@@ -499,7 +503,7 @@ withUid(uid)
 withController(controller)
 ```
 
-"Used to select the correct KES controller (think: ingress.ingressClassName) The KES controller is instantiated with a specific controller name and filters ES based on this property"
+"Used to select the correct ESO controller (think: ingress.ingressClassName) The ESO controller is instantiated with a specific controller name and filters ES based on this property"
 
 ## obj spec.provider
 
@@ -743,14 +747,6 @@ withType(type)
 
 "Alibaba configures this store to sync secrets using Alibaba Cloud provider"
 
-### fn spec.provider.alibaba.withEndpoint
-
-```ts
-withEndpoint(endpoint)
-```
-
-
-
 ### fn spec.provider.alibaba.withRegionID
 
 ```ts
@@ -762,6 +758,42 @@ withRegionID(regionID)
 ## obj spec.provider.alibaba.auth
 
 "AlibabaAuth contains a secretRef for credentials."
+
+## obj spec.provider.alibaba.auth.rrsa
+
+"Authenticate against Alibaba using RRSA."
+
+### fn spec.provider.alibaba.auth.rrsa.withOidcProviderArn
+
+```ts
+withOidcProviderArn(oidcProviderArn)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withOidcTokenFilePath
+
+```ts
+withOidcTokenFilePath(oidcTokenFilePath)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withRoleArn
+
+```ts
+withRoleArn(roleArn)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withSessionName
+
+```ts
+withSessionName(sessionName)
+```
+
+
 
 ## obj spec.provider.alibaba.auth.secretRef
 
@@ -1275,7 +1307,7 @@ withNamespace(namespace)
 
 ## obj spec.provider.gitlab
 
-"Gitlab configures this store to sync secrets using Gitlab Variables provider"
+"GitLab configures this store to sync secrets using GitLab Variables provider"
 
 ### fn spec.provider.gitlab.withProjectID
 

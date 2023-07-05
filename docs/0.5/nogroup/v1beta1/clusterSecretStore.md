@@ -133,6 +133,10 @@ permalink: /0.5/nogroup/v1beta1/clusterSecretStore/
     * [`obj spec.provider.ibm`](#obj-specprovideribm)
       * [`fn withServiceUrl(serviceUrl)`](#fn-specprovideribmwithserviceurl)
       * [`obj spec.provider.ibm.auth`](#obj-specprovideribmauth)
+        * [`obj spec.provider.ibm.auth.containerAuth`](#obj-specprovideribmauthcontainerauth)
+          * [`fn withIamEndpoint(iamEndpoint)`](#fn-specprovideribmauthcontainerauthwithiamendpoint)
+          * [`fn withProfile(profile)`](#fn-specprovideribmauthcontainerauthwithprofile)
+          * [`fn withTokenLocation(tokenLocation)`](#fn-specprovideribmauthcontainerauthwithtokenlocation)
         * [`obj spec.provider.ibm.auth.secretRef`](#obj-specprovideribmauthsecretref)
           * [`obj spec.provider.ibm.auth.secretRef.secretApiKeySecretRef`](#obj-specprovideribmauthsecretrefsecretapikeysecretref)
             * [`fn withKey(key)`](#fn-specprovideribmauthsecretrefsecretapikeysecretrefwithkey)
@@ -151,9 +155,8 @@ permalink: /0.5/nogroup/v1beta1/clusterSecretStore/
             * [`fn withName(name)`](#fn-specproviderkubernetesauthcertclientkeywithname)
             * [`fn withNamespace(namespace)`](#fn-specproviderkubernetesauthcertclientkeywithnamespace)
         * [`obj spec.provider.kubernetes.auth.serviceAccount`](#obj-specproviderkubernetesauthserviceaccount)
-          * [`obj spec.provider.kubernetes.auth.serviceAccount.serviceAccount`](#obj-specproviderkubernetesauthserviceaccountserviceaccount)
-            * [`fn withName(name)`](#fn-specproviderkubernetesauthserviceaccountserviceaccountwithname)
-            * [`fn withNamespace(namespace)`](#fn-specproviderkubernetesauthserviceaccountserviceaccountwithnamespace)
+          * [`fn withName(name)`](#fn-specproviderkubernetesauthserviceaccountwithname)
+          * [`fn withNamespace(namespace)`](#fn-specproviderkubernetesauthserviceaccountwithnamespace)
         * [`obj spec.provider.kubernetes.auth.token`](#obj-specproviderkubernetesauthtoken)
           * [`obj spec.provider.kubernetes.auth.token.bearerToken`](#obj-specproviderkubernetesauthtokenbearertoken)
             * [`fn withKey(key)`](#fn-specproviderkubernetesauthtokenbearertokenwithkey)
@@ -1172,6 +1175,34 @@ withServiceUrl(serviceUrl)
 
 "Auth configures how secret-manager authenticates with the IBM secrets manager."
 
+## obj spec.provider.ibm.auth.containerAuth
+
+"IBM Container-based auth with IAM Trusted Profile."
+
+### fn spec.provider.ibm.auth.containerAuth.withIamEndpoint
+
+```ts
+withIamEndpoint(iamEndpoint)
+```
+
+
+
+### fn spec.provider.ibm.auth.containerAuth.withProfile
+
+```ts
+withProfile(profile)
+```
+
+"the IBM Trusted Profile"
+
+### fn spec.provider.ibm.auth.containerAuth.withTokenLocation
+
+```ts
+withTokenLocation(tokenLocation)
+```
+
+"Location the token is mounted on the pod"
+
 ## obj spec.provider.ibm.auth.secretRef
 
 
@@ -1284,11 +1315,7 @@ withNamespace(namespace)
 
 "points to a service account that should be used for authentication"
 
-## obj spec.provider.kubernetes.auth.serviceAccount.serviceAccount
-
-"A reference to a ServiceAccount resource."
-
-### fn spec.provider.kubernetes.auth.serviceAccount.serviceAccount.withName
+### fn spec.provider.kubernetes.auth.serviceAccount.withName
 
 ```ts
 withName(name)
@@ -1296,7 +1323,7 @@ withName(name)
 
 "The name of the ServiceAccount resource being referred to."
 
-### fn spec.provider.kubernetes.auth.serviceAccount.serviceAccount.withNamespace
+### fn spec.provider.kubernetes.auth.serviceAccount.withNamespace
 
 ```ts
 withNamespace(namespace)
@@ -1366,7 +1393,7 @@ withUrl(url)
 withKey(key)
 ```
 
-"The key the value inside of the provider type to use, only used with \"Secret\" type"
+"The key where the CA certificate can be found in the Secret or ConfigMap."
 
 ### fn spec.provider.kubernetes.server.caProvider.withName
 
@@ -1382,7 +1409,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"The namespace the Provider type is in."
+"The namespace the Provider type is in. Can only be defined when used in a ClusterSecretStore."
 
 ### fn spec.provider.kubernetes.server.caProvider.withType
 
@@ -2050,7 +2077,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key the value inside of the provider type to use, only used with \"Secret\" type"
+"The key where the CA certificate can be found in the Secret or ConfigMap."
 
 ### fn spec.provider.vault.caProvider.withName
 
@@ -2066,7 +2093,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"The namespace the Provider type is in."
+"The namespace the Provider type is in. Can only be defined when used in a ClusterSecretStore."
 
 ### fn spec.provider.vault.caProvider.withType
 

@@ -286,6 +286,15 @@
       ibm: {
         '#auth':: d.obj(help='"Auth configures how secret-manager authenticates with the IBM secrets manager."'),
         auth: {
+          '#containerAuth':: d.obj(help='"IBM Container-based auth with IAM Trusted Profile."'),
+          containerAuth: {
+            '#withIamEndpoint':: d.fn(help='', args=[d.arg(name='iamEndpoint', type=d.T.string)]),
+            withIamEndpoint(iamEndpoint): { spec+: { provider+: { ibm+: { auth+: { containerAuth+: { iamEndpoint: iamEndpoint } } } } } },
+            '#withProfile':: d.fn(help='"the IBM Trusted Profile"', args=[d.arg(name='profile', type=d.T.string)]),
+            withProfile(profile): { spec+: { provider+: { ibm+: { auth+: { containerAuth+: { profile: profile } } } } } },
+            '#withTokenLocation':: d.fn(help='"Location the token is mounted on the pod"', args=[d.arg(name='tokenLocation', type=d.T.string)]),
+            withTokenLocation(tokenLocation): { spec+: { provider+: { ibm+: { auth+: { containerAuth+: { tokenLocation: tokenLocation } } } } } },
+          },
           '#secretRef':: d.obj(help=''),
           secretRef: {
             '#secretApiKeySecretRef':: d.obj(help='"The SecretAccessKey is used for authentication"'),
@@ -329,13 +338,10 @@
           },
           '#serviceAccount':: d.obj(help='"points to a service account that should be used for authentication"'),
           serviceAccount: {
-            '#serviceAccount':: d.obj(help='"A reference to a ServiceAccount resource."'),
-            serviceAccount: {
-              '#withName':: d.fn(help='"The name of the ServiceAccount resource being referred to."', args=[d.arg(name='name', type=d.T.string)]),
-              withName(name): { spec+: { provider+: { kubernetes+: { auth+: { serviceAccount+: { serviceAccount+: { name: name } } } } } } },
-              '#withNamespace':: d.fn(help='"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."', args=[d.arg(name='namespace', type=d.T.string)]),
-              withNamespace(namespace): { spec+: { provider+: { kubernetes+: { auth+: { serviceAccount+: { serviceAccount+: { namespace: namespace } } } } } } },
-            },
+            '#withName':: d.fn(help='"The name of the ServiceAccount resource being referred to."', args=[d.arg(name='name', type=d.T.string)]),
+            withName(name): { spec+: { provider+: { kubernetes+: { auth+: { serviceAccount+: { name: name } } } } } },
+            '#withNamespace':: d.fn(help='"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."', args=[d.arg(name='namespace', type=d.T.string)]),
+            withNamespace(namespace): { spec+: { provider+: { kubernetes+: { auth+: { serviceAccount+: { namespace: namespace } } } } } },
           },
           '#token':: d.obj(help='"use static token to authenticate with"'),
           token: {
@@ -354,11 +360,11 @@
         server: {
           '#caProvider':: d.obj(help='"see: https://external-secrets.io/v0.4.1/spec/#external-secrets.io/v1alpha1.CAProvider"'),
           caProvider: {
-            '#withKey':: d.fn(help='"The key the value inside of the provider type to use, only used with \\"Secret\\" type"', args=[d.arg(name='key', type=d.T.string)]),
+            '#withKey':: d.fn(help='"The key where the CA certificate can be found in the Secret or ConfigMap."', args=[d.arg(name='key', type=d.T.string)]),
             withKey(key): { spec+: { provider+: { kubernetes+: { server+: { caProvider+: { key: key } } } } } },
             '#withName':: d.fn(help='"The name of the object located at the provider type."', args=[d.arg(name='name', type=d.T.string)]),
             withName(name): { spec+: { provider+: { kubernetes+: { server+: { caProvider+: { name: name } } } } } },
-            '#withNamespace':: d.fn(help='"The namespace the Provider type is in."', args=[d.arg(name='namespace', type=d.T.string)]),
+            '#withNamespace':: d.fn(help='"The namespace the Provider type is in. Can only be defined when used in a ClusterSecretStore."', args=[d.arg(name='namespace', type=d.T.string)]),
             withNamespace(namespace): { spec+: { provider+: { kubernetes+: { server+: { caProvider+: { namespace: namespace } } } } } },
             '#withType':: d.fn(help='"The type of provider to use such as \\"Secret\\", or \\"ConfigMap\\"."', args=[d.arg(name='type', type=d.T.string)]),
             withType(type): { spec+: { provider+: { kubernetes+: { server+: { caProvider+: { type: type } } } } } },
@@ -577,11 +583,11 @@
         },
         '#caProvider':: d.obj(help='"The provider for the CA bundle to use to validate Vault server certificate."'),
         caProvider: {
-          '#withKey':: d.fn(help='"The key the value inside of the provider type to use, only used with \\"Secret\\" type"', args=[d.arg(name='key', type=d.T.string)]),
+          '#withKey':: d.fn(help='"The key where the CA certificate can be found in the Secret or ConfigMap."', args=[d.arg(name='key', type=d.T.string)]),
           withKey(key): { spec+: { provider+: { vault+: { caProvider+: { key: key } } } } },
           '#withName':: d.fn(help='"The name of the object located at the provider type."', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { spec+: { provider+: { vault+: { caProvider+: { name: name } } } } },
-          '#withNamespace':: d.fn(help='"The namespace the Provider type is in."', args=[d.arg(name='namespace', type=d.T.string)]),
+          '#withNamespace':: d.fn(help='"The namespace the Provider type is in. Can only be defined when used in a ClusterSecretStore."', args=[d.arg(name='namespace', type=d.T.string)]),
           withNamespace(namespace): { spec+: { provider+: { vault+: { caProvider+: { namespace: namespace } } } } },
           '#withType':: d.fn(help='"The type of provider to use such as \\"Secret\\", or \\"ConfigMap\\"."', args=[d.arg(name='type', type=d.T.string)]),
           withType(type): { spec+: { provider+: { vault+: { caProvider+: { type: type } } } } },

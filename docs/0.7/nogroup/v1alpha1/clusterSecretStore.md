@@ -34,6 +34,7 @@ permalink: /0.7/nogroup/v1alpha1/clusterSecretStore/
   * [`obj spec.provider`](#obj-specprovider)
     * [`obj spec.provider.akeyless`](#obj-specproviderakeyless)
       * [`fn withAkeylessGWApiURL(akeylessGWApiURL)`](#fn-specproviderakeylesswithakeylessgwapiurl)
+      * [`fn withCaBundle(caBundle)`](#fn-specproviderakeylesswithcabundle)
       * [`obj spec.provider.akeyless.authSecretRef`](#obj-specproviderakeylessauthsecretref)
         * [`obj spec.provider.akeyless.authSecretRef.kubernetesAuth`](#obj-specproviderakeylessauthsecretrefkubernetesauth)
           * [`fn withAccessID(accessID)`](#fn-specproviderakeylessauthsecretrefkubernetesauthwithaccessid)
@@ -60,10 +61,19 @@ permalink: /0.7/nogroup/v1alpha1/clusterSecretStore/
             * [`fn withKey(key)`](#fn-specproviderakeylessauthsecretrefsecretrefaccesstypeparamwithkey)
             * [`fn withName(name)`](#fn-specproviderakeylessauthsecretrefsecretrefaccesstypeparamwithname)
             * [`fn withNamespace(namespace)`](#fn-specproviderakeylessauthsecretrefsecretrefaccesstypeparamwithnamespace)
+      * [`obj spec.provider.akeyless.caProvider`](#obj-specproviderakeylesscaprovider)
+        * [`fn withKey(key)`](#fn-specproviderakeylesscaproviderwithkey)
+        * [`fn withName(name)`](#fn-specproviderakeylesscaproviderwithname)
+        * [`fn withNamespace(namespace)`](#fn-specproviderakeylesscaproviderwithnamespace)
+        * [`fn withType(type)`](#fn-specproviderakeylesscaproviderwithtype)
     * [`obj spec.provider.alibaba`](#obj-specprovideralibaba)
-      * [`fn withEndpoint(endpoint)`](#fn-specprovideralibabawithendpoint)
       * [`fn withRegionID(regionID)`](#fn-specprovideralibabawithregionid)
       * [`obj spec.provider.alibaba.auth`](#obj-specprovideralibabaauth)
+        * [`obj spec.provider.alibaba.auth.rrsa`](#obj-specprovideralibabaauthrrsa)
+          * [`fn withOidcProviderArn(oidcProviderArn)`](#fn-specprovideralibabaauthrrsawithoidcproviderarn)
+          * [`fn withOidcTokenFilePath(oidcTokenFilePath)`](#fn-specprovideralibabaauthrrsawithoidctokenfilepath)
+          * [`fn withRoleArn(roleArn)`](#fn-specprovideralibabaauthrrsawithrolearn)
+          * [`fn withSessionName(sessionName)`](#fn-specprovideralibabaauthrrsawithsessionname)
         * [`obj spec.provider.alibaba.auth.secretRef`](#obj-specprovideralibabaauthsecretref)
           * [`obj spec.provider.alibaba.auth.secretRef.accessKeyIDSecretRef`](#obj-specprovideralibabaauthsecretrefaccesskeyidsecretref)
             * [`fn withKey(key)`](#fn-specprovideralibabaauthsecretrefaccesskeyidsecretrefwithkey)
@@ -493,7 +503,7 @@ withUid(uid)
 withController(controller)
 ```
 
-"Used to select the correct KES controller (think: ingress.ingressClassName) The KES controller is instantiated with a specific controller name and filters ES based on this property"
+"Used to select the correct ESO controller (think: ingress.ingressClassName) The ESO controller is instantiated with a specific controller name and filters ES based on this property"
 
 ## obj spec.provider
 
@@ -510,6 +520,14 @@ withAkeylessGWApiURL(akeylessGWApiURL)
 ```
 
 "Akeyless GW API Url from which the secrets to be fetched from."
+
+### fn spec.provider.akeyless.withCaBundle
+
+```ts
+withCaBundle(caBundle)
+```
+
+"PEM/base64 encoded CA bundle used to validate Akeyless Gateway certificate. Only used if the AkeylessGWApiURL URL is using HTTPS protocol. If not set the system root certificates are used to validate the TLS connection."
 
 ## obj spec.provider.akeyless.authSecretRef
 
@@ -689,17 +707,45 @@ withNamespace(namespace)
 
 "Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
 
+## obj spec.provider.akeyless.caProvider
+
+"The provider for the CA bundle to use to validate Akeyless Gateway certificate."
+
+### fn spec.provider.akeyless.caProvider.withKey
+
+```ts
+withKey(key)
+```
+
+"The key the value inside of the provider type to use, only used with \"Secret\" type"
+
+### fn spec.provider.akeyless.caProvider.withName
+
+```ts
+withName(name)
+```
+
+"The name of the object located at the provider type."
+
+### fn spec.provider.akeyless.caProvider.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"The namespace the Provider type is in."
+
+### fn spec.provider.akeyless.caProvider.withType
+
+```ts
+withType(type)
+```
+
+"The type of provider to use such as \"Secret\", or \"ConfigMap\"."
+
 ## obj spec.provider.alibaba
 
 "Alibaba configures this store to sync secrets using Alibaba Cloud provider"
-
-### fn spec.provider.alibaba.withEndpoint
-
-```ts
-withEndpoint(endpoint)
-```
-
-
 
 ### fn spec.provider.alibaba.withRegionID
 
@@ -712,6 +758,42 @@ withRegionID(regionID)
 ## obj spec.provider.alibaba.auth
 
 "AlibabaAuth contains a secretRef for credentials."
+
+## obj spec.provider.alibaba.auth.rrsa
+
+"Authenticate against Alibaba using RRSA."
+
+### fn spec.provider.alibaba.auth.rrsa.withOidcProviderArn
+
+```ts
+withOidcProviderArn(oidcProviderArn)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withOidcTokenFilePath
+
+```ts
+withOidcTokenFilePath(oidcTokenFilePath)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withRoleArn
+
+```ts
+withRoleArn(roleArn)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withSessionName
+
+```ts
+withSessionName(sessionName)
+```
+
+
 
 ## obj spec.provider.alibaba.auth.secretRef
 
@@ -1225,7 +1307,7 @@ withNamespace(namespace)
 
 ## obj spec.provider.gitlab
 
-"Gitlab configures this store to sync secrets using Gitlab Variables provider"
+"GitLab configures this store to sync secrets using GitLab Variables provider"
 
 ### fn spec.provider.gitlab.withProjectID
 

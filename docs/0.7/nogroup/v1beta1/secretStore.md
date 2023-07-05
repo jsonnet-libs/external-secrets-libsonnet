@@ -50,6 +50,7 @@ permalink: /0.7/nogroup/v1beta1/secretStore/
   * [`obj spec.provider`](#obj-specprovider)
     * [`obj spec.provider.akeyless`](#obj-specproviderakeyless)
       * [`fn withAkeylessGWApiURL(akeylessGWApiURL)`](#fn-specproviderakeylesswithakeylessgwapiurl)
+      * [`fn withCaBundle(caBundle)`](#fn-specproviderakeylesswithcabundle)
       * [`obj spec.provider.akeyless.authSecretRef`](#obj-specproviderakeylessauthsecretref)
         * [`obj spec.provider.akeyless.authSecretRef.kubernetesAuth`](#obj-specproviderakeylessauthsecretrefkubernetesauth)
           * [`fn withAccessID(accessID)`](#fn-specproviderakeylessauthsecretrefkubernetesauthwithaccessid)
@@ -76,10 +77,19 @@ permalink: /0.7/nogroup/v1beta1/secretStore/
             * [`fn withKey(key)`](#fn-specproviderakeylessauthsecretrefsecretrefaccesstypeparamwithkey)
             * [`fn withName(name)`](#fn-specproviderakeylessauthsecretrefsecretrefaccesstypeparamwithname)
             * [`fn withNamespace(namespace)`](#fn-specproviderakeylessauthsecretrefsecretrefaccesstypeparamwithnamespace)
+      * [`obj spec.provider.akeyless.caProvider`](#obj-specproviderakeylesscaprovider)
+        * [`fn withKey(key)`](#fn-specproviderakeylesscaproviderwithkey)
+        * [`fn withName(name)`](#fn-specproviderakeylesscaproviderwithname)
+        * [`fn withNamespace(namespace)`](#fn-specproviderakeylesscaproviderwithnamespace)
+        * [`fn withType(type)`](#fn-specproviderakeylesscaproviderwithtype)
     * [`obj spec.provider.alibaba`](#obj-specprovideralibaba)
-      * [`fn withEndpoint(endpoint)`](#fn-specprovideralibabawithendpoint)
       * [`fn withRegionID(regionID)`](#fn-specprovideralibabawithregionid)
       * [`obj spec.provider.alibaba.auth`](#obj-specprovideralibabaauth)
+        * [`obj spec.provider.alibaba.auth.rrsa`](#obj-specprovideralibabaauthrrsa)
+          * [`fn withOidcProviderArn(oidcProviderArn)`](#fn-specprovideralibabaauthrrsawithoidcproviderarn)
+          * [`fn withOidcTokenFilePath(oidcTokenFilePath)`](#fn-specprovideralibabaauthrrsawithoidctokenfilepath)
+          * [`fn withRoleArn(roleArn)`](#fn-specprovideralibabaauthrrsawithrolearn)
+          * [`fn withSessionName(sessionName)`](#fn-specprovideralibabaauthrrsawithsessionname)
         * [`obj spec.provider.alibaba.auth.secretRef`](#obj-specprovideralibabaauthsecretref)
           * [`obj spec.provider.alibaba.auth.secretRef.accessKeyIDSecretRef`](#obj-specprovideralibabaauthsecretrefaccesskeyidsecretref)
             * [`fn withKey(key)`](#fn-specprovideralibabaauthsecretrefaccesskeyidsecretrefwithkey)
@@ -92,6 +102,7 @@ permalink: /0.7/nogroup/v1beta1/secretStore/
     * [`obj spec.provider.aws`](#obj-specprovideraws)
       * [`fn withAdditionalRoles(additionalRoles)`](#fn-specproviderawswithadditionalroles)
       * [`fn withAdditionalRolesMixin(additionalRoles)`](#fn-specproviderawswithadditionalrolesmixin)
+      * [`fn withExternalID(externalID)`](#fn-specproviderawswithexternalid)
       * [`fn withRegion(region)`](#fn-specproviderawswithregion)
       * [`fn withRole(role)`](#fn-specproviderawswithrole)
       * [`fn withService(service)`](#fn-specproviderawswithservice)
@@ -197,6 +208,12 @@ permalink: /0.7/nogroup/v1beta1/secretStore/
             * [`fn withKey(key)`](#fn-specprovideribmauthsecretrefsecretapikeysecretrefwithkey)
             * [`fn withName(name)`](#fn-specprovideribmauthsecretrefsecretapikeysecretrefwithname)
             * [`fn withNamespace(namespace)`](#fn-specprovideribmauthsecretrefsecretapikeysecretrefwithnamespace)
+    * [`obj spec.provider.keepersecurity`](#obj-specproviderkeepersecurity)
+      * [`fn withFolderID(folderID)`](#fn-specproviderkeepersecuritywithfolderid)
+      * [`obj spec.provider.keepersecurity.authRef`](#obj-specproviderkeepersecurityauthref)
+        * [`fn withKey(key)`](#fn-specproviderkeepersecurityauthrefwithkey)
+        * [`fn withName(name)`](#fn-specproviderkeepersecurityauthrefwithname)
+        * [`fn withNamespace(namespace)`](#fn-specproviderkeepersecurityauthrefwithnamespace)
     * [`obj spec.provider.kubernetes`](#obj-specproviderkubernetes)
       * [`fn withRemoteNamespace(remoteNamespace)`](#fn-specproviderkuberneteswithremotenamespace)
       * [`obj spec.provider.kubernetes.auth`](#obj-specproviderkubernetesauth)
@@ -252,6 +269,22 @@ permalink: /0.7/nogroup/v1beta1/secretStore/
             * [`fn withKey(key)`](#fn-specprovideroracleauthsecretrefprivatekeywithkey)
             * [`fn withName(name)`](#fn-specprovideroracleauthsecretrefprivatekeywithname)
             * [`fn withNamespace(namespace)`](#fn-specprovideroracleauthsecretrefprivatekeywithnamespace)
+    * [`obj spec.provider.scaleway`](#obj-specproviderscaleway)
+      * [`fn withApiUrl(apiUrl)`](#fn-specproviderscalewaywithapiurl)
+      * [`fn withProjectId(projectId)`](#fn-specproviderscalewaywithprojectid)
+      * [`fn withRegion(region)`](#fn-specproviderscalewaywithregion)
+      * [`obj spec.provider.scaleway.accessKey`](#obj-specproviderscalewayaccesskey)
+        * [`fn withValue(value)`](#fn-specproviderscalewayaccesskeywithvalue)
+        * [`obj spec.provider.scaleway.accessKey.secretRef`](#obj-specproviderscalewayaccesskeysecretref)
+          * [`fn withKey(key)`](#fn-specproviderscalewayaccesskeysecretrefwithkey)
+          * [`fn withName(name)`](#fn-specproviderscalewayaccesskeysecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specproviderscalewayaccesskeysecretrefwithnamespace)
+      * [`obj spec.provider.scaleway.secretKey`](#obj-specproviderscalewaysecretkey)
+        * [`fn withValue(value)`](#fn-specproviderscalewaysecretkeywithvalue)
+        * [`obj spec.provider.scaleway.secretKey.secretRef`](#obj-specproviderscalewaysecretkeysecretref)
+          * [`fn withKey(key)`](#fn-specproviderscalewaysecretkeysecretrefwithkey)
+          * [`fn withName(name)`](#fn-specproviderscalewaysecretkeysecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specproviderscalewaysecretkeysecretrefwithnamespace)
     * [`obj spec.provider.senhasegura`](#obj-specprovidersenhasegura)
       * [`fn withIgnoreSslCertificate(ignoreSslCertificate)`](#fn-specprovidersenhasegurawithignoresslcertificate)
       * [`fn withModule(module)`](#fn-specprovidersenhasegurawithmodule)
@@ -274,6 +307,10 @@ permalink: /0.7/nogroup/v1beta1/secretStore/
         * [`obj spec.provider.vault.auth.appRole`](#obj-specprovidervaultauthapprole)
           * [`fn withPath(path)`](#fn-specprovidervaultauthapprolewithpath)
           * [`fn withRoleId(roleId)`](#fn-specprovidervaultauthapprolewithroleid)
+          * [`obj spec.provider.vault.auth.appRole.roleRef`](#obj-specprovidervaultauthapproleroleref)
+            * [`fn withKey(key)`](#fn-specprovidervaultauthapprolerolerefwithkey)
+            * [`fn withName(name)`](#fn-specprovidervaultauthapprolerolerefwithname)
+            * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthapprolerolerefwithnamespace)
           * [`obj spec.provider.vault.auth.appRole.secretRef`](#obj-specprovidervaultauthapprolesecretref)
             * [`fn withKey(key)`](#fn-specprovidervaultauthapprolesecretrefwithkey)
             * [`fn withName(name)`](#fn-specprovidervaultauthapprolesecretrefwithname)
@@ -287,6 +324,32 @@ permalink: /0.7/nogroup/v1beta1/secretStore/
             * [`fn withKey(key)`](#fn-specprovidervaultauthcertsecretrefwithkey)
             * [`fn withName(name)`](#fn-specprovidervaultauthcertsecretrefwithname)
             * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthcertsecretrefwithnamespace)
+        * [`obj spec.provider.vault.auth.iam`](#obj-specprovidervaultauthiam)
+          * [`fn withExternalID(externalID)`](#fn-specprovidervaultauthiamwithexternalid)
+          * [`fn withPath(path)`](#fn-specprovidervaultauthiamwithpath)
+          * [`fn withRegion(region)`](#fn-specprovidervaultauthiamwithregion)
+          * [`fn withRole(role)`](#fn-specprovidervaultauthiamwithrole)
+          * [`fn withVaultAwsIamServerID(vaultAwsIamServerID)`](#fn-specprovidervaultauthiamwithvaultawsiamserverid)
+          * [`fn withVaultRole(vaultRole)`](#fn-specprovidervaultauthiamwithvaultrole)
+          * [`obj spec.provider.vault.auth.iam.jwt`](#obj-specprovidervaultauthiamjwt)
+            * [`obj spec.provider.vault.auth.iam.jwt.serviceAccountRef`](#obj-specprovidervaultauthiamjwtserviceaccountref)
+              * [`fn withAudiences(audiences)`](#fn-specprovidervaultauthiamjwtserviceaccountrefwithaudiences)
+              * [`fn withAudiencesMixin(audiences)`](#fn-specprovidervaultauthiamjwtserviceaccountrefwithaudiencesmixin)
+              * [`fn withName(name)`](#fn-specprovidervaultauthiamjwtserviceaccountrefwithname)
+              * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthiamjwtserviceaccountrefwithnamespace)
+          * [`obj spec.provider.vault.auth.iam.secretRef`](#obj-specprovidervaultauthiamsecretref)
+            * [`obj spec.provider.vault.auth.iam.secretRef.accessKeyIDSecretRef`](#obj-specprovidervaultauthiamsecretrefaccesskeyidsecretref)
+              * [`fn withKey(key)`](#fn-specprovidervaultauthiamsecretrefaccesskeyidsecretrefwithkey)
+              * [`fn withName(name)`](#fn-specprovidervaultauthiamsecretrefaccesskeyidsecretrefwithname)
+              * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthiamsecretrefaccesskeyidsecretrefwithnamespace)
+            * [`obj spec.provider.vault.auth.iam.secretRef.secretAccessKeySecretRef`](#obj-specprovidervaultauthiamsecretrefsecretaccesskeysecretref)
+              * [`fn withKey(key)`](#fn-specprovidervaultauthiamsecretrefsecretaccesskeysecretrefwithkey)
+              * [`fn withName(name)`](#fn-specprovidervaultauthiamsecretrefsecretaccesskeysecretrefwithname)
+              * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthiamsecretrefsecretaccesskeysecretrefwithnamespace)
+            * [`obj spec.provider.vault.auth.iam.secretRef.sessionTokenSecretRef`](#obj-specprovidervaultauthiamsecretrefsessiontokensecretref)
+              * [`fn withKey(key)`](#fn-specprovidervaultauthiamsecretrefsessiontokensecretrefwithkey)
+              * [`fn withName(name)`](#fn-specprovidervaultauthiamsecretrefsessiontokensecretrefwithname)
+              * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthiamsecretrefsessiontokensecretrefwithnamespace)
         * [`obj spec.provider.vault.auth.jwt`](#obj-specprovidervaultauthjwt)
           * [`fn withPath(path)`](#fn-specprovidervaultauthjwtwithpath)
           * [`fn withRole(role)`](#fn-specprovidervaultauthjwtwithrole)
@@ -584,7 +647,7 @@ withConditionsMixin(conditions)
 withController(controller)
 ```
 
-"Used to select the correct KES controller (think: ingress.ingressClassName) The KES controller is instantiated with a specific controller name and filters ES based on this property"
+"Used to select the correct ESO controller (think: ingress.ingressClassName) The ESO controller is instantiated with a specific controller name and filters ES based on this property"
 
 ### fn spec.withRefreshInterval
 
@@ -709,6 +772,14 @@ withAkeylessGWApiURL(akeylessGWApiURL)
 ```
 
 "Akeyless GW API Url from which the secrets to be fetched from."
+
+### fn spec.provider.akeyless.withCaBundle
+
+```ts
+withCaBundle(caBundle)
+```
+
+"PEM/base64 encoded CA bundle used to validate Akeyless Gateway certificate. Only used if the AkeylessGWApiURL URL is using HTTPS protocol. If not set the system root certificates are used to validate the TLS connection."
 
 ## obj spec.provider.akeyless.authSecretRef
 
@@ -888,17 +959,45 @@ withNamespace(namespace)
 
 "Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
 
+## obj spec.provider.akeyless.caProvider
+
+"The provider for the CA bundle to use to validate Akeyless Gateway certificate."
+
+### fn spec.provider.akeyless.caProvider.withKey
+
+```ts
+withKey(key)
+```
+
+"The key where the CA certificate can be found in the Secret or ConfigMap."
+
+### fn spec.provider.akeyless.caProvider.withName
+
+```ts
+withName(name)
+```
+
+"The name of the object located at the provider type."
+
+### fn spec.provider.akeyless.caProvider.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"The namespace the Provider type is in. Can only be defined when used in a ClusterSecretStore."
+
+### fn spec.provider.akeyless.caProvider.withType
+
+```ts
+withType(type)
+```
+
+"The type of provider to use such as \"Secret\", or \"ConfigMap\"."
+
 ## obj spec.provider.alibaba
 
 "Alibaba configures this store to sync secrets using Alibaba Cloud provider"
-
-### fn spec.provider.alibaba.withEndpoint
-
-```ts
-withEndpoint(endpoint)
-```
-
-
 
 ### fn spec.provider.alibaba.withRegionID
 
@@ -911,6 +1010,42 @@ withRegionID(regionID)
 ## obj spec.provider.alibaba.auth
 
 "AlibabaAuth contains a secretRef for credentials."
+
+## obj spec.provider.alibaba.auth.rrsa
+
+"Authenticate against Alibaba using RRSA."
+
+### fn spec.provider.alibaba.auth.rrsa.withOidcProviderArn
+
+```ts
+withOidcProviderArn(oidcProviderArn)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withOidcTokenFilePath
+
+```ts
+withOidcTokenFilePath(oidcTokenFilePath)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withRoleArn
+
+```ts
+withRoleArn(roleArn)
+```
+
+
+
+### fn spec.provider.alibaba.auth.rrsa.withSessionName
+
+```ts
+withSessionName(sessionName)
+```
+
+
 
 ## obj spec.provider.alibaba.auth.secretRef
 
@@ -993,6 +1128,14 @@ withAdditionalRolesMixin(additionalRoles)
 "AdditionalRoles is a chained list of Role ARNs which the SecretManager provider will sequentially assume before assuming Role"
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.provider.aws.withExternalID
+
+```ts
+withExternalID(externalID)
+```
+
+"AWS External ID set on assumed IAM roles"
 
 ### fn spec.provider.aws.withRegion
 
@@ -1550,7 +1693,7 @@ withNamespace(namespace)
 
 ## obj spec.provider.gitlab
 
-"Gitlab configures this store to sync secrets using Gitlab Variables provider"
+"GitLab configures this store to sync secrets using GitLab Variables provider"
 
 ### fn spec.provider.gitlab.withEnvironment
 
@@ -1707,6 +1850,46 @@ withName(name)
 "The name of the Secret resource being referred to."
 
 ### fn spec.provider.ibm.auth.secretRef.secretApiKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.keepersecurity
+
+"KeeperSecurity configures this store to sync secrets using the KeeperSecurity provider"
+
+### fn spec.provider.keepersecurity.withFolderID
+
+```ts
+withFolderID(folderID)
+```
+
+
+
+## obj spec.provider.keepersecurity.authRef
+
+"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+
+### fn spec.provider.keepersecurity.authRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.keepersecurity.authRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.keepersecurity.authRef.withNamespace
 
 ```ts
 withNamespace(namespace)
@@ -2082,6 +2265,114 @@ withNamespace(namespace)
 
 "Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
 
+## obj spec.provider.scaleway
+
+"Scaleway"
+
+### fn spec.provider.scaleway.withApiUrl
+
+```ts
+withApiUrl(apiUrl)
+```
+
+"APIURL is the url of the api to use. Defaults to https://api.scaleway.com"
+
+### fn spec.provider.scaleway.withProjectId
+
+```ts
+withProjectId(projectId)
+```
+
+"ProjectID is the id of your project, which you can find in the console: https://console.scaleway.com/project/settings"
+
+### fn spec.provider.scaleway.withRegion
+
+```ts
+withRegion(region)
+```
+
+"Region where your secrets are located: https://developers.scaleway.com/en/quickstart/#region-and-zone"
+
+## obj spec.provider.scaleway.accessKey
+
+"AccessKey is the non-secret part of the api key."
+
+### fn spec.provider.scaleway.accessKey.withValue
+
+```ts
+withValue(value)
+```
+
+"Value can be specified directly to set a value without using a secret."
+
+## obj spec.provider.scaleway.accessKey.secretRef
+
+"SecretRef references a key in a secret that will be used as value."
+
+### fn spec.provider.scaleway.accessKey.secretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.scaleway.accessKey.secretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.scaleway.accessKey.secretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.scaleway.secretKey
+
+"SecretKey is the non-secret part of the api key."
+
+### fn spec.provider.scaleway.secretKey.withValue
+
+```ts
+withValue(value)
+```
+
+"Value can be specified directly to set a value without using a secret."
+
+## obj spec.provider.scaleway.secretKey.secretRef
+
+"SecretRef references a key in a secret that will be used as value."
+
+### fn spec.provider.scaleway.secretKey.secretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.scaleway.secretKey.secretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.scaleway.secretKey.secretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
 ## obj spec.provider.senhasegura
 
 "Senhasegura configures this store to sync secrets using senhasegura provider"
@@ -2234,6 +2525,34 @@ withRoleId(roleId)
 
 "RoleID configured in the App Role authentication backend when setting up the authentication backend in Vault."
 
+## obj spec.provider.vault.auth.appRole.roleRef
+
+"Reference to a key in a Secret that contains the App Role ID used to authenticate with Vault. The `key` field must be specified and denotes which entry within the Secret resource is used as the app role id."
+
+### fn spec.provider.vault.auth.appRole.roleRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.vault.auth.appRole.roleRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.vault.auth.appRole.roleRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
 ## obj spec.provider.vault.auth.appRole.secretRef
 
 "Reference to a key in a Secret that contains the App Role secret used to authenticate with Vault. The `key` field must be specified and denotes which entry within the Secret resource is used as the app role secret."
@@ -2315,6 +2634,188 @@ withName(name)
 "The name of the Secret resource being referred to."
 
 ### fn spec.provider.vault.auth.cert.secretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.vault.auth.iam
+
+"Iam authenticates with vault by passing a special AWS request signed with AWS IAM credentials AWS IAM authentication method"
+
+### fn spec.provider.vault.auth.iam.withExternalID
+
+```ts
+withExternalID(externalID)
+```
+
+"AWS External ID set on assumed IAM roles"
+
+### fn spec.provider.vault.auth.iam.withPath
+
+```ts
+withPath(path)
+```
+
+"Path where the AWS auth method is enabled in Vault, e.g: \"aws\
+
+### fn spec.provider.vault.auth.iam.withRegion
+
+```ts
+withRegion(region)
+```
+
+"AWS region"
+
+### fn spec.provider.vault.auth.iam.withRole
+
+```ts
+withRole(role)
+```
+
+"This is the AWS role to be assumed before talking to vault"
+
+### fn spec.provider.vault.auth.iam.withVaultAwsIamServerID
+
+```ts
+withVaultAwsIamServerID(vaultAwsIamServerID)
+```
+
+"X-Vault-AWS-IAM-Server-ID is an additional header used by Vault IAM auth method to mitigate against different types of replay attacks. More details here: https://developer.hashicorp.com/vault/docs/auth/aws"
+
+### fn spec.provider.vault.auth.iam.withVaultRole
+
+```ts
+withVaultRole(vaultRole)
+```
+
+"Vault Role. In vault, a role describes an identity with a set of permissions, groups, or policies you want to attach a user of the secrets engine"
+
+## obj spec.provider.vault.auth.iam.jwt
+
+"Specify a service account with IRSA enabled"
+
+## obj spec.provider.vault.auth.iam.jwt.serviceAccountRef
+
+"A reference to a ServiceAccount resource."
+
+### fn spec.provider.vault.auth.iam.jwt.serviceAccountRef.withAudiences
+
+```ts
+withAudiences(audiences)
+```
+
+"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+
+### fn spec.provider.vault.auth.iam.jwt.serviceAccountRef.withAudiencesMixin
+
+```ts
+withAudiencesMixin(audiences)
+```
+
+"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.provider.vault.auth.iam.jwt.serviceAccountRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the ServiceAccount resource being referred to."
+
+### fn spec.provider.vault.auth.iam.jwt.serviceAccountRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.vault.auth.iam.secretRef
+
+"Specify credentials in a Secret object"
+
+## obj spec.provider.vault.auth.iam.secretRef.accessKeyIDSecretRef
+
+"The AccessKeyID is used for authentication"
+
+### fn spec.provider.vault.auth.iam.secretRef.accessKeyIDSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.vault.auth.iam.secretRef.accessKeyIDSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.vault.auth.iam.secretRef.accessKeyIDSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.vault.auth.iam.secretRef.secretAccessKeySecretRef
+
+"The SecretAccessKey is used for authentication"
+
+### fn spec.provider.vault.auth.iam.secretRef.secretAccessKeySecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.vault.auth.iam.secretRef.secretAccessKeySecretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.vault.auth.iam.secretRef.secretAccessKeySecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.vault.auth.iam.secretRef.sessionTokenSecretRef
+
+"The SessionToken used for authentication This must be defined if AccessKeyID and SecretAccessKey are temporary credentials see: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html"
+
+### fn spec.provider.vault.auth.iam.secretRef.sessionTokenSecretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.vault.auth.iam.secretRef.sessionTokenSecretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.vault.auth.iam.secretRef.sessionTokenSecretRef.withNamespace
 
 ```ts
 withNamespace(namespace)

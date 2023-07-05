@@ -94,6 +94,7 @@ permalink: /0.8/nogroup/v1beta1/externalSecret/
       * [`fn withData(data)`](#fn-spectargettemplatewithdata)
       * [`fn withDataMixin(data)`](#fn-spectargettemplatewithdatamixin)
       * [`fn withEngineVersion(engineVersion)`](#fn-spectargettemplatewithengineversion)
+      * [`fn withMergePolicy(mergePolicy)`](#fn-spectargettemplatewithmergepolicy)
       * [`fn withTemplateFrom(templateFrom)`](#fn-spectargettemplatewithtemplatefrom)
       * [`fn withTemplateFromMixin(templateFrom)`](#fn-spectargettemplatewithtemplatefrommixin)
       * [`fn withType(type)`](#fn-spectargettemplatewithtype)
@@ -748,6 +749,14 @@ withDataMixin(data)
 
 ```ts
 withEngineVersion(engineVersion)
+```
+
+
+
+### fn spec.target.template.withMergePolicy
+
+```ts
+withMergePolicy(mergePolicy)
 ```
 
 
