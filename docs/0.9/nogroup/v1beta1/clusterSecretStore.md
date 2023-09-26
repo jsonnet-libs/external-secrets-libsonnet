@@ -167,6 +167,22 @@ permalink: /0.9/nogroup/v1beta1/clusterSecretStore/
             * [`fn withKey(key)`](#fn-specproviderconjurauthapikeyuserrefwithkey)
             * [`fn withName(name)`](#fn-specproviderconjurauthapikeyuserrefwithname)
             * [`fn withNamespace(namespace)`](#fn-specproviderconjurauthapikeyuserrefwithnamespace)
+    * [`obj spec.provider.delinea`](#obj-specproviderdelinea)
+      * [`fn withTenant(tenant)`](#fn-specproviderdelineawithtenant)
+      * [`fn withTld(tld)`](#fn-specproviderdelineawithtld)
+      * [`fn withUrlTemplate(urlTemplate)`](#fn-specproviderdelineawithurltemplate)
+      * [`obj spec.provider.delinea.clientId`](#obj-specproviderdelineaclientid)
+        * [`fn withValue(value)`](#fn-specproviderdelineaclientidwithvalue)
+        * [`obj spec.provider.delinea.clientId.secretRef`](#obj-specproviderdelineaclientidsecretref)
+          * [`fn withKey(key)`](#fn-specproviderdelineaclientidsecretrefwithkey)
+          * [`fn withName(name)`](#fn-specproviderdelineaclientidsecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specproviderdelineaclientidsecretrefwithnamespace)
+      * [`obj spec.provider.delinea.clientSecret`](#obj-specproviderdelineaclientsecret)
+        * [`fn withValue(value)`](#fn-specproviderdelineaclientsecretwithvalue)
+        * [`obj spec.provider.delinea.clientSecret.secretRef`](#obj-specproviderdelineaclientsecretsecretref)
+          * [`fn withKey(key)`](#fn-specproviderdelineaclientsecretsecretrefwithkey)
+          * [`fn withName(name)`](#fn-specproviderdelineaclientsecretsecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specproviderdelineaclientsecretsecretrefwithnamespace)
     * [`obj spec.provider.doppler`](#obj-specproviderdoppler)
       * [`fn withConfig(config)`](#fn-specproviderdopplerwithconfig)
       * [`fn withFormat(format)`](#fn-specproviderdopplerwithformat)
@@ -410,6 +426,13 @@ permalink: /0.9/nogroup/v1beta1/clusterSecretStore/
           * [`fn withKey(key)`](#fn-specprovidervaultauthtokensecretrefwithkey)
           * [`fn withName(name)`](#fn-specprovidervaultauthtokensecretrefwithname)
           * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthtokensecretrefwithnamespace)
+        * [`obj spec.provider.vault.auth.userPass`](#obj-specprovidervaultauthuserpass)
+          * [`fn withPath(path)`](#fn-specprovidervaultauthuserpasswithpath)
+          * [`fn withUsername(username)`](#fn-specprovidervaultauthuserpasswithusername)
+          * [`obj spec.provider.vault.auth.userPass.secretRef`](#obj-specprovidervaultauthuserpasssecretref)
+            * [`fn withKey(key)`](#fn-specprovidervaultauthuserpasssecretrefwithkey)
+            * [`fn withName(name)`](#fn-specprovidervaultauthuserpasssecretrefwithname)
+            * [`fn withNamespace(namespace)`](#fn-specprovidervaultauthuserpasssecretrefwithnamespace)
       * [`obj spec.provider.vault.caProvider`](#obj-specprovidervaultcaprovider)
         * [`fn withKey(key)`](#fn-specprovidervaultcaproviderwithkey)
         * [`fn withName(name)`](#fn-specprovidervaultcaproviderwithname)
@@ -1599,6 +1622,114 @@ withName(name)
 "The name of the Secret resource being referred to."
 
 ### fn spec.provider.conjur.auth.apikey.userRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.delinea
+
+"Delinea DevOps Secrets Vault https://docs.delinea.com/online-help/products/devops-secrets-vault/current"
+
+### fn spec.provider.delinea.withTenant
+
+```ts
+withTenant(tenant)
+```
+
+"Tenant is the chosen hostname / site name."
+
+### fn spec.provider.delinea.withTld
+
+```ts
+withTld(tld)
+```
+
+"TLD is based on the server location that was chosen during provisioning. If unset, defaults to \"com\"."
+
+### fn spec.provider.delinea.withUrlTemplate
+
+```ts
+withUrlTemplate(urlTemplate)
+```
+
+"URLTemplate If unset, defaults to \"https://%s.secretsvaultcloud.%s/v1/%s%s\"."
+
+## obj spec.provider.delinea.clientId
+
+"ClientID is the non-secret part of the credential."
+
+### fn spec.provider.delinea.clientId.withValue
+
+```ts
+withValue(value)
+```
+
+"Value can be specified directly to set a value without using a secret."
+
+## obj spec.provider.delinea.clientId.secretRef
+
+"SecretRef references a key in a secret that will be used as value."
+
+### fn spec.provider.delinea.clientId.secretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.delinea.clientId.secretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.delinea.clientId.secretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.delinea.clientSecret
+
+"ClientSecret is the secret part of the credential."
+
+### fn spec.provider.delinea.clientSecret.withValue
+
+```ts
+withValue(value)
+```
+
+"Value can be specified directly to set a value without using a secret."
+
+## obj spec.provider.delinea.clientSecret.secretRef
+
+"SecretRef references a key in a secret that will be used as value."
+
+### fn spec.provider.delinea.clientSecret.secretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.delinea.clientSecret.secretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.delinea.clientSecret.secretRef.withNamespace
 
 ```ts
 withNamespace(namespace)
@@ -3263,6 +3394,54 @@ withName(name)
 "The name of the Secret resource being referred to."
 
 ### fn spec.provider.vault.auth.tokenSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.vault.auth.userPass
+
+"UserPass authenticates with Vault by passing username/password pair"
+
+### fn spec.provider.vault.auth.userPass.withPath
+
+```ts
+withPath(path)
+```
+
+"Path where the UserPassword authentication backend is mounted in Vault, e.g: \"user\
+
+### fn spec.provider.vault.auth.userPass.withUsername
+
+```ts
+withUsername(username)
+```
+
+"Username is a user name used to authenticate using the UserPass Vault authentication method"
+
+## obj spec.provider.vault.auth.userPass.secretRef
+
+"SecretRef to a key in a Secret resource containing password for the user used to authenticate with Vault using the UserPass authentication method"
+
+### fn spec.provider.vault.auth.userPass.secretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.vault.auth.userPass.secretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.vault.auth.userPass.secretRef.withNamespace
 
 ```ts
 withNamespace(namespace)

@@ -129,6 +129,13 @@ permalink: /0.9/generators/v1alpha1/vaultDynamicSecret/
         * [`fn withKey(key)`](#fn-specproviderauthtokensecretrefwithkey)
         * [`fn withName(name)`](#fn-specproviderauthtokensecretrefwithname)
         * [`fn withNamespace(namespace)`](#fn-specproviderauthtokensecretrefwithnamespace)
+      * [`obj spec.provider.auth.userPass`](#obj-specproviderauthuserpass)
+        * [`fn withPath(path)`](#fn-specproviderauthuserpasswithpath)
+        * [`fn withUsername(username)`](#fn-specproviderauthuserpasswithusername)
+        * [`obj spec.provider.auth.userPass.secretRef`](#obj-specproviderauthuserpasssecretref)
+          * [`fn withKey(key)`](#fn-specproviderauthuserpasssecretrefwithkey)
+          * [`fn withName(name)`](#fn-specproviderauthuserpasssecretrefwithname)
+          * [`fn withNamespace(namespace)`](#fn-specproviderauthuserpasssecretrefwithnamespace)
     * [`obj spec.provider.caProvider`](#obj-specprovidercaprovider)
       * [`fn withKey(key)`](#fn-specprovidercaproviderwithkey)
       * [`fn withName(name)`](#fn-specprovidercaproviderwithname)
@@ -1006,6 +1013,54 @@ withName(name)
 "The name of the Secret resource being referred to."
 
 ### fn spec.provider.auth.tokenSecretRef.withNamespace
+
+```ts
+withNamespace(namespace)
+```
+
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+
+## obj spec.provider.auth.userPass
+
+"UserPass authenticates with Vault by passing username/password pair"
+
+### fn spec.provider.auth.userPass.withPath
+
+```ts
+withPath(path)
+```
+
+"Path where the UserPassword authentication backend is mounted in Vault, e.g: \"user\
+
+### fn spec.provider.auth.userPass.withUsername
+
+```ts
+withUsername(username)
+```
+
+"Username is a user name used to authenticate using the UserPass Vault authentication method"
+
+## obj spec.provider.auth.userPass.secretRef
+
+"SecretRef to a key in a Secret resource containing password for the user used to authenticate with Vault using the UserPass authentication method"
+
+### fn spec.provider.auth.userPass.secretRef.withKey
+
+```ts
+withKey(key)
+```
+
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+
+### fn spec.provider.auth.userPass.secretRef.withName
+
+```ts
+withName(name)
+```
+
+"The name of the Secret resource being referred to."
+
+### fn spec.provider.auth.userPass.secretRef.withNamespace
 
 ```ts
 withNamespace(namespace)

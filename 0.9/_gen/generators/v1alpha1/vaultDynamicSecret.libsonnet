@@ -246,6 +246,22 @@
           '#withNamespace':: d.fn(help='"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."', args=[d.arg(name='namespace', type=d.T.string)]),
           withNamespace(namespace): { spec+: { provider+: { auth+: { tokenSecretRef+: { namespace: namespace } } } } },
         },
+        '#userPass':: d.obj(help='"UserPass authenticates with Vault by passing username/password pair"'),
+        userPass: {
+          '#secretRef':: d.obj(help='"SecretRef to a key in a Secret resource containing password for the user used to authenticate with Vault using the UserPass authentication method"'),
+          secretRef: {
+            '#withKey':: d.fn(help="\"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.\"", args=[d.arg(name='key', type=d.T.string)]),
+            withKey(key): { spec+: { provider+: { auth+: { userPass+: { secretRef+: { key: key } } } } } },
+            '#withName':: d.fn(help='"The name of the Secret resource being referred to."', args=[d.arg(name='name', type=d.T.string)]),
+            withName(name): { spec+: { provider+: { auth+: { userPass+: { secretRef+: { name: name } } } } } },
+            '#withNamespace':: d.fn(help='"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."', args=[d.arg(name='namespace', type=d.T.string)]),
+            withNamespace(namespace): { spec+: { provider+: { auth+: { userPass+: { secretRef+: { namespace: namespace } } } } } },
+          },
+          '#withPath':: d.fn(help='"Path where the UserPassword authentication backend is mounted in Vault, e.g: \\"user\\', args=[d.arg(name='path', type=d.T.string)]),
+          withPath(path): { spec+: { provider+: { auth+: { userPass+: { path: path } } } } },
+          '#withUsername':: d.fn(help='"Username is a user name used to authenticate using the UserPass Vault authentication method"', args=[d.arg(name='username', type=d.T.string)]),
+          withUsername(username): { spec+: { provider+: { auth+: { userPass+: { username: username } } } } },
+        },
       },
       '#caProvider':: d.obj(help='"The provider for the CA bundle to use to validate Vault server certificate."'),
       caProvider: {
