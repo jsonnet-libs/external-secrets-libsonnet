@@ -503,7 +503,7 @@ withUid(uid)
 withController(controller)
 ```
 
-"Used to select the correct ESO controller (think: ingress.ingressClassName) The ESO controller is instantiated with a specific controller name and filters ES based on this property"
+"Used to select the correct ESO controller (think: ingress.ingressClassName)\nThe ESO controller is instantiated with a specific controller name and filters ES based on this property"
 
 ## obj spec.provider
 
@@ -527,7 +527,7 @@ withAkeylessGWApiURL(akeylessGWApiURL)
 withCaBundle(caBundle)
 ```
 
-"PEM/base64 encoded CA bundle used to validate Akeyless Gateway certificate. Only used if the AkeylessGWApiURL URL is using HTTPS protocol. If not set the system root certificates are used to validate the TLS connection."
+"PEM/base64 encoded CA bundle used to validate Akeyless Gateway certificate. Only used\nif the AkeylessGWApiURL URL is using HTTPS protocol. If not set the system root certificates\nare used to validate the TLS connection."
 
 ## obj spec.provider.akeyless.authSecretRef
 
@@ -535,7 +535,7 @@ withCaBundle(caBundle)
 
 ## obj spec.provider.akeyless.authSecretRef.kubernetesAuth
 
-"Kubernetes authenticates with Akeyless by passing the ServiceAccount token stored in the named Secret resource."
+"Kubernetes authenticates with Akeyless by passing the ServiceAccount\ntoken stored in the named Secret resource."
 
 ### fn spec.provider.akeyless.authSecretRef.kubernetesAuth.withAccessID
 
@@ -555,7 +555,7 @@ withK8sConfName(k8sConfName)
 
 ## obj spec.provider.akeyless.authSecretRef.kubernetesAuth.secretRef
 
-"Optional secret field containing a Kubernetes ServiceAccount JWT used for authenticating with Akeyless. If a name is specified without a key, `token` is the default. If one is not specified, the one bound to the controller will be used."
+"Optional secret field containing a Kubernetes ServiceAccount JWT used\nfor authenticating with Akeyless. If a name is specified without a key,\n`token` is the default. If one is not specified, the one bound to\nthe controller will be used."
 
 ### fn spec.provider.akeyless.authSecretRef.kubernetesAuth.secretRef.withKey
 
@@ -563,7 +563,7 @@ withK8sConfName(k8sConfName)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.akeyless.authSecretRef.kubernetesAuth.secretRef.withName
 
@@ -579,11 +579,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.akeyless.authSecretRef.kubernetesAuth.serviceAccountRef
 
-"Optional service account field containing the name of a kubernetes ServiceAccount. If the service account is specified, the service account secret token JWT will be used for authenticating with Akeyless. If the service account selector is not supplied, the secretRef will be used instead."
+"Optional service account field containing the name of a kubernetes ServiceAccount.\nIf the service account is specified, the service account secret token JWT will be used\nfor authenticating with Akeyless. If the service account selector is not supplied,\nthe secretRef will be used instead."
 
 ### fn spec.provider.akeyless.authSecretRef.kubernetesAuth.serviceAccountRef.withAudiences
 
@@ -591,7 +591,7 @@ withNamespace(namespace)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.provider.akeyless.authSecretRef.kubernetesAuth.serviceAccountRef.withAudiencesMixin
 
@@ -599,7 +599,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -617,11 +617,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.akeyless.authSecretRef.secretRef
 
-"Reference to a Secret that contains the details to authenticate with Akeyless."
+"Reference to a Secret that contains the details\nto authenticate with Akeyless."
 
 ## obj spec.provider.akeyless.authSecretRef.secretRef.accessID
 
@@ -633,7 +633,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.akeyless.authSecretRef.secretRef.accessID.withName
 
@@ -649,11 +649,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.akeyless.authSecretRef.secretRef.accessType
 
-"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+"A reference to a specific 'key' within a Secret resource,\nIn some instances, `key` is a required field."
 
 ### fn spec.provider.akeyless.authSecretRef.secretRef.accessType.withKey
 
@@ -661,7 +661,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.akeyless.authSecretRef.secretRef.accessType.withName
 
@@ -677,11 +677,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.akeyless.authSecretRef.secretRef.accessTypeParam
 
-"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+"A reference to a specific 'key' within a Secret resource,\nIn some instances, `key` is a required field."
 
 ### fn spec.provider.akeyless.authSecretRef.secretRef.accessTypeParam.withKey
 
@@ -689,7 +689,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.akeyless.authSecretRef.secretRef.accessTypeParam.withName
 
@@ -705,7 +705,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.akeyless.caProvider
 
@@ -809,7 +809,7 @@ withSessionName(sessionName)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.alibaba.auth.secretRef.accessKeyIDSecretRef.withName
 
@@ -825,7 +825,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.alibaba.auth.secretRef.accessKeySecretSecretRef
 
@@ -837,7 +837,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.alibaba.auth.secretRef.accessKeySecretSecretRef.withName
 
@@ -853,7 +853,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.aws
 
@@ -885,7 +885,7 @@ withService(service)
 
 ## obj spec.provider.aws.auth
 
-"Auth defines the information necessary to authenticate against AWS if not set aws sdk will infer credentials from your environment see: https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html#specifying-credentials"
+"Auth defines the information necessary to authenticate against AWS\nif not set aws sdk will infer credentials from your environment\nsee: https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html#specifying-credentials"
 
 ## obj spec.provider.aws.auth.jwt
 
@@ -901,7 +901,7 @@ withService(service)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.provider.aws.auth.jwt.serviceAccountRef.withAudiencesMixin
 
@@ -909,7 +909,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -927,11 +927,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.aws.auth.secretRef
 
-"AWSAuthSecretRef holds secret references for AWS credentials both AccessKeyID and SecretAccessKey must be defined in order to properly authenticate."
+"AWSAuthSecretRef holds secret references for AWS credentials\nboth AccessKeyID and SecretAccessKey must be defined in order to properly authenticate."
 
 ## obj spec.provider.aws.auth.secretRef.accessKeyIDSecretRef
 
@@ -943,7 +943,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.aws.auth.secretRef.accessKeyIDSecretRef.withName
 
@@ -959,7 +959,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.aws.auth.secretRef.secretAccessKeySecretRef
 
@@ -971,7 +971,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.aws.auth.secretRef.secretAccessKeySecretRef.withName
 
@@ -987,7 +987,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.azurekv
 
@@ -999,7 +999,7 @@ withNamespace(namespace)
 withAuthType(authType)
 ```
 
-"Auth type defines how to authenticate to the keyvault service. Valid values are: - \"ServicePrincipal\" (default): Using a service principal (tenantId, clientId, clientSecret) - \"ManagedIdentity\": Using Managed Identity assigned to the pod (see aad-pod-identity)"
+"Auth type defines how to authenticate to the keyvault service.\nValid values are:\n- \"ServicePrincipal\" (default): Using a service principal (tenantId, clientId, clientSecret)\n- \"ManagedIdentity\": Using Managed Identity assigned to the pod (see aad-pod-identity)"
 
 ### fn spec.provider.azurekv.withIdentityId
 
@@ -1039,7 +1039,7 @@ withVaultUrl(vaultUrl)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.azurekv.authSecretRef.clientId.withName
 
@@ -1055,7 +1055,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.azurekv.authSecretRef.clientSecret
 
@@ -1067,7 +1067,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.azurekv.authSecretRef.clientSecret.withName
 
@@ -1083,11 +1083,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.azurekv.serviceAccountRef
 
-"ServiceAccountRef specified the service account that should be used when authenticating with WorkloadIdentity."
+"ServiceAccountRef specified the service account\nthat should be used when authenticating with WorkloadIdentity."
 
 ### fn spec.provider.azurekv.serviceAccountRef.withAudiences
 
@@ -1095,7 +1095,7 @@ withNamespace(namespace)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.provider.azurekv.serviceAccountRef.withAudiencesMixin
 
@@ -1103,7 +1103,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -1121,7 +1121,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.fake
 
@@ -1221,7 +1221,7 @@ withProjectID(projectID)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.gcpsm.auth.secretRef.secretAccessKeySecretRef.withName
 
@@ -1237,7 +1237,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.gcpsm.auth.workloadIdentity
 
@@ -1277,7 +1277,7 @@ withClusterProjectID(clusterProjectID)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.provider.gcpsm.auth.workloadIdentity.serviceAccountRef.withAudiencesMixin
 
@@ -1285,7 +1285,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -1303,7 +1303,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.gitlab
 
@@ -1343,7 +1343,7 @@ withUrl(url)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.gitlab.auth.secretRef.accessToken.withName
 
@@ -1359,7 +1359,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.ibm
 
@@ -1391,7 +1391,7 @@ withServiceUrl(serviceUrl)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.ibm.auth.secretRef.secretApiKeySecretRef.withName
 
@@ -1407,7 +1407,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.kubernetes
 
@@ -1431,7 +1431,7 @@ withRemoteNamespace(remoteNamespace)
 
 ## obj spec.provider.kubernetes.auth.cert.clientCert
 
-"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+"A reference to a specific 'key' within a Secret resource,\nIn some instances, `key` is a required field."
 
 ### fn spec.provider.kubernetes.auth.cert.clientCert.withKey
 
@@ -1439,7 +1439,7 @@ withRemoteNamespace(remoteNamespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.kubernetes.auth.cert.clientCert.withName
 
@@ -1455,11 +1455,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.kubernetes.auth.cert.clientKey
 
-"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+"A reference to a specific 'key' within a Secret resource,\nIn some instances, `key` is a required field."
 
 ### fn spec.provider.kubernetes.auth.cert.clientKey.withKey
 
@@ -1467,7 +1467,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.kubernetes.auth.cert.clientKey.withName
 
@@ -1483,7 +1483,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.kubernetes.auth.serviceAccount
 
@@ -1499,7 +1499,7 @@ withNamespace(namespace)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.provider.kubernetes.auth.serviceAccount.serviceAccount.withAudiencesMixin
 
@@ -1507,7 +1507,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -1525,7 +1525,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.kubernetes.auth.token
 
@@ -1533,7 +1533,7 @@ withNamespace(namespace)
 
 ## obj spec.provider.kubernetes.auth.token.bearerToken
 
-"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+"A reference to a specific 'key' within a Secret resource,\nIn some instances, `key` is a required field."
 
 ### fn spec.provider.kubernetes.auth.token.bearerToken.withKey
 
@@ -1541,7 +1541,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.kubernetes.auth.token.bearerToken.withName
 
@@ -1557,7 +1557,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.kubernetes.server
 
@@ -1637,7 +1637,7 @@ withVault(vault)
 
 ## obj spec.provider.oracle.auth
 
-"Auth configures how secret-manager authenticates with the Oracle Vault. If empty, use the instance principal, otherwise the user credentials specified in Auth."
+"Auth configures how secret-manager authenticates with the Oracle Vault.\nIf empty, use the instance principal, otherwise the user credentials specified in Auth."
 
 ### fn spec.provider.oracle.auth.withTenancy
 
@@ -1669,7 +1669,7 @@ withUser(user)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.oracle.auth.secretRef.fingerprint.withName
 
@@ -1685,7 +1685,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.oracle.auth.secretRef.privatekey
 
@@ -1697,7 +1697,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.oracle.auth.secretRef.privatekey.withName
 
@@ -1713,7 +1713,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault
 
@@ -1725,7 +1725,7 @@ withNamespace(namespace)
 withCaBundle(caBundle)
 ```
 
-"PEM encoded CA bundle used to validate Vault server certificate. Only used if the Server URL is using HTTPS protocol. This parameter is ignored for plain HTTP protocol connection. If not set the system root certificates are used to validate the TLS connection."
+"PEM encoded CA bundle used to validate Vault server certificate. Only used\nif the Server URL is using HTTPS protocol. This parameter is ignored for\nplain HTTP protocol connection. If not set the system root certificates\nare used to validate the TLS connection."
 
 ### fn spec.provider.vault.withForwardInconsistent
 
@@ -1733,7 +1733,7 @@ withCaBundle(caBundle)
 withForwardInconsistent(forwardInconsistent)
 ```
 
-"ForwardInconsistent tells Vault to forward read-after-write requests to the Vault leader instead of simply retrying within a loop. This can increase performance if the option is enabled serverside. https://www.vaultproject.io/docs/configuration/replication#allow_forwarding_via_header"
+"ForwardInconsistent tells Vault to forward read-after-write requests to the Vault\nleader instead of simply retrying within a loop. This can increase performance if\nthe option is enabled serverside.\nhttps://www.vaultproject.io/docs/configuration/replication#allow_forwarding_via_header"
 
 ### fn spec.provider.vault.withNamespace
 
@@ -1741,7 +1741,7 @@ withForwardInconsistent(forwardInconsistent)
 withNamespace(namespace)
 ```
 
-"Name of the vault namespace. Namespaces is a set of features within Vault Enterprise that allows Vault environments to support Secure Multi-tenancy. e.g: \"ns1\". More about namespaces can be found here https://www.vaultproject.io/docs/enterprise/namespaces"
+"Name of the vault namespace. Namespaces is a set of features within Vault Enterprise that allows\nVault environments to support Secure Multi-tenancy. e.g: \"ns1\".\nMore about namespaces can be found here https://www.vaultproject.io/docs/enterprise/namespaces"
 
 ### fn spec.provider.vault.withPath
 
@@ -1749,7 +1749,7 @@ withNamespace(namespace)
 withPath(path)
 ```
 
-"Path is the mount path of the Vault KV backend endpoint, e.g: \"secret\". The v2 KV secret engine version specific \"/data\" path suffix for fetching secrets from Vault is optional and will be appended if not present in specified path."
+"Path is the mount path of the Vault KV backend endpoint, e.g:\n\"secret\". The v2 KV secret engine version specific \"/data\" path suffix\nfor fetching secrets from Vault is optional and will be appended\nif not present in specified path."
 
 ### fn spec.provider.vault.withReadYourWrites
 
@@ -1757,7 +1757,7 @@ withPath(path)
 withReadYourWrites(readYourWrites)
 ```
 
-"ReadYourWrites ensures isolated read-after-write semantics by providing discovered cluster replication states in each request. More information about eventual consistency in Vault can be found here https://www.vaultproject.io/docs/enterprise/consistency"
+"ReadYourWrites ensures isolated read-after-write semantics by\nproviding discovered cluster replication states in each request.\nMore information about eventual consistency in Vault can be found here\nhttps://www.vaultproject.io/docs/enterprise/consistency"
 
 ### fn spec.provider.vault.withServer
 
@@ -1773,7 +1773,7 @@ withServer(server)
 withVersion(version)
 ```
 
-"Version is the Vault KV secret engine version. This can be either \"v1\" or \"v2\". Version defaults to \"v2\"."
+"Version is the Vault KV secret engine version. This can be either \"v1\" or\n\"v2\". Version defaults to \"v2\"."
 
 ## obj spec.provider.vault.auth
 
@@ -1781,7 +1781,7 @@ withVersion(version)
 
 ## obj spec.provider.vault.auth.appRole
 
-"AppRole authenticates with Vault using the App Role auth mechanism, with the role and secret stored in a Kubernetes Secret resource."
+"AppRole authenticates with Vault using the App Role auth mechanism,\nwith the role and secret stored in a Kubernetes Secret resource."
 
 ### fn spec.provider.vault.auth.appRole.withPath
 
@@ -1789,7 +1789,7 @@ withVersion(version)
 withPath(path)
 ```
 
-"Path where the App Role authentication backend is mounted in Vault, e.g: \"approle\
+"Path where the App Role authentication backend is mounted\nin Vault, e.g: \"approle\
 
 ### fn spec.provider.vault.auth.appRole.withRoleId
 
@@ -1797,11 +1797,11 @@ withPath(path)
 withRoleId(roleId)
 ```
 
-"RoleID configured in the App Role authentication backend when setting up the authentication backend in Vault."
+"RoleID configured in the App Role authentication backend when setting\nup the authentication backend in Vault."
 
 ## obj spec.provider.vault.auth.appRole.secretRef
 
-"Reference to a key in a Secret that contains the App Role secret used to authenticate with Vault. The `key` field must be specified and denotes which entry within the Secret resource is used as the app role secret."
+"Reference to a key in a Secret that contains the App Role secret used\nto authenticate with Vault.\nThe `key` field must be specified and denotes which entry within the Secret\nresource is used as the app role secret."
 
 ### fn spec.provider.vault.auth.appRole.secretRef.withKey
 
@@ -1809,7 +1809,7 @@ withRoleId(roleId)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.vault.auth.appRole.secretRef.withName
 
@@ -1825,15 +1825,15 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.auth.cert
 
-"Cert authenticates with TLS Certificates by passing client certificate, private key and ca certificate Cert authentication method"
+"Cert authenticates with TLS Certificates by passing client certificate, private key and ca certificate\nCert authentication method"
 
 ## obj spec.provider.vault.auth.cert.clientCert
 
-"ClientCert is a certificate to authenticate using the Cert Vault authentication method"
+"ClientCert is a certificate to authenticate using the Cert Vault\nauthentication method"
 
 ### fn spec.provider.vault.auth.cert.clientCert.withKey
 
@@ -1841,7 +1841,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.vault.auth.cert.clientCert.withName
 
@@ -1857,11 +1857,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.auth.cert.secretRef
 
-"SecretRef to a key in a Secret resource containing client private key to authenticate with Vault using the Cert authentication method"
+"SecretRef to a key in a Secret resource containing client private key to\nauthenticate with Vault using the Cert authentication method"
 
 ### fn spec.provider.vault.auth.cert.secretRef.withKey
 
@@ -1869,7 +1869,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.vault.auth.cert.secretRef.withName
 
@@ -1885,11 +1885,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.auth.jwt
 
-"Jwt authenticates with Vault by passing role and JWT token using the JWT/OIDC authentication method"
+"Jwt authenticates with Vault by passing role and JWT token using the\nJWT/OIDC authentication method"
 
 ### fn spec.provider.vault.auth.jwt.withPath
 
@@ -1897,7 +1897,7 @@ withNamespace(namespace)
 withPath(path)
 ```
 
-"Path where the JWT authentication backend is mounted in Vault, e.g: \"jwt\
+"Path where the JWT authentication backend is mounted\nin Vault, e.g: \"jwt\
 
 ### fn spec.provider.vault.auth.jwt.withRole
 
@@ -1905,11 +1905,11 @@ withPath(path)
 withRole(role)
 ```
 
-"Role is a JWT role to authenticate using the JWT/OIDC Vault authentication method"
+"Role is a JWT role to authenticate using the JWT/OIDC Vault\nauthentication method"
 
 ## obj spec.provider.vault.auth.jwt.kubernetesServiceAccountToken
 
-"Optional ServiceAccountToken specifies the Kubernetes service account for which to request a token for with the `TokenRequest` API."
+"Optional ServiceAccountToken specifies the Kubernetes service account for which to request\na token for with the `TokenRequest` API."
 
 ### fn spec.provider.vault.auth.jwt.kubernetesServiceAccountToken.withAudiences
 
@@ -1917,7 +1917,7 @@ withRole(role)
 withAudiences(audiences)
 ```
 
-"Optional audiences field that will be used to request a temporary Kubernetes service account token for the service account referenced by `serviceAccountRef`. Defaults to a single audience `vault` it not specified."
+"Optional audiences field that will be used to request a temporary Kubernetes service\naccount token for the service account referenced by `serviceAccountRef`.\nDefaults to a single audience `vault` it not specified."
 
 ### fn spec.provider.vault.auth.jwt.kubernetesServiceAccountToken.withAudiencesMixin
 
@@ -1925,7 +1925,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Optional audiences field that will be used to request a temporary Kubernetes service account token for the service account referenced by `serviceAccountRef`. Defaults to a single audience `vault` it not specified."
+"Optional audiences field that will be used to request a temporary Kubernetes service\naccount token for the service account referenced by `serviceAccountRef`.\nDefaults to a single audience `vault` it not specified."
 
 **Note:** This function appends passed data to existing values
 
@@ -1935,7 +1935,7 @@ withAudiencesMixin(audiences)
 withExpirationSeconds(expirationSeconds)
 ```
 
-"Optional expiration time in seconds that will be used to request a temporary Kubernetes service account token for the service account referenced by `serviceAccountRef`. Defaults to 10 minutes."
+"Optional expiration time in seconds that will be used to request a temporary\nKubernetes service account token for the service account referenced by\n`serviceAccountRef`.\nDefaults to 10 minutes."
 
 ## obj spec.provider.vault.auth.jwt.kubernetesServiceAccountToken.serviceAccountRef
 
@@ -1947,7 +1947,7 @@ withExpirationSeconds(expirationSeconds)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.provider.vault.auth.jwt.kubernetesServiceAccountToken.serviceAccountRef.withAudiencesMixin
 
@@ -1955,7 +1955,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -1973,11 +1973,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.auth.jwt.secretRef
 
-"Optional SecretRef that refers to a key in a Secret resource containing JWT token to authenticate with Vault using the JWT/OIDC authentication method."
+"Optional SecretRef that refers to a key in a Secret resource containing JWT token to\nauthenticate with Vault using the JWT/OIDC authentication method."
 
 ### fn spec.provider.vault.auth.jwt.secretRef.withKey
 
@@ -1985,7 +1985,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.vault.auth.jwt.secretRef.withName
 
@@ -2001,11 +2001,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.auth.kubernetes
 
-"Kubernetes authenticates with Vault by passing the ServiceAccount token stored in the named Secret resource to the Vault server."
+"Kubernetes authenticates with Vault by passing the ServiceAccount\ntoken stored in the named Secret resource to the Vault server."
 
 ### fn spec.provider.vault.auth.kubernetes.withMountPath
 
@@ -2013,7 +2013,7 @@ withNamespace(namespace)
 withMountPath(mountPath)
 ```
 
-"Path where the Kubernetes authentication backend is mounted in Vault, e.g: \"kubernetes\
+"Path where the Kubernetes authentication backend is mounted in Vault, e.g:\n\"kubernetes\
 
 ### fn spec.provider.vault.auth.kubernetes.withRole
 
@@ -2021,11 +2021,11 @@ withMountPath(mountPath)
 withRole(role)
 ```
 
-"A required field containing the Vault Role to assume. A Role binds a Kubernetes ServiceAccount with a set of Vault policies."
+"A required field containing the Vault Role to assume. A Role binds a\nKubernetes ServiceAccount with a set of Vault policies."
 
 ## obj spec.provider.vault.auth.kubernetes.secretRef
 
-"Optional secret field containing a Kubernetes ServiceAccount JWT used for authenticating with Vault. If a name is specified without a key, `token` is the default. If one is not specified, the one bound to the controller will be used."
+"Optional secret field containing a Kubernetes ServiceAccount JWT used\nfor authenticating with Vault. If a name is specified without a key,\n`token` is the default. If one is not specified, the one bound to\nthe controller will be used."
 
 ### fn spec.provider.vault.auth.kubernetes.secretRef.withKey
 
@@ -2033,7 +2033,7 @@ withRole(role)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.vault.auth.kubernetes.secretRef.withName
 
@@ -2049,11 +2049,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.auth.kubernetes.serviceAccountRef
 
-"Optional service account field containing the name of a kubernetes ServiceAccount. If the service account is specified, the service account secret token JWT will be used for authenticating with Vault. If the service account selector is not supplied, the secretRef will be used instead."
+"Optional service account field containing the name of a kubernetes ServiceAccount.\nIf the service account is specified, the service account secret token JWT will be used\nfor authenticating with Vault. If the service account selector is not supplied,\nthe secretRef will be used instead."
 
 ### fn spec.provider.vault.auth.kubernetes.serviceAccountRef.withAudiences
 
@@ -2061,7 +2061,7 @@ withNamespace(namespace)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.provider.vault.auth.kubernetes.serviceAccountRef.withAudiencesMixin
 
@@ -2069,7 +2069,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -2087,11 +2087,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.auth.ldap
 
-"Ldap authenticates with Vault by passing username/password pair using the LDAP authentication method"
+"Ldap authenticates with Vault by passing username/password pair using\nthe LDAP authentication method"
 
 ### fn spec.provider.vault.auth.ldap.withPath
 
@@ -2099,7 +2099,7 @@ withNamespace(namespace)
 withPath(path)
 ```
 
-"Path where the LDAP authentication backend is mounted in Vault, e.g: \"ldap\
+"Path where the LDAP authentication backend is mounted\nin Vault, e.g: \"ldap\
 
 ### fn spec.provider.vault.auth.ldap.withUsername
 
@@ -2107,11 +2107,11 @@ withPath(path)
 withUsername(username)
 ```
 
-"Username is a LDAP user name used to authenticate using the LDAP Vault authentication method"
+"Username is a LDAP user name used to authenticate using the LDAP Vault\nauthentication method"
 
 ## obj spec.provider.vault.auth.ldap.secretRef
 
-"SecretRef to a key in a Secret resource containing password for the LDAP user used to authenticate with Vault using the LDAP authentication method"
+"SecretRef to a key in a Secret resource containing password for the LDAP\nuser used to authenticate with Vault using the LDAP authentication\nmethod"
 
 ### fn spec.provider.vault.auth.ldap.secretRef.withKey
 
@@ -2119,7 +2119,7 @@ withUsername(username)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.vault.auth.ldap.secretRef.withName
 
@@ -2135,7 +2135,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.auth.tokenSecretRef
 
@@ -2147,7 +2147,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.vault.auth.tokenSecretRef.withName
 
@@ -2163,7 +2163,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.vault.caProvider
 
@@ -2219,7 +2219,7 @@ withBody(body)
 withCaBundle(caBundle)
 ```
 
-"PEM encoded CA bundle used to validate webhook server certificate. Only used if the Server URL is using HTTPS protocol. This parameter is ignored for plain HTTP protocol connection. If not set the system root certificates are used to validate the TLS connection."
+"PEM encoded CA bundle used to validate webhook server certificate. Only used\nif the Server URL is using HTTPS protocol. This parameter is ignored for\nplain HTTP protocol connection. If not set the system root certificates\nare used to validate the TLS connection."
 
 ### fn spec.provider.webhook.withHeaders
 
@@ -2253,7 +2253,7 @@ withMethod(method)
 withSecrets(secrets)
 ```
 
-"Secrets to fill in templates These secrets will be passed to the templating function as key value pairs under the given name"
+"Secrets to fill in templates\nThese secrets will be passed to the templating function as key value pairs under the given name"
 
 ### fn spec.provider.webhook.withSecretsMixin
 
@@ -2261,7 +2261,7 @@ withSecrets(secrets)
 withSecretsMixin(secrets)
 ```
 
-"Secrets to fill in templates These secrets will be passed to the templating function as key value pairs under the given name"
+"Secrets to fill in templates\nThese secrets will be passed to the templating function as key value pairs under the given name"
 
 **Note:** This function appends passed data to existing values
 
@@ -2331,7 +2331,7 @@ withJsonPath(jsonPath)
 
 ## obj spec.provider.webhook.secrets
 
-"Secrets to fill in templates These secrets will be passed to the templating function as key value pairs under the given name"
+"Secrets to fill in templates\nThese secrets will be passed to the templating function as key value pairs under the given name"
 
 ### fn spec.provider.webhook.secrets.withName
 
@@ -2351,7 +2351,7 @@ withName(name)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.webhook.secrets.secretRef.withName
 
@@ -2367,7 +2367,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.yandexlockbox
 
@@ -2395,7 +2395,7 @@ withApiEndpoint(apiEndpoint)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.yandexlockbox.auth.authorizedKeySecretRef.withName
 
@@ -2411,7 +2411,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.provider.yandexlockbox.caProvider
 
@@ -2419,7 +2419,7 @@ withNamespace(namespace)
 
 ## obj spec.provider.yandexlockbox.caProvider.certSecretRef
 
-"A reference to a specific 'key' within a Secret resource, In some instances, `key` is a required field."
+"A reference to a specific 'key' within a Secret resource,\nIn some instances, `key` is a required field."
 
 ### fn spec.provider.yandexlockbox.caProvider.certSecretRef.withKey
 
@@ -2427,7 +2427,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.provider.yandexlockbox.caProvider.certSecretRef.withName
 
@@ -2443,7 +2443,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.retrySettings
 

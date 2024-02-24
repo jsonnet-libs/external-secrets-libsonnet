@@ -4,7 +4,7 @@ permalink: /0.8/generators/v1alpha1/acrAccessToken/
 
 # generators.v1alpha1.acrAccessToken
 
-"ACRAccessToken returns a Azure Container Registry token that can be used for pushing/pulling images. Note: by default it will return an ACR Refresh Token with full access (depending on the identity). This can be scoped down to the repository level using .spec.scope. In case scope is defined it will return an ACR Access Token. \n See docs: https://github.com/Azure/acr/blob/main/docs/AAD-OAuth.md"
+"ACRAccessToken returns a Azure Container Registry token\nthat can be used for pushing/pulling images.\nNote: by default it will return an ACR Refresh Token with full access\n(depending on the identity).\nThis can be scoped down to the repository level using .spec.scope.\nIn case scope is defined it will return an ACR Access Token.\n\n\nSee docs: https://github.com/Azure/acr/blob/main/docs/AAD-OAuth.md"
 
 ## Index
 
@@ -230,7 +230,7 @@ withUid(uid)
 
 ## obj spec
 
-"ACRAccessTokenSpec defines how to generate the access token e.g. how to authenticate and which registry to use. see: https://github.com/Azure/acr/blob/main/docs/AAD-OAuth.md#overview"
+"ACRAccessTokenSpec defines how to generate the access token\ne.g. how to authenticate and which registry to use.\nsee: https://github.com/Azure/acr/blob/main/docs/AAD-OAuth.md#overview"
 
 ### fn spec.withEnvironmentType
 
@@ -238,7 +238,7 @@ withUid(uid)
 withEnvironmentType(environmentType)
 ```
 
-"EnvironmentType specifies the Azure cloud environment endpoints to use for connecting and authenticating with Azure. By default it points to the public cloud AAD endpoint. The following endpoints are available, also see here: https://github.com/Azure/go-autorest/blob/main/autorest/azure/environments.go#L152 PublicCloud, USGovernmentCloud, ChinaCloud, GermanCloud"
+"EnvironmentType specifies the Azure cloud environment endpoints to use for\nconnecting and authenticating with Azure. By default it points to the public cloud AAD endpoint.\nThe following endpoints are available, also see here: https://github.com/Azure/go-autorest/blob/main/autorest/azure/environments.go#L152\nPublicCloud, USGovernmentCloud, ChinaCloud, GermanCloud"
 
 ### fn spec.withRegistry
 
@@ -246,7 +246,7 @@ withEnvironmentType(environmentType)
 withRegistry(registry)
 ```
 
-"the domain name of the ACR registry e.g. foobarexample.azurecr.io"
+"the domain name of the ACR registry\ne.g. foobarexample.azurecr.io"
 
 ### fn spec.withScope
 
@@ -254,7 +254,7 @@ withRegistry(registry)
 withScope(scope)
 ```
 
-"Define the scope for the access token, e.g. pull/push access for a repository. if not provided it will return a refresh token that has full scope. Note: you need to pin it down to the repository level, there is no wildcard available. \n examples: repository:my-repository:pull,push repository:my-repository:pull \n see docs for details: https://docs.docker.com/registry/spec/auth/scope/"
+"Define the scope for the access token, e.g. pull/push access for a repository.\nif not provided it will return a refresh token that has full scope.\nNote: you need to pin it down to the repository level, there is no wildcard available.\n\n\nexamples:\nrepository:my-repository:pull,push\nrepository:my-repository:pull\n\n\nsee docs for details: https://docs.docker.com/registry/spec/auth/scope/"
 
 ### fn spec.withTenantId
 
@@ -286,7 +286,7 @@ withIdentityId(identityId)
 
 ## obj spec.auth.servicePrincipal.secretRef
 
-"Configuration used to authenticate with Azure using static credentials stored in a Kind=Secret."
+"Configuration used to authenticate with Azure using static\ncredentials stored in a Kind=Secret."
 
 ## obj spec.auth.servicePrincipal.secretRef.clientId
 
@@ -298,7 +298,7 @@ withIdentityId(identityId)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.auth.servicePrincipal.secretRef.clientId.withName
 
@@ -314,7 +314,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.auth.servicePrincipal.secretRef.clientSecret
 
@@ -326,7 +326,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.auth.servicePrincipal.secretRef.clientSecret.withName
 
@@ -342,7 +342,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.auth.workloadIdentity
 
@@ -350,7 +350,7 @@ withNamespace(namespace)
 
 ## obj spec.auth.workloadIdentity.serviceAccountRef
 
-"ServiceAccountRef specified the service account that should be used when authenticating with WorkloadIdentity."
+"ServiceAccountRef specified the service account\nthat should be used when authenticating with WorkloadIdentity."
 
 ### fn spec.auth.workloadIdentity.serviceAccountRef.withAudiences
 
@@ -358,7 +358,7 @@ withNamespace(namespace)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.auth.workloadIdentity.serviceAccountRef.withAudiencesMixin
 
@@ -366,7 +366,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -384,4 +384,4 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."

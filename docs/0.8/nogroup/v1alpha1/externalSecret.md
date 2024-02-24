@@ -272,7 +272,7 @@ withData(data)
 withDataFrom(dataFrom)
 ```
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 ### fn spec.withDataFromMixin
 
@@ -280,7 +280,7 @@ withDataFrom(dataFrom)
 withDataFromMixin(dataFrom)
 ```
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 **Note:** This function appends passed data to existing values
 
@@ -300,7 +300,7 @@ withDataMixin(data)
 withRefreshInterval(refreshInterval)
 ```
 
-"RefreshInterval is the amount of time before the values are read again from the SecretStore provider Valid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\" May be set to zero to fetch and create it once. Defaults to 1h."
+"RefreshInterval is the amount of time before the values are read again from the SecretStore provider\nValid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\"\nMay be set to zero to fetch and create it once. Defaults to 1h."
 
 ## obj spec.data
 
@@ -352,7 +352,7 @@ withVersion(version)
 
 ## obj spec.dataFrom
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 ### fn spec.dataFrom.withConversionStrategy
 
@@ -396,7 +396,7 @@ withVersion(version)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.secretStoreRef.withName
 
@@ -408,7 +408,7 @@ withName(name)
 
 ## obj spec.target
 
-"ExternalSecretTarget defines the Kubernetes Secret to be created There can be only one target per ExternalSecret."
+"ExternalSecretTarget defines the Kubernetes Secret to be created\nThere can be only one target per ExternalSecret."
 
 ### fn spec.target.withCreationPolicy
 
@@ -416,7 +416,7 @@ withName(name)
 withCreationPolicy(creationPolicy)
 ```
 
-"CreationPolicy defines rules on how to create the resulting Secret Defaults to 'Owner'"
+"CreationPolicy defines rules on how to create the resulting Secret\nDefaults to 'Owner'"
 
 ### fn spec.target.withImmutable
 
@@ -432,7 +432,7 @@ withImmutable(immutable)
 withName(name)
 ```
 
-"Name defines the name of the Secret resource to be managed This field is immutable Defaults to the .metadata.name of the ExternalSecret resource"
+"Name defines the name of the Secret resource to be managed\nThis field is immutable\nDefaults to the .metadata.name of the ExternalSecret resource"
 
 ## obj spec.target.template
 
@@ -462,7 +462,7 @@ withDataMixin(data)
 withEngineVersion(engineVersion)
 ```
 
-"EngineVersion specifies the template engine version that should be used to compile/execute the template specified in .data and .templateFrom[]."
+"EngineVersion specifies the template engine version\nthat should be used to compile/execute the\ntemplate specified in .data and .templateFrom[]."
 
 ### fn spec.target.template.withTemplateFrom
 

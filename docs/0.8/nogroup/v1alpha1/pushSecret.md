@@ -335,7 +335,7 @@ withRemoteKey(remoteKey)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.secretStoreRefs.withName
 
@@ -373,7 +373,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.secretStoreRefs.labelSelector.withMatchLabelsMixin
 
@@ -381,7 +381,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -403,7 +403,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.secretStoreRefs.labelSelector.matchExpressions.withValues
 
@@ -411,7 +411,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.secretStoreRefs.labelSelector.matchExpressions.withValuesMixin
 
@@ -419,7 +419,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 

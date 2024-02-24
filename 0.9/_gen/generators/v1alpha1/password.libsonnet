@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='password', url='', help='"Password generates a random password based on the configuration parameters in spec. You can specify the length, characterset and other attributes."'),
+  '#':: d.pkg(name='password', url='', help='"Password generates a random password based on the\\nconfiguration parameters in spec.\\nYou can specify the length, characterset and other attributes."'),
   '#metadata':: d.obj(help='"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."'),
   metadata: {
     '#withAnnotations':: d.fn(help='"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"', args=[d.arg(name='annotations', type=d.T.object)]),
@@ -51,15 +51,15 @@
   spec: {
     '#withAllowRepeat':: d.fn(help='"set AllowRepeat to true to allow repeating characters."', args=[d.arg(name='allowRepeat', type=d.T.boolean)]),
     withAllowRepeat(allowRepeat): { spec+: { allowRepeat: allowRepeat } },
-    '#withDigits':: d.fn(help='"Digits specifies the number of digits in the generated password. If omitted it defaults to 25% of the length of the password"', args=[d.arg(name='digits', type=d.T.integer)]),
+    '#withDigits':: d.fn(help='"Digits specifies the number of digits in the generated\\npassword. If omitted it defaults to 25% of the length of the password"', args=[d.arg(name='digits', type=d.T.integer)]),
     withDigits(digits): { spec+: { digits: digits } },
-    '#withLength':: d.fn(help='"Length of the password to be generated. Defaults to 24"', args=[d.arg(name='length', type=d.T.integer)]),
+    '#withLength':: d.fn(help='"Length of the password to be generated.\\nDefaults to 24"', args=[d.arg(name='length', type=d.T.integer)]),
     withLength(length): { spec+: { length: length } },
     '#withNoUpper':: d.fn(help='"Set NoUpper to disable uppercase characters"', args=[d.arg(name='noUpper', type=d.T.boolean)]),
     withNoUpper(noUpper): { spec+: { noUpper: noUpper } },
-    '#withSymbolCharacters':: d.fn(help='"SymbolCharacters specifies the special characters that should be used in the generated password."', args=[d.arg(name='symbolCharacters', type=d.T.string)]),
+    '#withSymbolCharacters':: d.fn(help='"SymbolCharacters specifies the special characters that should be used\\nin the generated password."', args=[d.arg(name='symbolCharacters', type=d.T.string)]),
     withSymbolCharacters(symbolCharacters): { spec+: { symbolCharacters: symbolCharacters } },
-    '#withSymbols':: d.fn(help='"Symbols specifies the number of symbol characters in the generated password. If omitted it defaults to 25% of the length of the password"', args=[d.arg(name='symbols', type=d.T.integer)]),
+    '#withSymbols':: d.fn(help='"Symbols specifies the number of symbol characters in the generated\\npassword. If omitted it defaults to 25% of the length of the password"', args=[d.arg(name='symbols', type=d.T.integer)]),
     withSymbols(symbols): { spec+: { symbols: symbols } },
   },
   '#mixin': 'ignore',

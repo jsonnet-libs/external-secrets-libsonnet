@@ -4,7 +4,7 @@ permalink: /0.9/generators/v1alpha1/ecrAuthorizationToken/
 
 # generators.v1alpha1.ecrAuthorizationToken
 
-"ECRAuthorizationTokenSpec uses the GetAuthorizationToken API to retrieve an authorization token. The authorization token is valid for 12 hours. The authorizationToken returned is a base64 encoded string that can be decoded and used in a docker login command to authenticate to a registry. For more information, see Registry authentication (https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth) in the Amazon Elastic Container Registry User Guide."
+"ECRAuthorizationTokenSpec uses the GetAuthorizationToken API to retrieve an\nauthorization token.\nThe authorization token is valid for 12 hours.\nThe authorizationToken returned is a base64 encoded string that can be decoded\nand used in a docker login command to authenticate to a registry.\nFor more information, see Registry authentication (https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth) in the Amazon Elastic Container Registry User Guide."
 
 ## Index
 
@@ -245,7 +245,7 @@ withRegion(region)
 withRole(role)
 ```
 
-"You can assume a role before making calls to the desired AWS service."
+"You can assume a role before making calls to the\ndesired AWS service."
 
 ## obj spec.auth
 
@@ -265,7 +265,7 @@ withRole(role)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.auth.jwt.serviceAccountRef.withAudiencesMixin
 
@@ -273,7 +273,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -291,11 +291,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.auth.secretRef
 
-"AWSAuthSecretRef holds secret references for AWS credentials both AccessKeyID and SecretAccessKey must be defined in order to properly authenticate."
+"AWSAuthSecretRef holds secret references for AWS credentials\nboth AccessKeyID and SecretAccessKey must be defined in order to properly authenticate."
 
 ## obj spec.auth.secretRef.accessKeyIDSecretRef
 
@@ -307,7 +307,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.auth.secretRef.accessKeyIDSecretRef.withName
 
@@ -323,7 +323,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.auth.secretRef.secretAccessKeySecretRef
 
@@ -335,7 +335,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.auth.secretRef.secretAccessKeySecretRef.withName
 
@@ -351,11 +351,11 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.auth.secretRef.sessionTokenSecretRef
 
-"The SessionToken used for authentication This must be defined if AccessKeyID and SecretAccessKey are temporary credentials see: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html"
+"The SessionToken used for authentication\nThis must be defined if AccessKeyID and SecretAccessKey are temporary credentials\nsee: https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html"
 
 ### fn spec.auth.secretRef.sessionTokenSecretRef.withKey
 
@@ -363,7 +363,7 @@ withNamespace(namespace)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.auth.secretRef.sessionTokenSecretRef.withName
 
@@ -379,4 +379,4 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."

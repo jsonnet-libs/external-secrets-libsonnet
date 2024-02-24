@@ -59,6 +59,36 @@ permalink: /0.9/nogroup/v1alpha1/pushSecret/
   * [`obj spec.selector`](#obj-specselector)
     * [`obj spec.selector.secret`](#obj-specselectorsecret)
       * [`fn withName(name)`](#fn-specselectorsecretwithname)
+  * [`obj spec.template`](#obj-spectemplate)
+    * [`fn withData(data)`](#fn-spectemplatewithdata)
+    * [`fn withDataMixin(data)`](#fn-spectemplatewithdatamixin)
+    * [`fn withEngineVersion(engineVersion)`](#fn-spectemplatewithengineversion)
+    * [`fn withMergePolicy(mergePolicy)`](#fn-spectemplatewithmergepolicy)
+    * [`fn withTemplateFrom(templateFrom)`](#fn-spectemplatewithtemplatefrom)
+    * [`fn withTemplateFromMixin(templateFrom)`](#fn-spectemplatewithtemplatefrommixin)
+    * [`fn withType(type)`](#fn-spectemplatewithtype)
+    * [`obj spec.template.metadata`](#obj-spectemplatemetadata)
+      * [`fn withAnnotations(annotations)`](#fn-spectemplatemetadatawithannotations)
+      * [`fn withAnnotationsMixin(annotations)`](#fn-spectemplatemetadatawithannotationsmixin)
+      * [`fn withLabels(labels)`](#fn-spectemplatemetadatawithlabels)
+      * [`fn withLabelsMixin(labels)`](#fn-spectemplatemetadatawithlabelsmixin)
+    * [`obj spec.template.templateFrom`](#obj-spectemplatetemplatefrom)
+      * [`fn withLiteral(literal)`](#fn-spectemplatetemplatefromwithliteral)
+      * [`fn withTarget(target)`](#fn-spectemplatetemplatefromwithtarget)
+      * [`obj spec.template.templateFrom.configMap`](#obj-spectemplatetemplatefromconfigmap)
+        * [`fn withItems(items)`](#fn-spectemplatetemplatefromconfigmapwithitems)
+        * [`fn withItemsMixin(items)`](#fn-spectemplatetemplatefromconfigmapwithitemsmixin)
+        * [`fn withName(name)`](#fn-spectemplatetemplatefromconfigmapwithname)
+        * [`obj spec.template.templateFrom.configMap.items`](#obj-spectemplatetemplatefromconfigmapitems)
+          * [`fn withKey(key)`](#fn-spectemplatetemplatefromconfigmapitemswithkey)
+          * [`fn withTemplateAs(templateAs)`](#fn-spectemplatetemplatefromconfigmapitemswithtemplateas)
+      * [`obj spec.template.templateFrom.secret`](#obj-spectemplatetemplatefromsecret)
+        * [`fn withItems(items)`](#fn-spectemplatetemplatefromsecretwithitems)
+        * [`fn withItemsMixin(items)`](#fn-spectemplatetemplatefromsecretwithitemsmixin)
+        * [`fn withName(name)`](#fn-spectemplatetemplatefromsecretwithname)
+        * [`obj spec.template.templateFrom.secret.items`](#obj-spectemplatetemplatefromsecretitems)
+          * [`fn withKey(key)`](#fn-spectemplatetemplatefromsecretitemswithkey)
+          * [`fn withTemplateAs(templateAs)`](#fn-spectemplatetemplatefromsecretitemswithtemplateas)
 
 ## Fields
 
@@ -300,7 +330,7 @@ withSecretStoreRefsMixin(secretStoreRefs)
 withMetadata(metadata)
 ```
 
-"Metadata is metadata attached to the secret. The structure of metadata is provider specific, please look it up in the provider documentation."
+"Metadata is metadata attached to the secret.\nThe structure of metadata is provider specific, please look it up in the provider documentation."
 
 ## obj spec.data.match
 
@@ -344,7 +374,7 @@ withRemoteKey(remoteKey)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.secretStoreRefs.withName
 
@@ -382,7 +412,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.secretStoreRefs.labelSelector.withMatchLabelsMixin
 
@@ -390,7 +420,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -412,7 +442,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.secretStoreRefs.labelSelector.matchExpressions.withValues
 
@@ -420,7 +450,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.secretStoreRefs.labelSelector.matchExpressions.withValuesMixin
 
@@ -428,7 +458,7 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values
 
@@ -447,3 +477,226 @@ withName(name)
 ```
 
 "Name of the Secret. The Secret must exist in the same namespace as the PushSecret manifest."
+
+## obj spec.template
+
+"Template defines a blueprint for the created Secret resource."
+
+### fn spec.template.withData
+
+```ts
+withData(data)
+```
+
+
+
+### fn spec.template.withDataMixin
+
+```ts
+withDataMixin(data)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.withEngineVersion
+
+```ts
+withEngineVersion(engineVersion)
+```
+
+"EngineVersion specifies the template engine version\nthat should be used to compile/execute the\ntemplate specified in .data and .templateFrom[]."
+
+### fn spec.template.withMergePolicy
+
+```ts
+withMergePolicy(mergePolicy)
+```
+
+
+
+### fn spec.template.withTemplateFrom
+
+```ts
+withTemplateFrom(templateFrom)
+```
+
+
+
+### fn spec.template.withTemplateFromMixin
+
+```ts
+withTemplateFromMixin(templateFrom)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.withType
+
+```ts
+withType(type)
+```
+
+
+
+## obj spec.template.metadata
+
+"ExternalSecretTemplateMetadata defines metadata fields for the Secret blueprint."
+
+### fn spec.template.metadata.withAnnotations
+
+```ts
+withAnnotations(annotations)
+```
+
+
+
+### fn spec.template.metadata.withAnnotationsMixin
+
+```ts
+withAnnotationsMixin(annotations)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.metadata.withLabels
+
+```ts
+withLabels(labels)
+```
+
+
+
+### fn spec.template.metadata.withLabelsMixin
+
+```ts
+withLabelsMixin(labels)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+## obj spec.template.templateFrom
+
+
+
+### fn spec.template.templateFrom.withLiteral
+
+```ts
+withLiteral(literal)
+```
+
+
+
+### fn spec.template.templateFrom.withTarget
+
+```ts
+withTarget(target)
+```
+
+
+
+## obj spec.template.templateFrom.configMap
+
+
+
+### fn spec.template.templateFrom.configMap.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.template.templateFrom.configMap.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.templateFrom.configMap.withName
+
+```ts
+withName(name)
+```
+
+
+
+## obj spec.template.templateFrom.configMap.items
+
+
+
+### fn spec.template.templateFrom.configMap.items.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.template.templateFrom.configMap.items.withTemplateAs
+
+```ts
+withTemplateAs(templateAs)
+```
+
+
+
+## obj spec.template.templateFrom.secret
+
+
+
+### fn spec.template.templateFrom.secret.withItems
+
+```ts
+withItems(items)
+```
+
+
+
+### fn spec.template.templateFrom.secret.withItemsMixin
+
+```ts
+withItemsMixin(items)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.template.templateFrom.secret.withName
+
+```ts
+withName(name)
+```
+
+
+
+## obj spec.template.templateFrom.secret.items
+
+
+
+### fn spec.template.templateFrom.secret.items.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.template.templateFrom.secret.items.withTemplateAs
+
+```ts
+withTemplateAs(templateAs)
+```
+

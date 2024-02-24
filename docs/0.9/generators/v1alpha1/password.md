@@ -4,7 +4,7 @@ permalink: /0.9/generators/v1alpha1/password/
 
 # generators.v1alpha1.password
 
-"Password generates a random password based on the configuration parameters in spec. You can specify the length, characterset and other attributes."
+"Password generates a random password based on the\nconfiguration parameters in spec.\nYou can specify the length, characterset and other attributes."
 
 ## Index
 
@@ -229,7 +229,7 @@ withAllowRepeat(allowRepeat)
 withDigits(digits)
 ```
 
-"Digits specifies the number of digits in the generated password. If omitted it defaults to 25% of the length of the password"
+"Digits specifies the number of digits in the generated\npassword. If omitted it defaults to 25% of the length of the password"
 
 ### fn spec.withLength
 
@@ -237,7 +237,7 @@ withDigits(digits)
 withLength(length)
 ```
 
-"Length of the password to be generated. Defaults to 24"
+"Length of the password to be generated.\nDefaults to 24"
 
 ### fn spec.withNoUpper
 
@@ -253,7 +253,7 @@ withNoUpper(noUpper)
 withSymbolCharacters(symbolCharacters)
 ```
 
-"SymbolCharacters specifies the special characters that should be used in the generated password."
+"SymbolCharacters specifies the special characters that should be used\nin the generated password."
 
 ### fn spec.withSymbols
 
@@ -261,4 +261,4 @@ withSymbolCharacters(symbolCharacters)
 withSymbols(symbols)
 ```
 
-"Symbols specifies the number of symbol characters in the generated password. If omitted it defaults to 25% of the length of the password"
+"Symbols specifies the number of symbol characters in the generated\npassword. If omitted it defaults to 25% of the length of the password"

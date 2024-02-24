@@ -346,7 +346,7 @@ withData(data)
 withDataFrom(dataFrom)
 ```
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 ### fn spec.externalSecretSpec.withDataFromMixin
 
@@ -354,7 +354,7 @@ withDataFrom(dataFrom)
 withDataFromMixin(dataFrom)
 ```
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 **Note:** This function appends passed data to existing values
 
@@ -374,7 +374,7 @@ withDataMixin(data)
 withRefreshInterval(refreshInterval)
 ```
 
-"RefreshInterval is the amount of time before the values are read again from the SecretStore provider Valid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\" May be set to zero to fetch and create it once. Defaults to 1h."
+"RefreshInterval is the amount of time before the values are read again from the SecretStore provider\nValid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\"\nMay be set to zero to fetch and create it once. Defaults to 1h."
 
 ## obj spec.externalSecretSpec.data
 
@@ -386,11 +386,11 @@ withRefreshInterval(refreshInterval)
 withSecretKey(secretKey)
 ```
 
-"SecretKey defines the key in which the controller stores the value. This is the key in the Kind=Secret"
+"SecretKey defines the key in which the controller stores\nthe value. This is the key in the Kind=Secret"
 
 ## obj spec.externalSecretSpec.data.remoteRef
 
-"RemoteRef points to the remote secret and defines which secret (version/property/..) to fetch."
+"RemoteRef points to the remote secret and defines\nwhich secret (version/property/..) to fetch."
 
 ### fn spec.externalSecretSpec.data.remoteRef.withConversionStrategy
 
@@ -442,7 +442,7 @@ withVersion(version)
 
 ## obj spec.externalSecretSpec.data.sourceRef
 
-"SourceRef allows you to override the source from which the value will pulled from."
+"SourceRef allows you to override the source\nfrom which the value will pulled from."
 
 ## obj spec.externalSecretSpec.data.sourceRef.generatorRef
 
@@ -482,7 +482,7 @@ withName(name)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.externalSecretSpec.data.sourceRef.storeRef.withName
 
@@ -494,7 +494,7 @@ withName(name)
 
 ## obj spec.externalSecretSpec.dataFrom
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 ### fn spec.externalSecretSpec.dataFrom.withRewrite
 
@@ -502,7 +502,7 @@ withName(name)
 withRewrite(rewrite)
 ```
 
-"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+"Used to rewrite secret Keys after getting them from the secret Provider\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
 
 ### fn spec.externalSecretSpec.dataFrom.withRewriteMixin
 
@@ -510,13 +510,13 @@ withRewrite(rewrite)
 withRewriteMixin(rewrite)
 ```
 
-"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+"Used to rewrite secret Keys after getting them from the secret Provider\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.externalSecretSpec.dataFrom.extract
 
-"Used to extract multiple key/value pairs from one secret Note: Extract does not support sourceRef.Generator or sourceRef.GeneratorRef."
+"Used to extract multiple key/value pairs from one secret\nNote: Extract does not support sourceRef.Generator or sourceRef.GeneratorRef."
 
 ### fn spec.externalSecretSpec.dataFrom.extract.withConversionStrategy
 
@@ -568,7 +568,7 @@ withVersion(version)
 
 ## obj spec.externalSecretSpec.dataFrom.find
 
-"Used to find secrets based on tags or regular expressions Note: Find does not support sourceRef.Generator or sourceRef.GeneratorRef."
+"Used to find secrets based on tags or regular expressions\nNote: Find does not support sourceRef.Generator or sourceRef.GeneratorRef."
 
 ### fn spec.externalSecretSpec.dataFrom.find.withConversionStrategy
 
@@ -626,11 +626,11 @@ withRegexp(regexp)
 
 ## obj spec.externalSecretSpec.dataFrom.rewrite
 
-"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+"Used to rewrite secret Keys after getting them from the secret Provider\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
 
 ## obj spec.externalSecretSpec.dataFrom.rewrite.regexp
 
-"Used to rewrite with regular expressions. The resulting key will be the output of a regexp.ReplaceAll operation."
+"Used to rewrite with regular expressions.\nThe resulting key will be the output of a regexp.ReplaceAll operation."
 
 ### fn spec.externalSecretSpec.dataFrom.rewrite.regexp.withSource
 
@@ -650,7 +650,7 @@ withTarget(target)
 
 ## obj spec.externalSecretSpec.dataFrom.sourceRef
 
-"SourceRef points to a store or generator which contains secret values ready to use. Use this in combination with Extract or Find pull values out of a specific SecretStore. When sourceRef points to a generator Extract or Find is not supported. The generator returns a static map of values"
+"SourceRef points to a store or generator\nwhich contains secret values ready to use.\nUse this in combination with Extract or Find pull values out of\na specific SecretStore.\nWhen sourceRef points to a generator Extract or Find is not supported.\nThe generator returns a static map of values"
 
 ## obj spec.externalSecretSpec.dataFrom.sourceRef.generatorRef
 
@@ -690,7 +690,7 @@ withName(name)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.externalSecretSpec.dataFrom.sourceRef.storeRef.withName
 
@@ -710,7 +710,7 @@ withName(name)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.externalSecretSpec.secretStoreRef.withName
 
@@ -722,7 +722,7 @@ withName(name)
 
 ## obj spec.externalSecretSpec.target
 
-"ExternalSecretTarget defines the Kubernetes Secret to be created There can be only one target per ExternalSecret."
+"ExternalSecretTarget defines the Kubernetes Secret to be created\nThere can be only one target per ExternalSecret."
 
 ### fn spec.externalSecretSpec.target.withCreationPolicy
 
@@ -730,7 +730,7 @@ withName(name)
 withCreationPolicy(creationPolicy)
 ```
 
-"CreationPolicy defines rules on how to create the resulting Secret Defaults to 'Owner'"
+"CreationPolicy defines rules on how to create the resulting Secret\nDefaults to 'Owner'"
 
 ### fn spec.externalSecretSpec.target.withDeletionPolicy
 
@@ -738,7 +738,7 @@ withCreationPolicy(creationPolicy)
 withDeletionPolicy(deletionPolicy)
 ```
 
-"DeletionPolicy defines rules on how to delete the resulting Secret Defaults to 'Retain'"
+"DeletionPolicy defines rules on how to delete the resulting Secret\nDefaults to 'Retain'"
 
 ### fn spec.externalSecretSpec.target.withImmutable
 
@@ -754,7 +754,7 @@ withImmutable(immutable)
 withName(name)
 ```
 
-"Name defines the name of the Secret resource to be managed This field is immutable Defaults to the .metadata.name of the ExternalSecret resource"
+"Name defines the name of the Secret resource to be managed\nThis field is immutable\nDefaults to the .metadata.name of the ExternalSecret resource"
 
 ## obj spec.externalSecretSpec.target.template
 
@@ -1008,7 +1008,7 @@ withMatchExpressionsMixin(matchExpressions)
 withMatchLabels(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 ### fn spec.namespaceSelector.withMatchLabelsMixin
 
@@ -1016,7 +1016,7 @@ withMatchLabels(matchLabels)
 withMatchLabelsMixin(matchLabels)
 ```
 
-"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+"matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels\nmap is equivalent to an element of matchExpressions, whose key field is \"key\", the\noperator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
 
 **Note:** This function appends passed data to existing values
 
@@ -1038,7 +1038,7 @@ withKey(key)
 withOperator(operator)
 ```
 
-"operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist."
+"operator represents a key's relationship to a set of values.\nValid operators are In, NotIn, Exists and DoesNotExist."
 
 ### fn spec.namespaceSelector.matchExpressions.withValues
 
@@ -1046,7 +1046,7 @@ withOperator(operator)
 withValues(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 ### fn spec.namespaceSelector.matchExpressions.withValuesMixin
 
@@ -1054,6 +1054,6 @@ withValues(values)
 withValuesMixin(values)
 ```
 
-"values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch."
+"values is an array of string values. If the operator is In or NotIn,\nthe values array must be non-empty. If the operator is Exists or DoesNotExist,\nthe values array must be empty. This array is replaced during a strategic\nmerge patch."
 
 **Note:** This function appends passed data to existing values

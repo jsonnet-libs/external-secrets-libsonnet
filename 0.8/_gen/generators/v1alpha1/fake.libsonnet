@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='fake', url='', help='"Fake generator is used for testing. It lets you define a static set of credentials that is always returned."'),
+  '#':: d.pkg(name='fake', url='', help='"Fake generator is used for testing. It lets you define\\na static set of credentials that is always returned."'),
   '#metadata':: d.obj(help='"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."'),
   metadata: {
     '#withAnnotations':: d.fn(help='"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"', args=[d.arg(name='annotations', type=d.T.object)]),
@@ -49,11 +49,11 @@
   } + self.metadata.withName(name=name),
   '#spec':: d.obj(help='"FakeSpec contains the static data."'),
   spec: {
-    '#withController':: d.fn(help='"Used to select the correct ESO controller (think: ingress.ingressClassName) The ESO controller is instantiated with a specific controller name and filters VDS based on this property"', args=[d.arg(name='controller', type=d.T.string)]),
+    '#withController':: d.fn(help='"Used to select the correct ESO controller (think: ingress.ingressClassName)\\nThe ESO controller is instantiated with a specific controller name and filters VDS based on this property"', args=[d.arg(name='controller', type=d.T.string)]),
     withController(controller): { spec+: { controller: controller } },
-    '#withData':: d.fn(help='"Data defines the static data returned by this generator."', args=[d.arg(name='data', type=d.T.object)]),
+    '#withData':: d.fn(help='"Data defines the static data returned\\nby this generator."', args=[d.arg(name='data', type=d.T.object)]),
     withData(data): { spec+: { data: data } },
-    '#withDataMixin':: d.fn(help='"Data defines the static data returned by this generator."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='data', type=d.T.object)]),
+    '#withDataMixin':: d.fn(help='"Data defines the static data returned\\nby this generator."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='data', type=d.T.object)]),
     withDataMixin(data): { spec+: { data+: data } },
   },
   '#mixin': 'ignore',

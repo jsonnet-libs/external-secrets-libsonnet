@@ -51,7 +51,7 @@
   spec: {
     '#data':: d.obj(help='"Data defines the connection between the Kubernetes Secret keys and the Provider data"'),
     data: {
-      '#remoteRef':: d.obj(help='"RemoteRef points to the remote secret and defines which secret (version/property/..) to fetch."'),
+      '#remoteRef':: d.obj(help='"RemoteRef points to the remote secret and defines\\nwhich secret (version/property/..) to fetch."'),
       remoteRef: {
         '#withConversionStrategy':: d.fn(help='"Used to define a conversion Strategy"', args=[d.arg(name='conversionStrategy', type=d.T.string)]),
         withConversionStrategy(conversionStrategy): { remoteRef+: { conversionStrategy: conversionStrategy } },
@@ -66,7 +66,7 @@
         '#withVersion':: d.fn(help='"Used to select a specific version of the Provider value, if supported"', args=[d.arg(name='version', type=d.T.string)]),
         withVersion(version): { remoteRef+: { version: version } },
       },
-      '#sourceRef':: d.obj(help='"SourceRef allows you to override the source from which the value will pulled from."'),
+      '#sourceRef':: d.obj(help='"SourceRef allows you to override the source\\nfrom which the value will pulled from."'),
       sourceRef: {
         '#generatorRef':: d.obj(help='"GeneratorRef points to a generator custom resource in"'),
         generatorRef: {
@@ -79,18 +79,18 @@
         },
         '#storeRef':: d.obj(help='"SecretStoreRef defines which SecretStore to fetch the ExternalSecret data."'),
         storeRef: {
-          '#withKind':: d.fn(help='"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"', args=[d.arg(name='kind', type=d.T.string)]),
+          '#withKind':: d.fn(help='"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\\nDefaults to `SecretStore`"', args=[d.arg(name='kind', type=d.T.string)]),
           withKind(kind): { sourceRef+: { storeRef+: { kind: kind } } },
           '#withName':: d.fn(help='"Name of the SecretStore resource"', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { sourceRef+: { storeRef+: { name: name } } },
         },
       },
-      '#withSecretKey':: d.fn(help='"SecretKey defines the key in which the controller stores the value. This is the key in the Kind=Secret"', args=[d.arg(name='secretKey', type=d.T.string)]),
+      '#withSecretKey':: d.fn(help='"SecretKey defines the key in which the controller stores\\nthe value. This is the key in the Kind=Secret"', args=[d.arg(name='secretKey', type=d.T.string)]),
       withSecretKey(secretKey): { secretKey: secretKey },
     },
-    '#dataFrom':: d.obj(help='"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"'),
+    '#dataFrom':: d.obj(help='"DataFrom is used to fetch all properties from a specific Provider data\\nIf multiple entries are specified, the Secret keys are merged in the specified order"'),
     dataFrom: {
-      '#extract':: d.obj(help='"Used to extract multiple key/value pairs from one secret Note: Extract does not support sourceRef.Generator or sourceRef.GeneratorRef."'),
+      '#extract':: d.obj(help='"Used to extract multiple key/value pairs from one secret\\nNote: Extract does not support sourceRef.Generator or sourceRef.GeneratorRef."'),
       extract: {
         '#withConversionStrategy':: d.fn(help='"Used to define a conversion Strategy"', args=[d.arg(name='conversionStrategy', type=d.T.string)]),
         withConversionStrategy(conversionStrategy): { extract+: { conversionStrategy: conversionStrategy } },
@@ -105,7 +105,7 @@
         '#withVersion':: d.fn(help='"Used to select a specific version of the Provider value, if supported"', args=[d.arg(name='version', type=d.T.string)]),
         withVersion(version): { extract+: { version: version } },
       },
-      '#find':: d.obj(help='"Used to find secrets based on tags or regular expressions Note: Find does not support sourceRef.Generator or sourceRef.GeneratorRef."'),
+      '#find':: d.obj(help='"Used to find secrets based on tags or regular expressions\\nNote: Find does not support sourceRef.Generator or sourceRef.GeneratorRef."'),
       find: {
         '#name':: d.obj(help='"Finds secrets based on the name."'),
         name: {
@@ -123,9 +123,9 @@
         '#withTagsMixin':: d.fn(help='"Find secrets based on tags."\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tags', type=d.T.object)]),
         withTagsMixin(tags): { find+: { tags+: tags } },
       },
-      '#rewrite':: d.obj(help='"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"'),
+      '#rewrite':: d.obj(help='"Used to rewrite secret Keys after getting them from the secret Provider\\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"'),
       rewrite: {
-        '#regexp':: d.obj(help='"Used to rewrite with regular expressions. The resulting key will be the output of a regexp.ReplaceAll operation."'),
+        '#regexp':: d.obj(help='"Used to rewrite with regular expressions.\\nThe resulting key will be the output of a regexp.ReplaceAll operation."'),
         regexp: {
           '#withSource':: d.fn(help='"Used to define the regular expression of a re.Compiler."', args=[d.arg(name='source', type=d.T.string)]),
           withSource(source): { regexp+: { source: source } },
@@ -133,7 +133,7 @@
           withTarget(target): { regexp+: { target: target } },
         },
       },
-      '#sourceRef':: d.obj(help='"SourceRef points to a store or generator which contains secret values ready to use. Use this in combination with Extract or Find pull values out of a specific SecretStore. When sourceRef points to a generator Extract or Find is not supported. The generator returns a static map of values"'),
+      '#sourceRef':: d.obj(help='"SourceRef points to a store or generator\\nwhich contains secret values ready to use.\\nUse this in combination with Extract or Find pull values out of\\na specific SecretStore.\\nWhen sourceRef points to a generator Extract or Find is not supported.\\nThe generator returns a static map of values"'),
       sourceRef: {
         '#generatorRef':: d.obj(help='"GeneratorRef points to a generator custom resource in"'),
         generatorRef: {
@@ -146,25 +146,25 @@
         },
         '#storeRef':: d.obj(help='"SecretStoreRef defines which SecretStore to fetch the ExternalSecret data."'),
         storeRef: {
-          '#withKind':: d.fn(help='"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"', args=[d.arg(name='kind', type=d.T.string)]),
+          '#withKind':: d.fn(help='"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\\nDefaults to `SecretStore`"', args=[d.arg(name='kind', type=d.T.string)]),
           withKind(kind): { sourceRef+: { storeRef+: { kind: kind } } },
           '#withName':: d.fn(help='"Name of the SecretStore resource"', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { sourceRef+: { storeRef+: { name: name } } },
         },
       },
-      '#withRewrite':: d.fn(help='"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"', args=[d.arg(name='rewrite', type=d.T.array)]),
+      '#withRewrite':: d.fn(help='"Used to rewrite secret Keys after getting them from the secret Provider\\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"', args=[d.arg(name='rewrite', type=d.T.array)]),
       withRewrite(rewrite): { rewrite: if std.isArray(v=rewrite) then rewrite else [rewrite] },
-      '#withRewriteMixin':: d.fn(help='"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='rewrite', type=d.T.array)]),
+      '#withRewriteMixin':: d.fn(help='"Used to rewrite secret Keys after getting them from the secret Provider\\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='rewrite', type=d.T.array)]),
       withRewriteMixin(rewrite): { rewrite+: if std.isArray(v=rewrite) then rewrite else [rewrite] },
     },
     '#secretStoreRef':: d.obj(help='"SecretStoreRef defines which SecretStore to fetch the ExternalSecret data."'),
     secretStoreRef: {
-      '#withKind':: d.fn(help='"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"', args=[d.arg(name='kind', type=d.T.string)]),
+      '#withKind':: d.fn(help='"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\\nDefaults to `SecretStore`"', args=[d.arg(name='kind', type=d.T.string)]),
       withKind(kind): { spec+: { secretStoreRef+: { kind: kind } } },
       '#withName':: d.fn(help='"Name of the SecretStore resource"', args=[d.arg(name='name', type=d.T.string)]),
       withName(name): { spec+: { secretStoreRef+: { name: name } } },
     },
-    '#target':: d.obj(help='"ExternalSecretTarget defines the Kubernetes Secret to be created There can be only one target per ExternalSecret."'),
+    '#target':: d.obj(help='"ExternalSecretTarget defines the Kubernetes Secret to be created\\nThere can be only one target per ExternalSecret."'),
     target: {
       '#template':: d.obj(help='"Template defines a blueprint for the created Secret resource."'),
       template: {
@@ -233,24 +233,24 @@
         '#withType':: d.fn(help='', args=[d.arg(name='type', type=d.T.string)]),
         withType(type): { spec+: { target+: { template+: { type: type } } } },
       },
-      '#withCreationPolicy':: d.fn(help="\"CreationPolicy defines rules on how to create the resulting Secret Defaults to 'Owner'\"", args=[d.arg(name='creationPolicy', type=d.T.string)]),
+      '#withCreationPolicy':: d.fn(help="\"CreationPolicy defines rules on how to create the resulting Secret\\nDefaults to 'Owner'\"", args=[d.arg(name='creationPolicy', type=d.T.string)]),
       withCreationPolicy(creationPolicy): { spec+: { target+: { creationPolicy: creationPolicy } } },
-      '#withDeletionPolicy':: d.fn(help="\"DeletionPolicy defines rules on how to delete the resulting Secret Defaults to 'Retain'\"", args=[d.arg(name='deletionPolicy', type=d.T.string)]),
+      '#withDeletionPolicy':: d.fn(help="\"DeletionPolicy defines rules on how to delete the resulting Secret\\nDefaults to 'Retain'\"", args=[d.arg(name='deletionPolicy', type=d.T.string)]),
       withDeletionPolicy(deletionPolicy): { spec+: { target+: { deletionPolicy: deletionPolicy } } },
       '#withImmutable':: d.fn(help='"Immutable defines if the final secret will be immutable"', args=[d.arg(name='immutable', type=d.T.boolean)]),
       withImmutable(immutable): { spec+: { target+: { immutable: immutable } } },
-      '#withName':: d.fn(help='"Name defines the name of the Secret resource to be managed This field is immutable Defaults to the .metadata.name of the ExternalSecret resource"', args=[d.arg(name='name', type=d.T.string)]),
+      '#withName':: d.fn(help='"Name defines the name of the Secret resource to be managed\\nThis field is immutable\\nDefaults to the .metadata.name of the ExternalSecret resource"', args=[d.arg(name='name', type=d.T.string)]),
       withName(name): { spec+: { target+: { name: name } } },
     },
     '#withData':: d.fn(help='"Data defines the connection between the Kubernetes Secret keys and the Provider data"', args=[d.arg(name='data', type=d.T.array)]),
     withData(data): { spec+: { data: if std.isArray(v=data) then data else [data] } },
-    '#withDataFrom':: d.fn(help='"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"', args=[d.arg(name='dataFrom', type=d.T.array)]),
+    '#withDataFrom':: d.fn(help='"DataFrom is used to fetch all properties from a specific Provider data\\nIf multiple entries are specified, the Secret keys are merged in the specified order"', args=[d.arg(name='dataFrom', type=d.T.array)]),
     withDataFrom(dataFrom): { spec+: { dataFrom: if std.isArray(v=dataFrom) then dataFrom else [dataFrom] } },
-    '#withDataFromMixin':: d.fn(help='"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='dataFrom', type=d.T.array)]),
+    '#withDataFromMixin':: d.fn(help='"DataFrom is used to fetch all properties from a specific Provider data\\nIf multiple entries are specified, the Secret keys are merged in the specified order"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='dataFrom', type=d.T.array)]),
     withDataFromMixin(dataFrom): { spec+: { dataFrom+: if std.isArray(v=dataFrom) then dataFrom else [dataFrom] } },
     '#withDataMixin':: d.fn(help='"Data defines the connection between the Kubernetes Secret keys and the Provider data"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='data', type=d.T.array)]),
     withDataMixin(data): { spec+: { data+: if std.isArray(v=data) then data else [data] } },
-    '#withRefreshInterval':: d.fn(help='"RefreshInterval is the amount of time before the values are read again from the SecretStore provider Valid time units are \\"ns\\", \\"us\\" (or \\"µs\\"), \\"ms\\", \\"s\\", \\"m\\", \\"h\\" May be set to zero to fetch and create it once. Defaults to 1h."', args=[d.arg(name='refreshInterval', type=d.T.string)]),
+    '#withRefreshInterval':: d.fn(help='"RefreshInterval is the amount of time before the values are read again from the SecretStore provider\\nValid time units are \\"ns\\", \\"us\\" (or \\"µs\\"), \\"ms\\", \\"s\\", \\"m\\", \\"h\\"\\nMay be set to zero to fetch and create it once. Defaults to 1h."', args=[d.arg(name='refreshInterval', type=d.T.string)]),
     withRefreshInterval(refreshInterval): { spec+: { refreshInterval: refreshInterval } },
   },
   '#mixin': 'ignore',

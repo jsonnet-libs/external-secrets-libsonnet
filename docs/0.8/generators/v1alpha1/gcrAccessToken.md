@@ -4,7 +4,7 @@ permalink: /0.8/generators/v1alpha1/gcrAccessToken/
 
 # generators.v1alpha1.gcrAccessToken
 
-"GCRAccessToken generates an GCP access token that can be used to authenticate with GCR."
+"GCRAccessToken generates an GCP access token\nthat can be used to authenticate with GCR."
 
 ## Index
 
@@ -251,7 +251,7 @@ withProjectID(projectID)
 withKey(key)
 ```
 
-"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required."
+"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\ndefaulted, in others it may be required."
 
 ### fn spec.auth.secretRef.secretAccessKeySecretRef.withName
 
@@ -267,7 +267,7 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."
 
 ## obj spec.auth.workloadIdentity
 
@@ -307,7 +307,7 @@ withClusterProjectID(clusterProjectID)
 withAudiences(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 ### fn spec.auth.workloadIdentity.serviceAccountRef.withAudiencesMixin
 
@@ -315,7 +315,7 @@ withAudiences(audiences)
 withAudiencesMixin(audiences)
 ```
 
-"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"
+"Audience specifies the `aud` claim for the service account token\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\nthen this audiences will be appended to the list"
 
 **Note:** This function appends passed data to existing values
 
@@ -333,4 +333,4 @@ withName(name)
 withNamespace(namespace)
 ```
 
-"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."
+"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\nto the namespace of the referent."

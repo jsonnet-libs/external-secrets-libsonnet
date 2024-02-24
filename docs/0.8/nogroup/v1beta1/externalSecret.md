@@ -313,7 +313,7 @@ withData(data)
 withDataFrom(dataFrom)
 ```
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 ### fn spec.withDataFromMixin
 
@@ -321,7 +321,7 @@ withDataFrom(dataFrom)
 withDataFromMixin(dataFrom)
 ```
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 **Note:** This function appends passed data to existing values
 
@@ -341,7 +341,7 @@ withDataMixin(data)
 withRefreshInterval(refreshInterval)
 ```
 
-"RefreshInterval is the amount of time before the values are read again from the SecretStore provider Valid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\" May be set to zero to fetch and create it once. Defaults to 1h."
+"RefreshInterval is the amount of time before the values are read again from the SecretStore provider\nValid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\"\nMay be set to zero to fetch and create it once. Defaults to 1h."
 
 ## obj spec.data
 
@@ -353,11 +353,11 @@ withRefreshInterval(refreshInterval)
 withSecretKey(secretKey)
 ```
 
-"SecretKey defines the key in which the controller stores the value. This is the key in the Kind=Secret"
+"SecretKey defines the key in which the controller stores\nthe value. This is the key in the Kind=Secret"
 
 ## obj spec.data.remoteRef
 
-"RemoteRef points to the remote secret and defines which secret (version/property/..) to fetch."
+"RemoteRef points to the remote secret and defines\nwhich secret (version/property/..) to fetch."
 
 ### fn spec.data.remoteRef.withConversionStrategy
 
@@ -409,7 +409,7 @@ withVersion(version)
 
 ## obj spec.data.sourceRef
 
-"SourceRef allows you to override the source from which the value will pulled from."
+"SourceRef allows you to override the source\nfrom which the value will pulled from."
 
 ## obj spec.data.sourceRef.generatorRef
 
@@ -449,7 +449,7 @@ withName(name)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.data.sourceRef.storeRef.withName
 
@@ -461,7 +461,7 @@ withName(name)
 
 ## obj spec.dataFrom
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+"DataFrom is used to fetch all properties from a specific Provider data\nIf multiple entries are specified, the Secret keys are merged in the specified order"
 
 ### fn spec.dataFrom.withRewrite
 
@@ -469,7 +469,7 @@ withName(name)
 withRewrite(rewrite)
 ```
 
-"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+"Used to rewrite secret Keys after getting them from the secret Provider\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
 
 ### fn spec.dataFrom.withRewriteMixin
 
@@ -477,13 +477,13 @@ withRewrite(rewrite)
 withRewriteMixin(rewrite)
 ```
 
-"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+"Used to rewrite secret Keys after getting them from the secret Provider\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
 
 **Note:** This function appends passed data to existing values
 
 ## obj spec.dataFrom.extract
 
-"Used to extract multiple key/value pairs from one secret Note: Extract does not support sourceRef.Generator or sourceRef.GeneratorRef."
+"Used to extract multiple key/value pairs from one secret\nNote: Extract does not support sourceRef.Generator or sourceRef.GeneratorRef."
 
 ### fn spec.dataFrom.extract.withConversionStrategy
 
@@ -535,7 +535,7 @@ withVersion(version)
 
 ## obj spec.dataFrom.find
 
-"Used to find secrets based on tags or regular expressions Note: Find does not support sourceRef.Generator or sourceRef.GeneratorRef."
+"Used to find secrets based on tags or regular expressions\nNote: Find does not support sourceRef.Generator or sourceRef.GeneratorRef."
 
 ### fn spec.dataFrom.find.withConversionStrategy
 
@@ -593,11 +593,11 @@ withRegexp(regexp)
 
 ## obj spec.dataFrom.rewrite
 
-"Used to rewrite secret Keys after getting them from the secret Provider Multiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
+"Used to rewrite secret Keys after getting them from the secret Provider\nMultiple Rewrite operations can be provided. They are applied in a layered order (first to last)"
 
 ## obj spec.dataFrom.rewrite.regexp
 
-"Used to rewrite with regular expressions. The resulting key will be the output of a regexp.ReplaceAll operation."
+"Used to rewrite with regular expressions.\nThe resulting key will be the output of a regexp.ReplaceAll operation."
 
 ### fn spec.dataFrom.rewrite.regexp.withSource
 
@@ -617,7 +617,7 @@ withTarget(target)
 
 ## obj spec.dataFrom.sourceRef
 
-"SourceRef points to a store or generator which contains secret values ready to use. Use this in combination with Extract or Find pull values out of a specific SecretStore. When sourceRef points to a generator Extract or Find is not supported. The generator returns a static map of values"
+"SourceRef points to a store or generator\nwhich contains secret values ready to use.\nUse this in combination with Extract or Find pull values out of\na specific SecretStore.\nWhen sourceRef points to a generator Extract or Find is not supported.\nThe generator returns a static map of values"
 
 ## obj spec.dataFrom.sourceRef.generatorRef
 
@@ -657,7 +657,7 @@ withName(name)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.dataFrom.sourceRef.storeRef.withName
 
@@ -677,7 +677,7 @@ withName(name)
 withKind(kind)
 ```
 
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
+"Kind of the SecretStore resource (SecretStore or ClusterSecretStore)\nDefaults to `SecretStore`"
 
 ### fn spec.secretStoreRef.withName
 
@@ -689,7 +689,7 @@ withName(name)
 
 ## obj spec.target
 
-"ExternalSecretTarget defines the Kubernetes Secret to be created There can be only one target per ExternalSecret."
+"ExternalSecretTarget defines the Kubernetes Secret to be created\nThere can be only one target per ExternalSecret."
 
 ### fn spec.target.withCreationPolicy
 
@@ -697,7 +697,7 @@ withName(name)
 withCreationPolicy(creationPolicy)
 ```
 
-"CreationPolicy defines rules on how to create the resulting Secret Defaults to 'Owner'"
+"CreationPolicy defines rules on how to create the resulting Secret\nDefaults to 'Owner'"
 
 ### fn spec.target.withDeletionPolicy
 
@@ -705,7 +705,7 @@ withCreationPolicy(creationPolicy)
 withDeletionPolicy(deletionPolicy)
 ```
 
-"DeletionPolicy defines rules on how to delete the resulting Secret Defaults to 'Retain'"
+"DeletionPolicy defines rules on how to delete the resulting Secret\nDefaults to 'Retain'"
 
 ### fn spec.target.withImmutable
 
@@ -721,7 +721,7 @@ withImmutable(immutable)
 withName(name)
 ```
 
-"Name defines the name of the Secret resource to be managed This field is immutable Defaults to the .metadata.name of the ExternalSecret resource"
+"Name defines the name of the Secret resource to be managed\nThis field is immutable\nDefaults to the .metadata.name of the ExternalSecret resource"
 
 ## obj spec.target.template
 

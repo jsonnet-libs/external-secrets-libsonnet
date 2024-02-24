@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#':: d.pkg(name='gcrAccessToken', url='', help='"GCRAccessToken generates an GCP access token that can be used to authenticate with GCR."'),
+  '#':: d.pkg(name='gcrAccessToken', url='', help='"GCRAccessToken generates an GCP access token\\nthat can be used to authenticate with GCR."'),
   '#metadata':: d.obj(help='"ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create."'),
   metadata: {
     '#withAnnotations':: d.fn(help='"Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations"', args=[d.arg(name='annotations', type=d.T.object)]),
@@ -55,11 +55,11 @@
       secretRef: {
         '#secretAccessKeySecretRef':: d.obj(help='"The SecretAccessKey is used for authentication"'),
         secretAccessKeySecretRef: {
-          '#withKey':: d.fn(help="\"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be defaulted, in others it may be required.\"", args=[d.arg(name='key', type=d.T.string)]),
+          '#withKey':: d.fn(help="\"The key of the entry in the Secret resource's `data` field to be used. Some instances of this field may be\\ndefaulted, in others it may be required.\"", args=[d.arg(name='key', type=d.T.string)]),
           withKey(key): { spec+: { auth+: { secretRef+: { secretAccessKeySecretRef+: { key: key } } } } },
           '#withName':: d.fn(help='"The name of the Secret resource being referred to."', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { spec+: { auth+: { secretRef+: { secretAccessKeySecretRef+: { name: name } } } } },
-          '#withNamespace':: d.fn(help='"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."', args=[d.arg(name='namespace', type=d.T.string)]),
+          '#withNamespace':: d.fn(help='"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\\nto the namespace of the referent."', args=[d.arg(name='namespace', type=d.T.string)]),
           withNamespace(namespace): { spec+: { auth+: { secretRef+: { secretAccessKeySecretRef+: { namespace: namespace } } } } },
         },
       },
@@ -67,13 +67,13 @@
       workloadIdentity: {
         '#serviceAccountRef':: d.obj(help='"A reference to a ServiceAccount resource."'),
         serviceAccountRef: {
-          '#withAudiences':: d.fn(help='"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"', args=[d.arg(name='audiences', type=d.T.array)]),
+          '#withAudiences':: d.fn(help='"Audience specifies the `aud` claim for the service account token\\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\\nthen this audiences will be appended to the list"', args=[d.arg(name='audiences', type=d.T.array)]),
           withAudiences(audiences): { spec+: { auth+: { workloadIdentity+: { serviceAccountRef+: { audiences: if std.isArray(v=audiences) then audiences else [audiences] } } } } },
-          '#withAudiencesMixin':: d.fn(help='"Audience specifies the `aud` claim for the service account token If the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity then this audiences will be appended to the list"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='audiences', type=d.T.array)]),
+          '#withAudiencesMixin':: d.fn(help='"Audience specifies the `aud` claim for the service account token\\nIf the service account uses a well-known annotation for e.g. IRSA or GCP Workload Identity\\nthen this audiences will be appended to the list"\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='audiences', type=d.T.array)]),
           withAudiencesMixin(audiences): { spec+: { auth+: { workloadIdentity+: { serviceAccountRef+: { audiences+: if std.isArray(v=audiences) then audiences else [audiences] } } } } },
           '#withName':: d.fn(help='"The name of the ServiceAccount resource being referred to."', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { spec+: { auth+: { workloadIdentity+: { serviceAccountRef+: { name: name } } } } },
-          '#withNamespace':: d.fn(help='"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults to the namespace of the referent."', args=[d.arg(name='namespace', type=d.T.string)]),
+          '#withNamespace':: d.fn(help='"Namespace of the resource being referred to. Ignored if referent is not cluster-scoped. cluster-scoped defaults\\nto the namespace of the referent."', args=[d.arg(name='namespace', type=d.T.string)]),
           withNamespace(namespace): { spec+: { auth+: { workloadIdentity+: { serviceAccountRef+: { namespace: namespace } } } } },
         },
         '#withClusterLocation':: d.fn(help='', args=[d.arg(name='clusterLocation', type=d.T.string)]),
