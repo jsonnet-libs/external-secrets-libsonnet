@@ -1,0 +1,18 @@
+{
+  local d = (import 'doc-util/main.libsonnet'),
+  '#':: d.pkg(name='v1alpha1', url='', help=''),
+  acrAccessToken: (import 'acrAccessToken.libsonnet'),
+  clusterGenerator: (import 'clusterGenerator.libsonnet'),
+  ecrAuthorizationToken: (import 'ecrAuthorizationToken.libsonnet'),
+  fake: (import 'fake.libsonnet'),
+  gcrAccessToken: (import 'gcrAccessToken.libsonnet'),
+  generatorState: (import 'generatorState.libsonnet'),
+  githubAccessToken: (import 'githubAccessToken.libsonnet'),
+  grafana: (import 'grafana.libsonnet'),
+  password: (import 'password.libsonnet'),
+  quayAccessToken: (import 'quayAccessToken.libsonnet'),
+  stsSessionToken: (import 'stsSessionToken.libsonnet'),
+  uuid: (import 'uuid.libsonnet'),
+  vaultDynamicSecret: (import 'vaultDynamicSecret.libsonnet'),
+  webhook: (import 'webhook.libsonnet'),
+}
