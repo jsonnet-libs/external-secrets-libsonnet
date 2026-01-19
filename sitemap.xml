@@ -2,630 +2,410 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/acrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/clusterGenerator/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/ecrAuthorizationToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/fake/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/gcrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/generatorState/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/githubAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/grafana/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/password/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/quayAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/stsSessionToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/uuid/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/vaultDynamicSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/generators/v1alpha1/webhook/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1alpha1/clusterPushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1alpha1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1alpha1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1alpha1/pushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1alpha1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1beta1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.15/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/acrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/clusterGenerator/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/ecrAuthorizationToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/fake/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/gcrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/generatorState/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/githubAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/grafana/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/password/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/quayAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/stsSessionToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/uuid/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/vaultDynamicSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/generators/v1alpha1/webhook/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1alpha1/clusterPushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1alpha1/pushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1beta1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.16/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/acrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/clusterGenerator/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/ecrAuthorizationToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/fake/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/gcrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/generatorState/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/githubAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/grafana/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/password/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/quayAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/stsSessionToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/uuid/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/vaultDynamicSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/generators/v1alpha1/webhook/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1alpha1/clusterPushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1alpha1/pushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1beta1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.17/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/acrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/clusterGenerator/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/ecrAuthorizationToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/fake/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/gcrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/generatorState/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/githubAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/grafana/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/mfa/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/password/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/quayAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/stsSessionToken/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/uuid/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/vaultDynamicSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/generators/v1alpha1/webhook/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1alpha1/clusterPushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1alpha1/pushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1beta1/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
-    </url>
-    <url>
-         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.18/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/acrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/clusterGenerator/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/ecrAuthorizationToken/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/fake/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/gcrAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/generatorState/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/githubAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/grafana/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/mfa/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/password/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/quayAccessToken/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/sshKey/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/stsSessionToken/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/uuid/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/vaultDynamicSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/generators/v1alpha1/webhook/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1alpha1/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1alpha1/clusterPushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1alpha1/pushSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1beta1/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1beta1/clusterExternalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1beta1/clusterSecretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1beta1/externalSecret/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/0.19/nogroup/v1beta1/secretStore/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/acrAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/cloudsmithAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/clusterGenerator/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/ecrAuthorizationToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/fake/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/gcrAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/generatorState/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/githubAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/grafana/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/mfa/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/password/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/quayAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/sshKey/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/stsSessionToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/uuid/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/vaultDynamicSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/generators/v1alpha1/webhook/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1/clusterExternalSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1/clusterSecretStore/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1/externalSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1/secretStore/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1alpha1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1alpha1/clusterPushSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1alpha1/pushSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1beta1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1beta1/clusterExternalSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1beta1/clusterSecretStore/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1beta1/externalSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.0/nogroup/v1beta1/secretStore/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/acrAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/cloudsmithAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/clusterGenerator/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/ecrAuthorizationToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/fake/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/gcrAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/generatorState/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/githubAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/grafana/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/mfa/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/password/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/quayAccessToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/sshKey/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/stsSessionToken/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/uuid/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/vaultDynamicSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/generators/v1alpha1/webhook/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1/clusterExternalSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1/clusterSecretStore/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1/externalSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1/secretStore/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1alpha1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1alpha1/clusterPushSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1alpha1/pushSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1beta1/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1beta1/clusterExternalSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1beta1/clusterSecretStore/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1beta1/externalSecret/</loc>
+         <lastmod>2026-01-19</lastmod>
+    </url>
+    <url>
+         <loc>https://jsonnet-libs.github.io/external-secrets-libsonnet/1.1/nogroup/v1beta1/secretStore/</loc>
+         <lastmod>2026-01-19</lastmod>
     </url>
 </urlset>
